@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-04-15",
+  "files": [
+    {
+      "path": "world_bank_population_2023_snapshot.json",
+      "sha256": "db8766484990049a6b54af92166c3367f084aca309339be2d2930f1aaca1ccc9",
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?date=2023&format=json&per_page=500",
+      "description": "World Bank WDI indicator SP.POP.TOTL (Population, total), 2023."
+    },
+    {
+      "path": "owid_world_broad_age_2023.csv",
+      "sha256": "542f3ad5a7d7305c16a2045830efdfe8f76dc541584ca9ff23c1c7963e016841",
+      "url": "https://ourworldindata.org/grapher/population-by-broad-age-group.csv?v=1&csvType=full&useColumnShortNames=true",
+      "description": "OWID extract: World row 2023 (UN WPP-based broad age groups) for marginal age derivation."
+    }
+  ],
+  "references": [
+    {
+      "topic": "sex_ratio",
+      "citation": "UN Population Division, World Population Prospects 2024 (medium variant): global sex ratio at birth and survival yield near-parity among adults; rounded here.",
+      "url": "https://population.un.org/wpp/"
+    },
+    {
+      "topic": "religion",
+      "citation": "Pew Research Center, Global Religious Futures / Religion Data (2020 round).",
+      "url": "https://www.pewresearch.org/religion/"
+    },
+    {
+      "topic": "smoking_alcohol",
+      "citation": "WHO Global Health Observatory (tobacco; alcohol patterns).",
+      "url": "https://www.who.int/data/gho"
+    },
+    {
+      "topic": "education",
+      "citation": "UNESCO UIS / World Bank education attainment aggregates (ISCED-oriented, global rough mix).",
+      "url": "https://uis.unesco.org/"
+    },
+    {
+      "topic": "height",
+      "citation": "NCD-RisC / Lancet global height studies (adult means ~165–168 cm by sex); here a single global Gaussian prior on cm (illustrative marginal, not age-sex conditional).",
+      "url": "https://www.ncdrisc.org/"
+    },
+    {
+      "topic": "eye_hair_color",
+      "citation": "Synthetic global marginal: literature ranges (anthropology / survey) combined; not a census.",
+      "url": ""
+    },
+    {
+      "topic": "mobile_os",
+      "citation": "StatCounter GlobalStats mobile OS share (device-weighted, not persons).",
+      "url": "https://gs.statcounter.com/os-market-share/mobile/worldwide"
+    },
+    {
+      "topic": "payments",
+      "citation": "World Bank Global Findex (account / digital payment use; mapped loosely to stated habits).",
+      "url": "https://www.worldbank.org/en/publication/globalfindex"
+    }
+  ]
+}

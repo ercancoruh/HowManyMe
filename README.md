@@ -40,3 +40,7 @@ npm run lint
 npm run typecheck
 npm run test
 ```
+
+## License
+
+MIT — see [LICENSE](LICENSE). Dataset sources are documented in [src/data/README.md](src/data/README.md).

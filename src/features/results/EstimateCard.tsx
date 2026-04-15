@@ -1,24 +1,28 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import type { EstimateResult } from "@/features/estimator/estimate"
 import { useI18n } from "@/i18n/useI18n"
+import type { Language } from "@/i18n/types"
 
 type EstimateCardProps = {
   result: EstimateResult
 }
 
-function formatCount(value: number) {
+function formatWholeNumber(value: number, language: Language) {
   if (value < 1) {
     return "< 1"
   }
 
-  return new Intl.NumberFormat("en", {
-    notation: value > 999_999 ? "compact" : "standard",
-    maximumFractionDigits: 1,
-  }).format(value)
+  const locale = language === "tr" ? "tr-TR" : "en-US"
+
+  return new Intl.NumberFormat(locale, {
+    maximumFractionDigits: 0,
+    minimumFractionDigits: 0,
+    useGrouping: true,
+  }).format(Math.round(value))
 }
 
 export function EstimateCard({ result }: EstimateCardProps) {
-  const { t } = useI18n()
+  const { t, language } = useI18n()
 
   return (
     <Card>
@@ -29,10 +33,13 @@ export function EstimateCard({ result }: EstimateCardProps) {
       <CardContent className="space-y-4">
         <div>
           <p className="text-sm text-muted-foreground">{t.estimatedPeople}</p>
-          <p className="text-3xl font-semibold">{formatCount(result.expectedCount)}</p>
+          <p className="text-3xl font-semibold">
+            {formatWholeNumber(result.expectedCount, language)}
+          </p>
         </div>
         <div className="text-sm text-muted-foreground">
-          {t.rangeLabel}: {formatCount(result.lowCount)} - {formatCount(result.highCount)}
+          {t.rangeLabel}: {formatWholeNumber(result.lowCount, language)} -{" "}
+          {formatWholeNumber(result.highCount, language)}
         </div>
       </CardContent>
     </Card>

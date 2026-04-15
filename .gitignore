@@ -7,18 +7,49 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies and build
 node_modules
 dist
 dist-ssr
 *.local
 
+# Vite / tooling caches
+.vite
+*.tsbuildinfo
+
+# Tests and coverage
+coverage
+
+# Environment (never commit secrets)
+.env
+.env.*
+!.env.example
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# One-off downloads / local experiments at repo root (see scripts + src/data/sources for real inputs)
+ages.json
+ages2.json
+ind47.json
+un_data.json
+un_ind.json
+wb_countries.json
+wpp_single.gz
+owid.csv
+owid5.csv
+owid_age.csv
+owid_sex.csv
+owid_single.csv
