@@ -21,7 +21,7 @@ export function LanguageToggle() {
       value={language}
       onValueChange={(value) => setLanguage(value as Language)}
     >
-      <SelectTrigger className="w-[140px]">
+      <SelectTrigger className="h-9 w-[140px] justify-between">
         <SelectValue placeholder={t.languageLabel} />
       </SelectTrigger>
       <SelectContent>
