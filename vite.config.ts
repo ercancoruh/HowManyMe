@@ -4,11 +4,15 @@ import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
 // https://vite.dev/config/
-export default defineConfig({
+// GitHub Pages project URL: https://<user>.github.io/<repo>/
+const repoBase = "/HowManyMe/"
+
+export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? repoBase : "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+}))

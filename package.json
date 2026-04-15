@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/ercancoruh/HowManyMe/issues"
   },
-  "homepage": "https://github.com/ercancoruh/HowManyMe#readme",
+  "homepage": "https://ercancoruh.github.io/HowManyMe/",
   "type": "module",
   "scripts": {
     "dev": "vite",

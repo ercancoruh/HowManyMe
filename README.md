@@ -45,6 +45,12 @@ npm run typecheck
 npm run test
 ```
 
+### GitHub Pages
+
+The site deploys automatically on push to `master` or `main` via [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml). After the first run, enable **Settings → Pages → Build and deployment → Source: GitHub Actions** if GitHub prompts you.
+
+Live URL: [https://ercancoruh.github.io/HowManyMe/](https://ercancoruh.github.io/HowManyMe/)
+
 ## License
 
 MIT — see [LICENSE](LICENSE). Third-party data terms and attribution are in [NOTICE.md](NOTICE.md); dataset sources are documented in [src/data/README.md](src/data/README.md).
