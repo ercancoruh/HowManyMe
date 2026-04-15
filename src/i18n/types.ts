@@ -39,6 +39,10 @@ export type Dictionary = {
   progressPersistHint: string
   noAnswersYet: string
   liveEstimateTitle: string
+  /** Tahmin notu: hiç özellik seçilmediğinde */
+  estimateNoteBaseline: string
+  /** Tahmin notu: sonuç çok nadir olduğunda */
+  estimateNoteExtremelyRare: string
 }
 
 export type TranslationMap = Record<Language, string>

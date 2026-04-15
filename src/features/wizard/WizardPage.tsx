@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Separator } from "@/components/ui/separator"
 import { populationDataset } from "@/data"
+import { formatEstimateNote } from "@/features/estimator/estimate-notes"
 import { estimateHowManyLikeMe } from "@/features/estimator/estimate"
 import { EstimateCard } from "@/features/results/EstimateCard"
 import { useWizardState } from "@/features/wizard/hooks/useWizardState"
@@ -89,7 +90,7 @@ export function WizardPage() {
                       <CardContent className="space-y-3">
                         {estimate.notes.map((note) => (
                           <p key={note} className="text-xs text-muted-foreground">
-                            {note}
+                            {formatEstimateNote(note, t)}
                           </p>
                         ))}
                       </CardContent>

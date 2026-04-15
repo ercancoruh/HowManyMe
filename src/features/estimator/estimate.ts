@@ -1,4 +1,8 @@
 import type { PopulationDataset } from "@/data/schema"
+import {
+  ESTIMATE_NOTE_BASELINE,
+  ESTIMATE_NOTE_EXTREMELY_RARE,
+} from "@/features/estimator/estimate-notes"
 
 export type UserAnswers = Record<string, string | undefined>
 
@@ -46,7 +50,7 @@ export function estimateHowManyLikeMe(
       selectedAttributes: 0,
       totalAttributes: dataset.attributes.length,
       confidence: "low",
-      notes: ["No attributes selected. Showing global population baseline."],
+      notes: [ESTIMATE_NOTE_BASELINE],
     }
   }
 
@@ -86,7 +90,7 @@ export function estimateHowManyLikeMe(
   let highCount = dataset.worldPopulation * highProbability
 
   if (expectedCount < 1) {
-    notes.push("Result is extremely rare. Interpreting as below one person on average.")
+    notes.push(ESTIMATE_NOTE_EXTREMELY_RARE)
     lowCount = Math.max(lowCount, 0.1)
     highCount = Math.max(highCount, 1)
   }

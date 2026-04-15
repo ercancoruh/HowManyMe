@@ -20,9 +20,8 @@ export const enDictionary: Dictionary = {
   restartButton: "Start over",
   selectPrompt: "Choose one option",
   noSearchResult: "No results found.",
-  resultTitle: "Your estimate",
-  resultDescription:
-    "This value is computed from global frequencies and is not an exact count.",
+  resultTitle: "Our estimate",
+  resultDescription: "This is only an estimate.",
   estimatedPeople: "Estimated similar people",
   confidenceLabel: "Confidence",
   confidenceLow: "Low",
@@ -36,8 +35,11 @@ export const enDictionary: Dictionary = {
   yearLabel: "Data year",
   choicesSoFarTitle: "Your answers so far",
   skippedStepLabel: "Skipped",
-  progressPersistHint:
-    "Choices are saved in this browser tab. You can use the Back button or browser history to go back; refresh resumes where you left off.",
+  progressPersistHint: "Choices are saved in this browser tab.",
   noAnswersYet: "No answers yet — your selections will appear here.",
   liveEstimateTitle: "Live estimate",
+  estimateNoteBaseline:
+    "No attributes selected. Showing global population baseline.",
+  estimateNoteExtremelyRare:
+    "Result is extremely rare. Interpreting as below one person on average.",
 }

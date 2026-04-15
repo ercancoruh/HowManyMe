@@ -20,9 +20,8 @@ export const trDictionary: Dictionary = {
   restartButton: "Baştan başla",
   selectPrompt: "Bir seçenek seç",
   noSearchResult: "Sonuç bulunamadı.",
-  resultTitle: "Tahminin",
-  resultDescription:
-    "Bu değer global frekanslardan hesaplanır, kesin kişi sayısı değildir.",
+  resultTitle: "Tahminimiz",
+  resultDescription: "Bu yalnızca bir tahmindir.",
   estimatedPeople: "Tahmini benzer kişi",
   confidenceLabel: "Güven",
   confidenceLow: "Düşük",
@@ -36,8 +35,11 @@ export const trDictionary: Dictionary = {
   yearLabel: "Veri yılı",
   choicesSoFarTitle: "Şu ana kadar verdiğin yanıtlar",
   skippedStepLabel: "Atlandı",
-  progressPersistHint:
-    "Seçimler bu sekmede kaydedilir. Geri tuşu veya tarayıcı geçmişi ile önceki adıma dönebilirsin; sayfayı yenilersen kaldığın yerden devam eder.",
+  progressPersistHint: "Seçimler bu sekmede kaydedilir.",
   noAnswersYet: "Henüz yanıt yok — seçtiklerin burada listelenir.",
   liveEstimateTitle: "Canlı tahmin",
+  estimateNoteBaseline:
+    "Hiç özellik seçilmedi. Küresel nüfus taban çizgisi gösteriliyor.",
+  estimateNoteExtremelyRare:
+    "Sonuç çok nadir; ortalamada bir kişinin altında yorumlanıyor.",
 }
