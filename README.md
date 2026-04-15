@@ -47,9 +47,17 @@ npm run test
 
 ### GitHub Pages
 
-The site deploys automatically on push to `master` or `main` via [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml). After the first run, enable **Settings → Pages → Build and deployment → Source: GitHub Actions** if GitHub prompts you.
+On every push to `master` or `main`, [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) builds the site and pushes `dist/` to the **`gh-pages`** branch.
 
-Live URL: [https://ercancoruh.github.io/HowManyMe/](https://ercancoruh.github.io/HowManyMe/)
+**One-time setup (required):**
+
+1. Repo **Settings → Actions → General → Workflow permissions**: choose **Read and write permissions** (needed so the workflow can update the `gh-pages` branch).
+2. Repo **Settings → Pages → Build and deployment**:
+   - **Source**: **Deploy from a branch**
+   - **Branch**: `gh-pages` / **/** (root folder)
+3. Push these workflow changes and wait for the green check on the **Actions** tab (first deploy creates the `gh-pages` branch).
+
+Live URL: [https://ercancoruh.github.io/HowManyMe/](https://ercancoruh.github.io/HowManyMe/) (may take a minute after the workflow finishes).
 
 ## License
 
