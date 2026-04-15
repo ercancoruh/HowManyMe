@@ -1,20 +1,30 @@
-import { Button } from "@/components/ui/button"
+import { LanguageToggle } from "@/components/language-toggle"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { WizardPage } from "@/features/wizard/WizardPage"
+import { useI18n } from "@/i18n/useI18n"
 
 export function App() {
+  const { t } = useI18n()
+
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <main className="min-h-svh bg-background px-4 py-6 sm:px-6">
+      <div className="mx-auto flex w-full max-w-5xl flex-col gap-6">
+        <header className="flex flex-col gap-4 rounded-xl border p-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 className="text-2xl font-semibold">{t.appTitle}</h1>
+            <p className="text-sm text-muted-foreground">{t.appSubtitle}</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <LanguageToggle />
+            <ThemeToggle />
+          </div>
+        </header>
+        <div className="text-xs text-muted-foreground">
+          {t.noAnswerHint}
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
+        <WizardPage />
       </div>
-    </div>
+    </main>
   )
 }
 

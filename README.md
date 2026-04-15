@@ -1,21 +1,42 @@
-# React + TypeScript + Vite + shadcn/ui
+# HowManyMe
 
-This is a template for a new Vite project with React, TypeScript, and shadcn/ui.
+HowManyMe is a privacy-first, fully client-side website that estimates how many
+people in the world may share your selected traits.
 
-## Adding components
+## Core principle
 
-To add components to your app, run the following command:
+- No backend and no database.
+- No user answers are saved.
+- One static JSON dataset powers all calculations.
+
+## Formula
+
+For selected attributes:
+
+1. Multiply selected value probabilities.
+2. Apply dampening for trait correlation: `pAdjusted = pRaw ^ alpha`.
+3. Apply minimum floor to avoid literal zero.
+4. Estimate count: `estimatedCount = worldPopulation * pAdjusted`.
+
+The app also shows a likely range and confidence tier.
+
+## Data transparency
+
+- Dataset file: `src/data/attributes.json`
+- Validation schema: `src/data/schema.ts`
+- Data notes: `src/data/README.md`
+
+## Development
 
 ```bash
-npx shadcn@latest add button
+npm install
+npm run dev
 ```
 
-This will place the ui components in the `src/components` directory.
+### Quality checks
 
-## Using components
-
-To use the components in your app, import them as follows:
-
-```tsx
-import { Button } from "@/components/ui/button"
+```bash
+npm run lint
+npm run typecheck
+npm run test
 ```

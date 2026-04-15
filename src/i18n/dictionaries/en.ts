@@ -1,0 +1,35 @@
+import type { Dictionary } from "@/i18n/types"
+
+export const enDictionary: Dictionary = {
+  appTitle: "HowManyMe",
+  appSubtitle:
+    "Estimate how many people in the world share your selected traits.",
+  languageLabel: "Language",
+  themeLabel: "Theme",
+  themeLight: "Light",
+  themeDark: "Dark",
+  themeSystem: "System",
+  stepLabel: "Step",
+  ofLabel: "of",
+  nextButton: "Next",
+  backButton: "Back",
+  skipButton: "Skip",
+  finishButton: "See result",
+  restartButton: "Start over",
+  selectPrompt: "Choose one option",
+  resultTitle: "Your estimate",
+  resultDescription:
+    "This value is computed from global frequencies and is not an exact count.",
+  estimatedPeople: "Estimated similar people",
+  confidenceLabel: "Confidence",
+  confidenceLow: "Low",
+  confidenceMedium: "Medium",
+  confidenceHigh: "High",
+  rangeLabel: "Likely range",
+  assumptionsTitle: "How this is calculated",
+  assumptionsBody:
+    "We multiply selected attribute probabilities and apply a dampening factor for correlation between traits.",
+  noAnswerHint: "You can skip any step to avoid sharing sensitive details.",
+  sourceLabel: "Source",
+  yearLabel: "Data year",
+}

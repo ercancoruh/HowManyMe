@@ -1,0 +1,123 @@
+{
+  "worldPopulation": 8100000000,
+  "asOfYear": 2026,
+  "alpha": 0.86,
+  "minProbabilityFloor": 0.000000000001,
+  "attributes": [
+    {
+      "id": "age_band",
+      "label": { "en": "Age range", "tr": "Yas araligi" },
+      "description": {
+        "en": "Choose your current age interval.",
+        "tr": "Mevcut yas araligini sec."
+      },
+      "source": "UN World Population Prospects",
+      "year": 2024,
+      "optional": false,
+      "values": [
+        { "id": "under_18", "label": { "en": "Under 18", "tr": "18 alti" }, "p": 0.3 },
+        { "id": "18_29", "label": { "en": "18-29", "tr": "18-29" }, "p": 0.2 },
+        { "id": "30_44", "label": { "en": "30-44", "tr": "30-44" }, "p": 0.21 },
+        { "id": "45_59", "label": { "en": "45-59", "tr": "45-59" }, "p": 0.17 },
+        { "id": "60_plus", "label": { "en": "60+", "tr": "60+" }, "p": 0.12 }
+      ]
+    },
+    {
+      "id": "sex",
+      "label": { "en": "Sex", "tr": "Cinsiyet" },
+      "source": "UN Population Division",
+      "year": 2024,
+      "optional": true,
+      "values": [
+        { "id": "female", "label": { "en": "Female", "tr": "Kadin" }, "p": 0.496 },
+        { "id": "male", "label": { "en": "Male", "tr": "Erkek" }, "p": 0.504 }
+      ]
+    },
+    {
+      "id": "region",
+      "label": { "en": "World region", "tr": "Dunya bolgesi" },
+      "source": "UN geoscheme",
+      "year": 2024,
+      "optional": false,
+      "values": [
+        { "id": "asia", "label": { "en": "Asia", "tr": "Asya" }, "p": 0.597 },
+        { "id": "africa", "label": { "en": "Africa", "tr": "Afrika" }, "p": 0.188 },
+        { "id": "europe", "label": { "en": "Europe", "tr": "Avrupa" }, "p": 0.092 },
+        { "id": "latin_america", "label": { "en": "Latin America", "tr": "Latin Amerika" }, "p": 0.081 },
+        { "id": "north_america", "label": { "en": "North America", "tr": "Kuzey Amerika" }, "p": 0.047 },
+        { "id": "oceania", "label": { "en": "Oceania", "tr": "Okyanusya" }, "p": 0.015 }
+      ]
+    },
+    {
+      "id": "blood_type",
+      "label": { "en": "Blood type", "tr": "Kan grubu" },
+      "source": "International blood distribution studies",
+      "year": 2022,
+      "optional": true,
+      "sensitive": true,
+      "weight": 0.8,
+      "values": [
+        { "id": "o_plus", "label": { "en": "O+", "tr": "0+" }, "p": 0.37 },
+        { "id": "a_plus", "label": { "en": "A+", "tr": "A+" }, "p": 0.34 },
+        { "id": "b_plus", "label": { "en": "B+", "tr": "B+" }, "p": 0.09 },
+        { "id": "ab_plus", "label": { "en": "AB+", "tr": "AB+" }, "p": 0.03 },
+        { "id": "o_minus", "label": { "en": "O-", "tr": "0-" }, "p": 0.06 },
+        { "id": "a_minus", "label": { "en": "A-", "tr": "A-" }, "p": 0.06 },
+        { "id": "b_minus", "label": { "en": "B-", "tr": "B-" }, "p": 0.04 },
+        { "id": "ab_minus", "label": { "en": "AB-", "tr": "AB-" }, "p": 0.01 }
+      ]
+    },
+    {
+      "id": "handedness",
+      "label": { "en": "Handedness", "tr": "Baskin el" },
+      "source": "Global handedness studies",
+      "year": 2021,
+      "optional": true,
+      "values": [
+        { "id": "right", "label": { "en": "Right-handed", "tr": "Saglak" }, "p": 0.9 },
+        { "id": "left", "label": { "en": "Left-handed", "tr": "Solak" }, "p": 0.1 }
+      ]
+    },
+    {
+      "id": "eye_color",
+      "label": { "en": "Eye color", "tr": "Goz rengi" },
+      "source": "Aggregated anthropology datasets",
+      "year": 2020,
+      "optional": true,
+      "values": [
+        { "id": "brown", "label": { "en": "Brown", "tr": "Kahverengi" }, "p": 0.79 },
+        { "id": "blue", "label": { "en": "Blue", "tr": "Mavi" }, "p": 0.1 },
+        { "id": "hazel", "label": { "en": "Hazel", "tr": "Ela" }, "p": 0.05 },
+        { "id": "green", "label": { "en": "Green", "tr": "Yesil" }, "p": 0.02 },
+        { "id": "other", "label": { "en": "Other", "tr": "Diger" }, "p": 0.04 }
+      ]
+    },
+    {
+      "id": "hair_color",
+      "label": { "en": "Hair color", "tr": "Sac rengi" },
+      "source": "Global demographic compilations",
+      "year": 2020,
+      "optional": true,
+      "values": [
+        { "id": "black", "label": { "en": "Black", "tr": "Siyah" }, "p": 0.72 },
+        { "id": "brown", "label": { "en": "Brown", "tr": "Kahverengi" }, "p": 0.17 },
+        { "id": "blonde", "label": { "en": "Blonde", "tr": "Sari" }, "p": 0.05 },
+        { "id": "red", "label": { "en": "Red", "tr": "Kizil" }, "p": 0.02 },
+        { "id": "gray_white", "label": { "en": "Gray/White", "tr": "Beyaz/Gri" }, "p": 0.04 }
+      ]
+    },
+    {
+      "id": "height_band",
+      "label": { "en": "Height range", "tr": "Boy araligi" },
+      "source": "Global health statistics",
+      "year": 2023,
+      "optional": true,
+      "values": [
+        { "id": "under_155", "label": { "en": "Under 155 cm", "tr": "155 cm alti" }, "p": 0.2 },
+        { "id": "155_169", "label": { "en": "155-169 cm", "tr": "155-169 cm" }, "p": 0.37 },
+        { "id": "170_184", "label": { "en": "170-184 cm", "tr": "170-184 cm" }, "p": 0.31 },
+        { "id": "185_plus", "label": { "en": "185+ cm", "tr": "185+ cm" }, "p": 0.12 }
+      ]
+    }
+  ]
+}
