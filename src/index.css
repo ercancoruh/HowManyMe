@@ -218,10 +218,16 @@
 
   body {
     @apply bg-background font-sans text-foreground antialiased;
+    overscroll-behavior: none;
   }
 
   html {
     @apply scroll-smooth;
+    overscroll-behavior: none;
+  }
+
+  #root {
+    overscroll-behavior: none;
   }
 
   @media (prefers-reduced-motion: reduce) {

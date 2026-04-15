@@ -33,18 +33,33 @@ function isLanguage(value: string | null): value is Language {
   return value === "en" || value === "tr"
 }
 
+function getPreferredLanguage(): Language {
+  if (typeof navigator === "undefined") {
+    return "en"
+  }
+  const raw =
+    navigator.languages?.find((code) => code.toLowerCase().startsWith("tr")) ??
+    navigator.language
+  const primary = raw.split(/[-_]/)[0]?.toLowerCase()
+  return primary === "tr" ? "tr" : "en"
+}
+
+function readInitialLanguage(): Language {
+  const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY)
+  if (isLanguage(savedLanguage)) {
+    return savedLanguage
+  }
+  const initial = getPreferredLanguage()
+  localStorage.setItem(LANGUAGE_STORAGE_KEY, initial)
+  return initial
+}
+
 type LanguageProviderProps = {
   children: ReactNode
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY)
-    if (isLanguage(savedLanguage)) {
-      return savedLanguage
-    }
-    return "en"
-  })
+  const [language, setLanguageState] = useState<Language>(readInitialLanguage)
 
   const setLanguage = useCallback((nextLanguage: Language) => {
     localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLanguage)

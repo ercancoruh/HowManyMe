@@ -11,7 +11,6 @@ export const enDictionary: Dictionary = {
   themeLabel: "Theme",
   themeLight: "Light",
   themeDark: "Dark",
-  themeSystem: "System",
   stepLabel: "Step",
   ofLabel: "of",
   nextButton: "Next",
@@ -33,7 +32,6 @@ export const enDictionary: Dictionary = {
   assumptionsTitle: "How this is calculated",
   assumptionsBody:
     "We multiply selected attribute probabilities and apply a dampening factor for correlation between traits.",
-  noAnswerHint: "You can skip any step to avoid sharing sensitive details.",
   sourceLabel: "Source",
   yearLabel: "Data year",
   choicesSoFarTitle: "Your answers so far",

@@ -13,7 +13,6 @@ export type Dictionary = {
   themeLabel: string
   themeLight: string
   themeDark: string
-  themeSystem: string
   stepLabel: string
   ofLabel: string
   nextButton: string
@@ -33,7 +32,6 @@ export type Dictionary = {
   rangeLabel: string
   assumptionsTitle: string
   assumptionsBody: string
-  noAnswerHint: string
   sourceLabel: string
   yearLabel: string
   choicesSoFarTitle: string

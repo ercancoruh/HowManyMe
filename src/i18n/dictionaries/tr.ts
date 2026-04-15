@@ -11,7 +11,6 @@ export const trDictionary: Dictionary = {
   themeLabel: "Tema",
   themeLight: "Açık",
   themeDark: "Koyu",
-  themeSystem: "Sistem",
   stepLabel: "Adım",
   ofLabel: "/",
   nextButton: "İleri",
@@ -33,7 +32,6 @@ export const trDictionary: Dictionary = {
   assumptionsTitle: "Hesaplama yöntemi",
   assumptionsBody:
     "Seçilen özellik olasılıkları çarpılır ve özellikler arası ilişki için dengeleme katsayısı uygulanır.",
-  noAnswerHint: "Hassas bilgiler için adımları atlayabilirsin.",
   sourceLabel: "Kaynak",
   yearLabel: "Veri yılı",
   choicesSoFarTitle: "Şu ana kadar verdiğin yanıtlar",

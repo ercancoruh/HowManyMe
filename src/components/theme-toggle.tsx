@@ -1,6 +1,6 @@
-import { Moon, Sun, Monitor } from "@phosphor-icons/react"
+import { Moon, Sun } from "@phosphor-icons/react"
 
-import { useTheme } from "@/components/theme-provider"
+import { useTheme, type Theme } from "@/components/theme-provider"
 import {
   Select,
   SelectContent,
@@ -15,7 +15,7 @@ export function ThemeToggle() {
   const { t } = useI18n()
 
   return (
-    <Select value={theme} onValueChange={(value) => setTheme(value as typeof theme)}>
+    <Select value={theme} onValueChange={(value) => setTheme(value as Theme)}>
       <SelectTrigger className="w-[140px]">
         <SelectValue placeholder={t.themeLabel} />
       </SelectTrigger>
@@ -30,12 +30,6 @@ export function ThemeToggle() {
           <div className="flex items-center gap-2">
             <Moon size={14} />
             {t.themeDark}
-          </div>
-        </SelectItem>
-        <SelectItem value="system">
-          <div className="flex items-center gap-2">
-            <Monitor size={14} />
-            {t.themeSystem}
           </div>
         </SelectItem>
       </SelectContent>
