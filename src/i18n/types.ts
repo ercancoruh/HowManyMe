@@ -4,6 +4,10 @@ export type Language = (typeof supportedLanguages)[number]
 
 export type Dictionary = {
   appTitle: string
+  /** Browser tab title */
+  documentTitle: string
+  /** `meta name="description"` for SEO and link previews */
+  metaDescription: string
   appSubtitle: string
   languageLabel: string
   themeLabel: string

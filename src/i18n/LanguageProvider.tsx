@@ -51,6 +51,17 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     setLanguageState(nextLanguage)
   }, [])
 
+  const dictionary = dictionaries[language]
+
+  useEffect(() => {
+    document.title = dictionary.documentTitle
+    document.documentElement.lang = language
+    const meta = document.querySelector('meta[name="description"]')
+    if (meta) {
+      meta.setAttribute("content", dictionary.metaDescription)
+    }
+  }, [dictionary, language])
+
   useEffect(() => {
     const handleStorageChange = (event: StorageEvent) => {
       if (event.storageArea !== localStorage) {
@@ -74,9 +85,9 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     () => ({
       language,
       setLanguage,
-      dictionary: dictionaries[language],
+      dictionary,
     }),
-    [language, setLanguage]
+    [language, setLanguage, dictionary]
   )
 
   return (

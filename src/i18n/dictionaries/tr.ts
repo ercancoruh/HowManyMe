@@ -2,6 +2,9 @@ import type { Dictionary } from "@/i18n/types"
 
 export const trDictionary: Dictionary = {
   appTitle: "HowManyMe",
+  documentTitle: "HowManyMe — Kaç kişi seninle aynı özelliklere sahip?",
+  metaDescription:
+    "Seçtiğin özelliklere göre dünyada sana benzeyen kişi sayısını tahmin et. Canlı güncellenen küresel nüfus modeli.",
   appSubtitle:
     "Seçtiğin özelliklere göre dünyada sana benzeyen kişi sayısını tahmin edelim.",
   languageLabel: "Dil",

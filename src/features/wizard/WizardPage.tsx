@@ -7,12 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Separator } from "@/components/ui/separator"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
 import { populationDataset } from "@/data"
 import { estimateHowManyLikeMe } from "@/features/estimator/estimate"
 import { EstimateCard } from "@/features/results/EstimateCard"
@@ -24,15 +20,15 @@ import { useI18n } from "@/i18n/useI18n"
 import { fadeSlideVariants, springSoft } from "@/lib/motion-presets"
 
 const wizardSurfaceClass =
-  "flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-border/80 bg-card/95 text-card-foreground shadow-lg ring-1 ring-foreground/5 backdrop-blur-md dark:bg-card/90"
+  "flex h-full max-lg:h-auto max-lg:min-h-[min(52svh,480px)] min-h-0 flex-col overflow-hidden rounded-2xl border border-border/80 bg-card/95 text-card-foreground shadow-lg ring-1 ring-foreground/5 backdrop-blur-md dark:bg-card/90"
 
 function WizardShell(props: { center: ReactNode; sideRail: ReactNode }) {
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden lg:grid lg:grid-cols-12 lg:items-stretch lg:gap-4">
-      <section className="flex min-h-0 flex-1 flex-col lg:col-span-8 lg:h-full lg:min-h-0">
+    <div className="flex min-h-0 flex-1 flex-col gap-3 max-lg:overflow-visible lg:overflow-hidden lg:grid lg:grid-cols-12 lg:items-stretch lg:gap-4">
+      <section className="flex min-h-0 flex-1 flex-col max-lg:min-h-[min(52svh,480px)] max-lg:shrink-0 lg:col-span-8 lg:h-full lg:min-h-0">
         {props.center}
       </section>
-      <aside className="flex h-[min(42svh,400px)] min-h-0 shrink-0 flex-col gap-3 overflow-hidden lg:col-span-4 lg:h-full lg:min-h-0">
+      <aside className="flex max-h-[min(28svh,300px)] min-h-0 shrink-0 flex-col gap-2 overflow-y-auto max-lg:flex-none lg:col-span-4 lg:h-full lg:max-h-none lg:min-h-0 lg:gap-3 lg:overflow-hidden">
         {props.sideRail}
       </aside>
     </div>
@@ -48,25 +44,40 @@ export function WizardPage() {
   const stepVariants = fadeSlideVariants(reduced ?? undefined)
   const transition = springSoft(reduced ?? undefined)
 
-  const trail = (
-    <WizardAnswerTrail
-      dataset={populationDataset}
-      answers={wizard.answers}
-      stepIndex={wizard.stepIndex}
-      isComplete={wizard.isComplete}
-      language={language}
-      t={t}
-    />
-  )
+  const trailCommon = {
+    dataset: populationDataset,
+    answers: wizard.answers,
+    stepIndex: wizard.stepIndex,
+    isComplete: wizard.isComplete,
+    language,
+    t,
+  }
+
+  const trail = <WizardAnswerTrail {...trailCommon} />
 
   const live = <LiveEstimateSidebar result={estimate} language={language} t={t} />
 
   const sideRail = (
-    <div className="flex h-full min-h-0 flex-1 flex-col gap-3">
-      <div className="flex min-h-0 flex-[1] flex-col overflow-hidden">
+    <div className="flex h-full min-h-0 flex-1 flex-col gap-2 lg:gap-3">
+      <div className="flex shrink-0 flex-col overflow-hidden lg:min-h-0 lg:flex-1">
         {live}
       </div>
-      <div className="flex min-h-0 flex-[2] flex-col overflow-hidden">{trail}</div>
+      <details className="rounded-2xl border border-border/80 bg-card/95 text-card-foreground shadow-lg ring-1 ring-foreground/5 backdrop-blur-md open:shadow-md lg:hidden dark:bg-card/90">
+        <summary className="cursor-pointer list-none px-3 py-2.5 font-heading text-sm font-semibold leading-tight tracking-tight outline-none ring-offset-background marker:content-none [&::-webkit-details-marker]:hidden">
+          {t.choicesSoFarTitle}
+          <span className="mt-0.5 block text-xs font-normal font-sans text-muted-foreground">
+            {t.progressPersistHint}
+          </span>
+        </summary>
+        <div className="max-h-[min(32svh,260px)] overflow-y-auto border-t border-border/60">
+          <WizardAnswerTrail
+            {...trailCommon}
+            hideHeader
+            className="rounded-none border-0 bg-transparent shadow-none ring-0 dark:bg-transparent"
+          />
+        </div>
+      </details>
+      <div className="hidden min-h-0 flex-[2] flex-col overflow-hidden lg:flex">{trail}</div>
     </div>
   )
 
@@ -149,17 +160,24 @@ export function WizardPage() {
                     {wizard.currentAttribute.label[language]}
                   </h2>
                   {wizard.currentAttribute.sensitive ? (
-                    <Tooltip>
-                      <TooltipTrigger asChild>
+                    <Popover>
+                      <PopoverTrigger asChild>
                         <button
                           type="button"
                           className="text-muted-foreground hover:text-foreground mt-0.5 shrink-0 transition-colors"
+                          aria-label={t.noAnswerHint}
                         >
                           <Info size={18} aria-hidden />
                         </button>
-                      </TooltipTrigger>
-                      <TooltipContent>{t.noAnswerHint}</TooltipContent>
-                    </Tooltip>
+                      </PopoverTrigger>
+                      <PopoverContent
+                        align="end"
+                        sideOffset={8}
+                        className="w-[min(calc(100vw-2rem),20rem)] text-sm"
+                      >
+                        {t.noAnswerHint}
+                      </PopoverContent>
+                    </Popover>
                   ) : null}
                 </div>
                 <p className="text-pretty text-sm text-muted-foreground">

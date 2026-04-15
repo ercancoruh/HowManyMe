@@ -2,6 +2,9 @@ import type { Dictionary } from "@/i18n/types"
 
 export const enDictionary: Dictionary = {
   appTitle: "HowManyMe",
+  documentTitle: "HowManyMe — How many people share your traits?",
+  metaDescription:
+    "Estimate how many people worldwide share the traits you select. Live updating global population model.",
   appSubtitle:
     "Let's estimate how many people in the world share your selected traits.",
   languageLabel: "Language",

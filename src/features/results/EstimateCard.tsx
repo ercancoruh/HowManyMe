@@ -20,7 +20,7 @@ export function EstimateCard({ result }: EstimateCardProps) {
       <CardContent className="space-y-4">
         <div>
           <p className="text-sm text-muted-foreground">{t.estimatedPeople}</p>
-          <p className="font-mono text-3xl font-semibold tracking-tight tabular-nums">
+          <p className="font-mono text-2xl font-semibold tracking-tight break-words text-balance tabular-nums sm:text-3xl">
             <AnimatedNumber
               value={result.expectedCount}
               format={(n) => formatWholeNumber(n, language)}
@@ -29,7 +29,7 @@ export function EstimateCard({ result }: EstimateCardProps) {
         </div>
         <div className="text-sm text-muted-foreground">
           {t.rangeLabel}:{" "}
-          <span className="font-mono font-medium text-foreground tabular-nums">
+          <span className="font-mono font-medium break-words text-balance text-foreground tabular-nums">
             <AnimatedNumber
               value={result.lowCount}
               format={(n) => formatWholeNumber(n, language)}

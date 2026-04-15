@@ -53,7 +53,7 @@ export function SearchableSelect({
       <PopoverContent align="start" className="w-[var(--radix-popover-trigger-width)] p-1">
         <Command>
           <CommandInput placeholder={placeholder} />
-          <CommandList>
+          <CommandList className="max-h-[min(40dvh,18rem)] sm:max-h-72">
             <CommandEmpty>{emptyText}</CommandEmpty>
             <CommandGroup>
               {options.map((option) => (

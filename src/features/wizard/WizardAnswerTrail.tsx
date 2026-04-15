@@ -13,6 +13,8 @@ type WizardAnswerTrailProps = {
   language: Language
   t: Dictionary
   className?: string
+  /** When true, only the scrollable list area is rendered (e.g. inside a mobile details panel). */
+  hideHeader?: boolean
 }
 
 export function WizardAnswerTrail({
@@ -23,6 +25,7 @@ export function WizardAnswerTrail({
   language,
   t,
   className,
+  hideHeader = false,
 }: WizardAnswerTrailProps) {
   const reduced = useReducedMotion()
   const endExclusive = isComplete ? dataset.attributes.length : stepIndex
@@ -53,12 +56,14 @@ export function WizardAnswerTrail({
         className,
       )}
     >
-      <div className="shrink-0 border-b border-border/60 px-3 py-2">
-        <h2 className="font-heading text-sm font-semibold leading-tight tracking-tight">
-          {t.choicesSoFarTitle}
-        </h2>
-        <p className="line-clamp-2 text-xs text-muted-foreground">{t.progressPersistHint}</p>
-      </div>
+      {hideHeader ? null : (
+        <div className="shrink-0 border-b border-border/60 px-3 py-2">
+          <h2 className="font-heading text-sm font-semibold leading-tight tracking-tight">
+            {t.choicesSoFarTitle}
+          </h2>
+          <p className="line-clamp-2 text-xs text-muted-foreground">{t.progressPersistHint}</p>
+        </div>
+      )}
       <div className="min-h-0 flex-1 overflow-y-auto px-3 py-2">
         {rows.length === 0 ? (
           <p className="text-sm text-muted-foreground">{t.noAnswersYet}</p>
