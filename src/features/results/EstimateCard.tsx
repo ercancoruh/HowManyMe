@@ -12,7 +12,7 @@ export function EstimateCard({ result }: EstimateCardProps) {
   const { t, language } = useI18n()
 
   return (
-    <Card className="border-primary/20 from-primary/[0.07] overflow-hidden bg-gradient-to-br to-card shadow-md">
+    <Card className="border-primary/20 from-primary/[0.07] overflow-visible bg-gradient-to-br to-card shadow-md">
       <CardHeader>
         <CardTitle>{t.resultTitle}</CardTitle>
         <CardDescription>{t.resultDescription}</CardDescription>

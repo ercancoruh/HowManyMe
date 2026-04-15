@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from "motion/react"
 import type { PopulationDataset } from "@/data/schema"
 import type { UserAnswers } from "@/features/estimator/estimate"
 import type { Dictionary, Language } from "@/i18n/types"
+import { PANEL_FRAME_CLASS, PANEL_INNER_CLASS } from "@/features/wizard/panel-surface"
 import { cn } from "@/lib/utils"
 
 type WizardAnswerTrailProps = {
@@ -47,19 +48,15 @@ export function WizardAnswerTrail({
   const listKey = rows.map((r) => r.id).join("|")
 
   return (
-    <div
-      className={cn(
-        "flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-border/80 bg-card/95 text-card-foreground shadow-lg ring-1 ring-foreground/5 backdrop-blur-md dark:bg-card/90",
-        className,
-      )}
-    >
-      <div className="shrink-0 border-b border-border/60 px-3 py-2">
-        <h2 className="font-heading text-sm font-semibold leading-tight tracking-tight">
-          {t.choicesSoFarTitle}
-        </h2>
-        <p className="line-clamp-2 text-xs text-muted-foreground">{t.progressPersistHint}</p>
-      </div>
-      <div className="min-h-0 flex-1 overflow-y-auto px-3 py-2">
+    <div className={cn(PANEL_FRAME_CLASS, className)}>
+      <div className={PANEL_INNER_CLASS}>
+        <div className="shrink-0 border-b border-border/60 px-3 py-2">
+          <h2 className="font-heading text-sm font-semibold leading-tight tracking-tight">
+            {t.choicesSoFarTitle}
+          </h2>
+          <p className="line-clamp-2 text-xs text-muted-foreground">{t.progressPersistHint}</p>
+        </div>
+        <div className="min-h-0 flex-1 overflow-y-auto px-3 py-2">
         {rows.length === 0 ? (
           <p className="text-sm text-muted-foreground">{t.noAnswersYet}</p>
         ) : (
@@ -98,6 +95,7 @@ export function WizardAnswerTrail({
             ))}
           </motion.ul>
         )}
+        </div>
       </div>
     </div>
   )
