@@ -33,4 +33,8 @@ export const enDictionary: Dictionary = {
   noAnswerHint: "You can skip any step to avoid sharing sensitive details.",
   sourceLabel: "Source",
   yearLabel: "Data year",
+  choicesSoFarTitle: "Your answers so far",
+  skippedStepLabel: "Skipped",
+  progressPersistHint:
+    "Choices are saved in this browser tab. You can use the Back button or browser history to go back; refresh resumes where you left off.",
 }

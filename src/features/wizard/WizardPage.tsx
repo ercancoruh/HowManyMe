@@ -15,6 +15,7 @@ import { populationDataset } from "@/data"
 import { estimateHowManyLikeMe } from "@/features/estimator/estimate"
 import { EstimateCard } from "@/features/results/EstimateCard"
 import { useWizardState } from "@/features/wizard/hooks/useWizardState"
+import { WizardAnswerTrail } from "@/features/wizard/WizardAnswerTrail"
 import { useI18n } from "@/i18n/useI18n"
 
 export function WizardPage() {
@@ -26,6 +27,14 @@ export function WizardPage() {
   if (wizard.isComplete) {
     return (
       <div className="mx-auto w-full max-w-3xl space-y-4">
+        <WizardAnswerTrail
+          dataset={populationDataset}
+          answers={wizard.answers}
+          stepIndex={wizard.stepIndex}
+          isComplete={wizard.isComplete}
+          language={language}
+          t={t}
+        />
         <EstimateCard result={estimate} />
         <Card>
           <CardHeader>
@@ -39,9 +48,14 @@ export function WizardPage() {
                 {note}
               </p>
             ))}
-            <Button onClick={wizard.restart} className="w-full sm:w-auto">
-              {t.restartButton}
-            </Button>
+            <div className="flex flex-wrap gap-2">
+              <Button variant="outline" onClick={wizard.goBack}>
+                {t.backButton}
+              </Button>
+              <Button onClick={wizard.restart} className="w-full sm:w-auto">
+                {t.restartButton}
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </div>
@@ -50,6 +64,14 @@ export function WizardPage() {
 
   return (
     <div className="mx-auto w-full max-w-3xl space-y-4">
+      <WizardAnswerTrail
+        dataset={populationDataset}
+        answers={wizard.answers}
+        stepIndex={wizard.stepIndex}
+        isComplete={wizard.isComplete}
+        language={language}
+        t={t}
+      />
       <Card>
         <CardHeader className="space-y-3">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
@@ -115,11 +137,7 @@ export function WizardPage() {
           )}
           <Separator />
           <div className="flex flex-wrap items-center gap-2">
-            <Button
-              variant="outline"
-              onClick={wizard.goBack}
-              disabled={wizard.stepIndex === 0}
-            >
+            <Button variant="outline" onClick={wizard.goBack} disabled={wizard.stepIndex === 0}>
               {t.backButton}
             </Button>
             <Button

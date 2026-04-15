@@ -33,4 +33,8 @@ export const trDictionary: Dictionary = {
   noAnswerHint: "Hassas bilgiler için adımları atlayabilirsin.",
   sourceLabel: "Kaynak",
   yearLabel: "Veri yılı",
+  choicesSoFarTitle: "Şu ana kadar verdiğin yanıtlar",
+  skippedStepLabel: "Atlandı",
+  progressPersistHint:
+    "Seçimler bu sekmede kaydedilir. Geri tuşu veya tarayıcı geçmişi ile önceki adıma dönebilirsin; sayfayı yenilersen kaldığın yerden devam eder.",
 }
