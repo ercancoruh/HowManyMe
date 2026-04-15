@@ -92,7 +92,8 @@ function parseAttribute(raw: unknown, index: number): DatasetAttribute {
   if (!isObject(raw)) {
     throw new Error(`attributes[${index}] must be an object`)
   }
-  if (typeof raw.id !== "string") {
+  const attributeId = raw.id
+  if (typeof attributeId !== "string") {
     throw new Error(`attributes[${index}].id must be string`)
   }
   if (!isLanguageMap(raw.label)) {
@@ -103,11 +104,11 @@ function parseAttribute(raw: unknown, index: number): DatasetAttribute {
   }
 
   const values = raw.values.map((value, valueIndex) =>
-    parseValue(value, valueIndex, raw.id)
+    parseValue(value, valueIndex, attributeId)
   )
 
   return {
-    id: raw.id,
+    id: attributeId,
     label: raw.label,
     ui:
       raw.ui === "searchable_select" || raw.ui === "radio"

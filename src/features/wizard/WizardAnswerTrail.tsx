@@ -1,3 +1,5 @@
+import { motion, useReducedMotion } from "motion/react"
+
 import type { PopulationDataset } from "@/data/schema"
 import type { UserAnswers } from "@/features/estimator/estimate"
 import type { Dictionary, Language } from "@/i18n/types"
@@ -22,6 +24,7 @@ export function WizardAnswerTrail({
   t,
   className,
 }: WizardAnswerTrailProps) {
+  const reduced = useReducedMotion()
   const endExclusive = isComplete ? dataset.attributes.length : stepIndex
 
   const rows =
@@ -41,32 +44,59 @@ export function WizardAnswerTrail({
           }
         })
 
+  const listKey = rows.map((r) => r.id).join("|")
+
   return (
     <div
       className={cn(
-        "flex h-full min-h-0 flex-col rounded-xl border bg-card text-card-foreground shadow-sm",
+        "flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-border/80 bg-card/95 text-card-foreground shadow-lg ring-1 ring-foreground/5 backdrop-blur-md dark:bg-card/90",
         className,
       )}
     >
-      <div className="shrink-0 border-b px-3 py-2">
-        <h2 className="text-sm font-semibold leading-tight">{t.choicesSoFarTitle}</h2>
+      <div className="shrink-0 border-b border-border/60 px-3 py-2">
+        <h2 className="font-heading text-sm font-semibold leading-tight tracking-tight">
+          {t.choicesSoFarTitle}
+        </h2>
         <p className="line-clamp-2 text-xs text-muted-foreground">{t.progressPersistHint}</p>
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto px-3 py-2">
         {rows.length === 0 ? (
           <p className="text-sm text-muted-foreground">{t.noAnswersYet}</p>
         ) : (
-          <ul className="space-y-2">
+          <motion.ul
+            key={listKey}
+            className="space-y-2"
+            initial="hidden"
+            animate="show"
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: reduced ? 0 : 0.045,
+                  delayChildren: reduced ? 0 : 0.02,
+                },
+              },
+            }}
+          >
             {rows.map((row) => (
-              <li
+              <motion.li
                 key={row.id}
+                variants={{
+                  hidden: { opacity: 0, x: reduced ? 0 : -8, y: reduced ? 0 : 4 },
+                  show: {
+                    opacity: 1,
+                    x: 0,
+                    y: 0,
+                    transition: { type: "spring", stiffness: 420, damping: 28 },
+                  },
+                }}
                 className="border-b border-border/50 pb-2 text-sm last:border-0 last:pb-0"
               >
                 <div className="text-xs text-muted-foreground">{row.question}</div>
                 <div className="font-medium leading-snug">{row.answer}</div>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         )}
       </div>
     </div>

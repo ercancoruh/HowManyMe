@@ -42,7 +42,7 @@ export function SearchableSelect({
       <PopoverTrigger asChild>
         <Button
           variant="outline"
-          className="h-11 w-full justify-between rounded-xl px-3 text-left"
+          className="motion-safe-transition h-11 w-full justify-between rounded-xl px-3 text-left hover:border-primary/40 hover:shadow-md active:scale-[0.99] data-[state=open]:border-primary/45 data-[state=open]:shadow-md"
         >
           <span className={cn("truncate", !selected && "text-muted-foreground")}>
             {selected?.label ?? placeholder}
