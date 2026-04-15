@@ -7,9 +7,9 @@ export function App() {
   const { t } = useI18n()
 
   return (
-    <main className="min-h-svh bg-background px-4 py-6 sm:px-6">
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-6">
-        <header className="flex flex-col gap-4 rounded-xl border p-4 sm:flex-row sm:items-center sm:justify-between">
+    <main className="flex h-svh max-h-svh min-h-0 flex-col overflow-hidden bg-background px-4 py-6 sm:px-6">
+      <div className="mx-auto flex min-h-0 w-full max-w-7xl flex-1 flex-col gap-4 overflow-hidden">
+        <header className="shrink-0 flex flex-col gap-4 rounded-xl border p-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="text-2xl font-semibold">{t.appTitle}</h1>
             <p className="text-sm text-muted-foreground">{t.appSubtitle}</p>
@@ -19,10 +19,10 @@ export function App() {
             <ThemeToggle />
           </div>
         </header>
-        <div className="text-xs text-muted-foreground">
-          {t.noAnswerHint}
+        <div className="shrink-0 text-xs text-muted-foreground">{t.noAnswerHint}</div>
+        <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+          <WizardPage />
         </div>
-        <WizardPage />
       </div>
     </main>
   )

@@ -3,7 +3,7 @@ import type { Dictionary } from "@/i18n/types"
 export const enDictionary: Dictionary = {
   appTitle: "HowManyMe",
   appSubtitle:
-    "Estimate how many people in the world share your selected traits.",
+    "Let's estimate how many people in the world share your selected traits.",
   languageLabel: "Language",
   themeLabel: "Theme",
   themeLight: "Light",
@@ -37,4 +37,6 @@ export const enDictionary: Dictionary = {
   skippedStepLabel: "Skipped",
   progressPersistHint:
     "Choices are saved in this browser tab. You can use the Back button or browser history to go back; refresh resumes where you left off.",
+  noAnswersYet: "No answers yet — your selections will appear here.",
+  liveEstimateTitle: "Live estimate",
 }

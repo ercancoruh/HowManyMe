@@ -35,6 +35,8 @@ export type Dictionary = {
   choicesSoFarTitle: string
   skippedStepLabel: string
   progressPersistHint: string
+  noAnswersYet: string
+  liveEstimateTitle: string
 }
 
 export type TranslationMap = Record<Language, string>

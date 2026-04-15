@@ -1,24 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import type { EstimateResult } from "@/features/estimator/estimate"
+import { formatWholeNumber } from "@/features/results/formatCount"
 import { useI18n } from "@/i18n/useI18n"
-import type { Language } from "@/i18n/types"
 
 type EstimateCardProps = {
   result: EstimateResult
-}
-
-function formatWholeNumber(value: number, language: Language) {
-  if (value < 1) {
-    return "< 1"
-  }
-
-  const locale = language === "tr" ? "tr-TR" : "en-US"
-
-  return new Intl.NumberFormat(locale, {
-    maximumFractionDigits: 0,
-    minimumFractionDigits: 0,
-    useGrouping: true,
-  }).format(Math.round(value))
 }
 
 export function EstimateCard({ result }: EstimateCardProps) {

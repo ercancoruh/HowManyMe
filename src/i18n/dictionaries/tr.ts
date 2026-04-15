@@ -3,7 +3,7 @@ import type { Dictionary } from "@/i18n/types"
 export const trDictionary: Dictionary = {
   appTitle: "HowManyMe",
   appSubtitle:
-    "Seçtiğin özelliklere göre dünyada sana benzeyen kişi sayısını tahmin et.",
+    "Seçtiğin özelliklere göre dünyada sana benzeyen kişi sayısını tahmin edelim.",
   languageLabel: "Dil",
   themeLabel: "Tema",
   themeLight: "Açık",
@@ -37,4 +37,6 @@ export const trDictionary: Dictionary = {
   skippedStepLabel: "Atlandı",
   progressPersistHint:
     "Seçimler bu sekmede kaydedilir. Geri tuşu veya tarayıcı geçmişi ile önceki adıma dönebilirsin; sayfayı yenilersen kaldığın yerden devam eder.",
+  noAnswersYet: "Henüz yanıt yok — seçtiklerin burada listelenir.",
+  liveEstimateTitle: "Canlı tahmin",
 }
