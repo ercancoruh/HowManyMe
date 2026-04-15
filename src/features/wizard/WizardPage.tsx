@@ -1,5 +1,6 @@
 import { Info } from "@phosphor-icons/react"
 
+import { SearchableSelect } from "@/components/searchable-select"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
@@ -74,28 +75,44 @@ export function WizardPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-5">
-          <RadioGroup
-            value={currentAnswer}
-            onValueChange={(value) => {
-              wizard.selectValue(wizard.currentAttribute.id, value)
-              wizard.goNext()
-            }}
-          >
-            {wizard.currentAttribute.values.map((value) => (
-              <label
-                key={value.id}
-                className="flex cursor-pointer items-center gap-3 rounded-lg border p-3 hover:bg-muted/50"
-                onClick={() => {
-                  if (currentAnswer === value.id) {
-                    wizard.goNext()
-                  }
-                }}
-              >
-                <RadioGroupItem value={value.id} id={value.id} />
-                <span>{value.label[language]}</span>
-              </label>
-            ))}
-          </RadioGroup>
+          {wizard.currentAttribute.ui === "searchable_select" ? (
+            <SearchableSelect
+              value={currentAnswer}
+              placeholder={t.selectPrompt}
+              emptyText={t.noSearchResult}
+              options={wizard.currentAttribute.values.map((value) => ({
+                id: value.id,
+                label: value.label[language],
+              }))}
+              onSelect={(valueId) => {
+                wizard.selectValue(wizard.currentAttribute.id, valueId)
+                wizard.goNext()
+              }}
+            />
+          ) : (
+            <RadioGroup
+              value={currentAnswer}
+              onValueChange={(value) => {
+                wizard.selectValue(wizard.currentAttribute.id, value)
+                wizard.goNext()
+              }}
+            >
+              {wizard.currentAttribute.values.map((value) => (
+                <label
+                  key={value.id}
+                  className="flex cursor-pointer items-center gap-3 rounded-lg border p-3 hover:bg-muted/50"
+                  onClick={() => {
+                    if (currentAnswer === value.id) {
+                      wizard.goNext()
+                    }
+                  }}
+                >
+                  <RadioGroupItem value={value.id} id={value.id} />
+                  <span>{value.label[language]}</span>
+                </label>
+              ))}
+            </RadioGroup>
+          )}
           <Separator />
           <div className="flex flex-wrap items-center gap-2">
             <Button

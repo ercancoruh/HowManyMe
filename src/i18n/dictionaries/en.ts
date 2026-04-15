@@ -17,6 +17,7 @@ export const enDictionary: Dictionary = {
   finishButton: "See result",
   restartButton: "Start over",
   selectPrompt: "Choose one option",
+  noSearchResult: "No results found.",
   resultTitle: "Your estimate",
   resultDescription:
     "This value is computed from global frequencies and is not an exact count.",

@@ -10,6 +10,7 @@ export type DatasetValue = {
 export type DatasetAttribute = {
   id: string
   label: TranslationMap
+  ui?: "radio" | "searchable_select"
   description?: TranslationMap
   values: DatasetValue[]
   optional?: boolean
@@ -108,6 +109,10 @@ function parseAttribute(raw: unknown, index: number): DatasetAttribute {
   return {
     id: raw.id,
     label: raw.label,
+    ui:
+      raw.ui === "searchable_select" || raw.ui === "radio"
+        ? raw.ui
+        : "radio",
     description: isLanguageMap(raw.description) ? raw.description : undefined,
     values,
     optional: typeof raw.optional === "boolean" ? raw.optional : false,

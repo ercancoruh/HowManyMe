@@ -17,6 +17,7 @@ export const trDictionary: Dictionary = {
   finishButton: "Sonucu göster",
   restartButton: "Baştan başla",
   selectPrompt: "Bir seçenek seç",
+  noSearchResult: "Sonuç bulunamadı.",
   resultTitle: "Tahminin",
   resultDescription:
     "Bu değer global frekanslardan hesaplanır, kesin kişi sayısı değildir.",

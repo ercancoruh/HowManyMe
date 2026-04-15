@@ -18,6 +18,7 @@ export type Dictionary = {
   finishButton: string
   restartButton: string
   selectPrompt: string
+  noSearchResult: string
   resultTitle: string
   resultDescription: string
   estimatedPeople: string
