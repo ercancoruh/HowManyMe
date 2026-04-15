@@ -1,5 +1,13 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, useMemo, useState, type ReactNode } from "react"
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react"
 
 import { enDictionary } from "@/i18n/dictionaries/en"
 import { trDictionary } from "@/i18n/dictionaries/tr"
@@ -19,13 +27,48 @@ const dictionaries: Record<Language, Dictionary> = {
 const LanguageContext = createContext<LanguageProviderValue | undefined>(
   undefined
 )
+const LANGUAGE_STORAGE_KEY = "language"
+
+function isLanguage(value: string | null): value is Language {
+  return value === "en" || value === "tr"
+}
 
 type LanguageProviderProps = {
   children: ReactNode
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>("en")
+  const [language, setLanguageState] = useState<Language>(() => {
+    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY)
+    if (isLanguage(savedLanguage)) {
+      return savedLanguage
+    }
+    return "en"
+  })
+
+  const setLanguage = useCallback((nextLanguage: Language) => {
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLanguage)
+    setLanguageState(nextLanguage)
+  }, [])
+
+  useEffect(() => {
+    const handleStorageChange = (event: StorageEvent) => {
+      if (event.storageArea !== localStorage) {
+        return
+      }
+      if (event.key !== LANGUAGE_STORAGE_KEY) {
+        return
+      }
+      if (isLanguage(event.newValue)) {
+        setLanguageState(event.newValue)
+      }
+    }
+
+    window.addEventListener("storage", handleStorageChange)
+    return () => {
+      window.removeEventListener("storage", handleStorageChange)
+    }
+  }, [])
 
   const value = useMemo(
     () => ({
@@ -33,7 +76,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       setLanguage,
       dictionary: dictionaries[language],
     }),
-    [language]
+    [language, setLanguage]
   )
 
   return (

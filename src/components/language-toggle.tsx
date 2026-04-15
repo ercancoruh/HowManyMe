@@ -10,7 +10,7 @@ import type { Language } from "@/i18n/types"
 
 const languageLabels: Record<Language, string> = {
   en: "English",
-  tr: "Turkce",
+  tr: "Türkçe",
 }
 
 export function LanguageToggle() {

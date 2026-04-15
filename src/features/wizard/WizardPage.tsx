@@ -25,7 +25,7 @@ export function WizardPage() {
   if (wizard.isComplete) {
     return (
       <div className="mx-auto w-full max-w-3xl space-y-4">
-        <EstimateCard result={estimate} dataset={populationDataset} />
+        <EstimateCard result={estimate} />
         <Card>
           <CardHeader>
             <CardTitle>{t.assumptionsTitle}</CardTitle>
@@ -76,14 +76,20 @@ export function WizardPage() {
         <CardContent className="space-y-5">
           <RadioGroup
             value={currentAnswer}
-            onValueChange={(value) =>
+            onValueChange={(value) => {
               wizard.selectValue(wizard.currentAttribute.id, value)
-            }
+              wizard.goNext()
+            }}
           >
             {wizard.currentAttribute.values.map((value) => (
               <label
                 key={value.id}
                 className="flex cursor-pointer items-center gap-3 rounded-lg border p-3 hover:bg-muted/50"
+                onClick={() => {
+                  if (currentAnswer === value.id) {
+                    wizard.goNext()
+                  }
+                }}
               >
                 <RadioGroupItem value={value.id} id={value.id} />
                 <span>{value.label[language]}</span>
@@ -100,22 +106,13 @@ export function WizardPage() {
               {t.backButton}
             </Button>
             <Button
-              variant="secondary"
+              variant="default"
               onClick={() => {
                 wizard.skipCurrent()
                 wizard.goNext()
               }}
             >
               {t.skipButton}
-            </Button>
-            <Button
-              className="ml-auto"
-              onClick={wizard.goNext}
-              disabled={!currentAnswer}
-            >
-              {wizard.stepIndex === wizard.totalSteps - 1
-                ? t.finishButton
-                : t.nextButton}
             </Button>
           </div>
         </CardContent>

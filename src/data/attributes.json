@@ -118,6 +118,64 @@
         { "id": "170_184", "label": { "en": "170-184 cm", "tr": "170-184 cm" }, "p": 0.31 },
         { "id": "185_plus", "label": { "en": "185+ cm", "tr": "185+ cm" }, "p": 0.12 }
       ]
+    },
+    {
+      "id": "education_level",
+      "label": { "en": "Education level", "tr": "Eğitim düzeyi" },
+      "description": {
+        "en": "Choose your highest completed education level.",
+        "tr": "Tamamladığın en yüksek eğitim düzeyini seç."
+      },
+      "source": "UNESCO and World Bank aggregated education statistics",
+      "year": 2023,
+      "optional": true,
+      "values": [
+        {
+          "id": "primary_or_less",
+          "label": { "en": "Primary or less", "tr": "İlköğretim ve altı" },
+          "p": 0.31
+        },
+        {
+          "id": "secondary",
+          "label": { "en": "Secondary", "tr": "Ortaöğretim" },
+          "p": 0.39
+        },
+        {
+          "id": "tertiary",
+          "label": { "en": "Tertiary", "tr": "Yükseköğretim" },
+          "p": 0.3
+        }
+      ]
+    },
+    {
+      "id": "marital_status",
+      "label": { "en": "Marital status", "tr": "Medeni durum" },
+      "source": "UN demographic indicators",
+      "year": 2022,
+      "optional": true,
+      "values": [
+        { "id": "never_married", "label": { "en": "Never married", "tr": "Hiç evlenmemiş" }, "p": 0.38 },
+        { "id": "married", "label": { "en": "Married", "tr": "Evli" }, "p": 0.48 },
+        { "id": "separated_divorced", "label": { "en": "Separated/Divorced", "tr": "Ayrı/Boşanmış" }, "p": 0.1 },
+        { "id": "widowed", "label": { "en": "Widowed", "tr": "Dul" }, "p": 0.04 }
+      ]
+    },
+    {
+      "id": "smoker_status",
+      "label": { "en": "Smoking status", "tr": "Sigara kullanımı" },
+      "description": {
+        "en": "Self-reported smoking habit.",
+        "tr": "Kişinin beyanına dayalı sigara alışkanlığı."
+      },
+      "source": "WHO tobacco prevalence reports",
+      "year": 2023,
+      "optional": true,
+      "sensitive": true,
+      "values": [
+        { "id": "current_smoker", "label": { "en": "Current smoker", "tr": "Aktif içici" }, "p": 0.22 },
+        { "id": "former_smoker", "label": { "en": "Former smoker", "tr": "Eski içici" }, "p": 0.13 },
+        { "id": "never_smoked", "label": { "en": "Never smoked", "tr": "Hiç içmemiş" }, "p": 0.65 }
+      ]
     }
   ]
 }
