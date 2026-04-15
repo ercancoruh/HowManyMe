@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Separator } from "@/components/ui/separator"
 import { populationDataset } from "@/data"
 import { formatEstimateNote } from "@/features/estimator/estimate-notes"
 import { estimateHowManyLikeMe } from "@/features/estimator/estimate"
@@ -191,19 +190,21 @@ export function WizardPage() {
               </AnimatePresence>
             </div>
             <div className="bg-card/80 shrink-0 border-t border-border/60 px-4 py-3 backdrop-blur-sm">
-              <Separator className="mb-3 lg:hidden" />
               <div className="flex flex-wrap items-center gap-2">
                 <Button variant="outline" onClick={wizard.goBack} disabled={wizard.stepIndex === 0}>
                   {t.backButton}
                 </Button>
                 <Button
-                  variant="default"
+                  variant="outline"
                   onClick={() => {
                     wizard.skipCurrent()
                     wizard.goNext()
                   }}
                 >
                   {t.skipButton}
+                </Button>
+                <Button variant="default" onClick={wizard.restart}>
+                  {t.restartButton}
                 </Button>
               </div>
             </div>
