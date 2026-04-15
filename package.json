@@ -3,6 +3,14 @@
   "private": true,
   "version": "0.0.1",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ercancoruh/HowManyMe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ercancoruh/HowManyMe/issues"
+  },
+  "homepage": "https://github.com/ercancoruh/HowManyMe#readme",
   "type": "module",
   "scripts": {
     "dev": "vite",

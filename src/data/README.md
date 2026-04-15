@@ -28,6 +28,10 @@ When updating data:
 3. Keep source and year metadata current.
 4. Validate by running `npm run typecheck` and `npm run test`.
 
+## Licensing and attribution (upstream data)
+
+World Bank and Our World in Data materials are processed under their respective terms. See the repository root [NOTICE.md](../../NOTICE.md) for links to official terms and citation guidance.
+
 ## Rebuilding from sources
 
 Committed inputs live under `src/data/sources/` (see `sources.lock.json` for URLs and SHA-256 checksums).

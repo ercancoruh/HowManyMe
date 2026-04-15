@@ -26,6 +26,10 @@ The app also shows a likely range and confidence tier.
 - Validation schema: `src/data/schema.ts`
 - Data notes: `src/data/README.md`
 
+### Data licensing and attribution
+
+Processed inputs include World Bank WDI population figures and Our World in Data exports. Redistribution and citation expectations for those sources are summarized in [NOTICE.md](NOTICE.md) (with links to each provider’s terms).
+
 ## Development
 
 ```bash
@@ -43,4 +47,4 @@ npm run test
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Dataset sources are documented in [src/data/README.md](src/data/README.md).
+MIT — see [LICENSE](LICENSE). Third-party data terms and attribution are in [NOTICE.md](NOTICE.md); dataset sources are documented in [src/data/README.md](src/data/README.md).
