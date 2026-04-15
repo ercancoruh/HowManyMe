@@ -6,16 +6,16 @@
   "attributes": [
     {
       "id": "age_band",
-      "label": { "en": "Age range", "tr": "Yas araligi" },
+      "label": { "en": "Age range", "tr": "Yaş aralığı" },
       "description": {
         "en": "Choose your current age interval.",
-        "tr": "Mevcut yas araligini sec."
+        "tr": "Mevcut yaş aralığını seç."
       },
       "source": "UN World Population Prospects",
       "year": 2024,
       "optional": false,
       "values": [
-        { "id": "under_18", "label": { "en": "Under 18", "tr": "18 alti" }, "p": 0.3 },
+        { "id": "under_18", "label": { "en": "Under 18", "tr": "18 altı" }, "p": 0.3 },
         { "id": "18_29", "label": { "en": "18-29", "tr": "18-29" }, "p": 0.2 },
         { "id": "30_44", "label": { "en": "30-44", "tr": "30-44" }, "p": 0.21 },
         { "id": "45_59", "label": { "en": "45-59", "tr": "45-59" }, "p": 0.17 },
@@ -29,13 +29,13 @@
       "year": 2024,
       "optional": true,
       "values": [
-        { "id": "female", "label": { "en": "Female", "tr": "Kadin" }, "p": 0.496 },
+        { "id": "female", "label": { "en": "Female", "tr": "Kadın" }, "p": 0.496 },
         { "id": "male", "label": { "en": "Male", "tr": "Erkek" }, "p": 0.504 }
       ]
     },
     {
       "id": "region",
-      "label": { "en": "World region", "tr": "Dunya bolgesi" },
+      "label": { "en": "World region", "tr": "Dünya bölgesi" },
       "source": "UN geoscheme",
       "year": 2024,
       "optional": false,
@@ -69,18 +69,18 @@
     },
     {
       "id": "handedness",
-      "label": { "en": "Handedness", "tr": "Baskin el" },
+      "label": { "en": "Handedness", "tr": "Baskın el" },
       "source": "Global handedness studies",
       "year": 2021,
       "optional": true,
       "values": [
-        { "id": "right", "label": { "en": "Right-handed", "tr": "Saglak" }, "p": 0.9 },
+        { "id": "right", "label": { "en": "Right-handed", "tr": "Sağlak" }, "p": 0.9 },
         { "id": "left", "label": { "en": "Left-handed", "tr": "Solak" }, "p": 0.1 }
       ]
     },
     {
       "id": "eye_color",
-      "label": { "en": "Eye color", "tr": "Goz rengi" },
+      "label": { "en": "Eye color", "tr": "Göz rengi" },
       "source": "Aggregated anthropology datasets",
       "year": 2020,
       "optional": true,
@@ -88,32 +88,32 @@
         { "id": "brown", "label": { "en": "Brown", "tr": "Kahverengi" }, "p": 0.79 },
         { "id": "blue", "label": { "en": "Blue", "tr": "Mavi" }, "p": 0.1 },
         { "id": "hazel", "label": { "en": "Hazel", "tr": "Ela" }, "p": 0.05 },
-        { "id": "green", "label": { "en": "Green", "tr": "Yesil" }, "p": 0.02 },
-        { "id": "other", "label": { "en": "Other", "tr": "Diger" }, "p": 0.04 }
+        { "id": "green", "label": { "en": "Green", "tr": "Yeşil" }, "p": 0.02 },
+        { "id": "other", "label": { "en": "Other", "tr": "Diğer" }, "p": 0.04 }
       ]
     },
     {
       "id": "hair_color",
-      "label": { "en": "Hair color", "tr": "Sac rengi" },
+      "label": { "en": "Hair color", "tr": "Saç rengi" },
       "source": "Global demographic compilations",
       "year": 2020,
       "optional": true,
       "values": [
         { "id": "black", "label": { "en": "Black", "tr": "Siyah" }, "p": 0.72 },
         { "id": "brown", "label": { "en": "Brown", "tr": "Kahverengi" }, "p": 0.17 },
-        { "id": "blonde", "label": { "en": "Blonde", "tr": "Sari" }, "p": 0.05 },
-        { "id": "red", "label": { "en": "Red", "tr": "Kizil" }, "p": 0.02 },
+        { "id": "blonde", "label": { "en": "Blonde", "tr": "Sarı" }, "p": 0.05 },
+        { "id": "red", "label": { "en": "Red", "tr": "Kızıl" }, "p": 0.02 },
         { "id": "gray_white", "label": { "en": "Gray/White", "tr": "Beyaz/Gri" }, "p": 0.04 }
       ]
     },
     {
       "id": "height_band",
-      "label": { "en": "Height range", "tr": "Boy araligi" },
+      "label": { "en": "Height range", "tr": "Boy aralığı" },
       "source": "Global health statistics",
       "year": 2023,
       "optional": true,
       "values": [
-        { "id": "under_155", "label": { "en": "Under 155 cm", "tr": "155 cm alti" }, "p": 0.2 },
+        { "id": "under_155", "label": { "en": "Under 155 cm", "tr": "155 cm altı" }, "p": 0.2 },
         { "id": "155_169", "label": { "en": "155-169 cm", "tr": "155-169 cm" }, "p": 0.37 },
         { "id": "170_184", "label": { "en": "170-184 cm", "tr": "170-184 cm" }, "p": 0.31 },
         { "id": "185_plus", "label": { "en": "185+ cm", "tr": "185+ cm" }, "p": 0.12 }
