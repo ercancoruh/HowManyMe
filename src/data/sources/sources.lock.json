@@ -49,11 +49,6 @@
       "topic": "mobile_os",
       "citation": "StatCounter GlobalStats mobile OS share (device-weighted, not persons).",
       "url": "https://gs.statcounter.com/os-market-share/mobile/worldwide"
-    },
-    {
-      "topic": "payments",
-      "citation": "World Bank Global Findex (account / digital payment use; mapped loosely to stated habits).",
-      "url": "https://www.worldbank.org/en/publication/globalfindex"
     }
   ]
 }

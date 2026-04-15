@@ -12,364 +12,124 @@
       },
       "ui": "searchable_select",
       "description": {
-        "en": "Choose your current age interval.",
-        "tr": "Mevcut yaş aralığını seç."
+        "en": "Choose the 5-year age bracket that includes your current age.",
+        "tr": "Yaşının dahil olduğu 5 yıllık aralığı seç."
       },
-      "source": "Derived from Our World in Data broad age groups (World, 2023; UN WPP-based), uniform within each band",
+      "source": "Derived from Our World in Data broad age groups (World, 2023; UN WPP–based), split into 5-year bands with uniform distribution within each UN broad group",
       "year": 2023,
       "optional": false,
       "values": [
         {
-          "id": "under_18",
+          "id": "age_0_4",
           "label": {
-            "en": "Under 18",
-            "tr": "18 altı"
+            "en": "0–4",
+            "tr": "0–4 yaş"
           },
-          "p": 0.2968784638227511
+          "p": 0.08083220305865992
         },
         {
-          "id": "age_18",
+          "id": "age_5_9",
           "label": {
-            "en": "18",
-            "tr": "18"
+            "en": "5–9",
+            "tr": "5–9 yaş"
           },
-          "p": 0.015552557540148391
+          "p": 0.08469429407182316
         },
         {
-          "id": "age_19",
+          "id": "age_10_14",
           "label": {
-            "en": "19",
-            "tr": "19"
+            "en": "10–14",
+            "tr": "10–14 yaş"
           },
-          "p": 0.015552557540148391
+          "p": 0.08469429407182316
         },
         {
-          "id": "age_20",
+          "id": "age_15_19",
           "label": {
-            "en": "20",
-            "tr": "20"
+            "en": "15–19",
+            "tr": "15–19 yaş"
           },
-          "p": 0.015552557540148391
+          "p": 0.07776278770074205
         },
         {
-          "id": "age_21",
+          "id": "age_20_24",
           "label": {
-            "en": "21",
-            "tr": "21"
+            "en": "20–24",
+            "tr": "20–24 yaş"
           },
-          "p": 0.015552557540148391
+          "p": 0.07776278770074205
         },
         {
-          "id": "age_22",
+          "id": "age_25_29",
           "label": {
-            "en": "22",
-            "tr": "22"
+            "en": "25–29",
+            "tr": "25–29 yaş"
           },
-          "p": 0.015552557540148391
+          "p": 0.06179332491031677
         },
         {
-          "id": "age_23",
+          "id": "age_30_34",
           "label": {
-            "en": "23",
-            "tr": "23"
+            "en": "30–34",
+            "tr": "30–34 yaş"
           },
-          "p": 0.015552557540148391
+          "p": 0.06179332491031677
         },
         {
-          "id": "age_24",
+          "id": "age_35_39",
           "label": {
-            "en": "24",
-            "tr": "24"
+            "en": "35–39",
+            "tr": "35–39 yaş"
           },
-          "p": 0.015552557540148391
+          "p": 0.06179332491031677
         },
         {
-          "id": "age_25",
+          "id": "age_40_44",
           "label": {
-            "en": "25",
-            "tr": "25"
+            "en": "40–44",
+            "tr": "40–44 yaş"
           },
-          "p": 0.012358664982063342
+          "p": 0.06179332491031677
         },
         {
-          "id": "age_26",
+          "id": "age_45_49",
           "label": {
-            "en": "26",
-            "tr": "26"
+            "en": "45–49",
+            "tr": "45–49 yaş"
           },
-          "p": 0.012358664982063342
+          "p": 0.06179332491031677
         },
         {
-          "id": "age_27",
+          "id": "age_50_54",
           "label": {
-            "en": "27",
-            "tr": "27"
+            "en": "50–54",
+            "tr": "50–54 yaş"
           },
-          "p": 0.012358664982063342
+          "p": 0.06179332491031677
         },
         {
-          "id": "age_28",
+          "id": "age_55_59",
           "label": {
-            "en": "28",
-            "tr": "28"
+            "en": "55–59",
+            "tr": "55–59 yaş"
           },
-          "p": 0.012358664982063342
+          "p": 0.06179332491031677
         },
         {
-          "id": "age_29",
+          "id": "age_60_64",
           "label": {
-            "en": "29",
-            "tr": "29"
+            "en": "60–64",
+            "tr": "60–64 yaş"
           },
-          "p": 0.012358664982063342
+          "p": 0.06179332491031677
         },
         {
-          "id": "age_30",
+          "id": "age_65_plus",
           "label": {
-            "en": "30",
-            "tr": "30"
+            "en": "65+",
+            "tr": "65 ve üzeri"
           },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_31",
-          "label": {
-            "en": "31",
-            "tr": "31"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_32",
-          "label": {
-            "en": "32",
-            "tr": "32"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_33",
-          "label": {
-            "en": "33",
-            "tr": "33"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_34",
-          "label": {
-            "en": "34",
-            "tr": "34"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_35",
-          "label": {
-            "en": "35",
-            "tr": "35"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_36",
-          "label": {
-            "en": "36",
-            "tr": "36"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_37",
-          "label": {
-            "en": "37",
-            "tr": "37"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_38",
-          "label": {
-            "en": "38",
-            "tr": "38"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_39",
-          "label": {
-            "en": "39",
-            "tr": "39"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_40",
-          "label": {
-            "en": "40",
-            "tr": "40"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_41",
-          "label": {
-            "en": "41",
-            "tr": "41"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_42",
-          "label": {
-            "en": "42",
-            "tr": "42"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_43",
-          "label": {
-            "en": "43",
-            "tr": "43"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_44",
-          "label": {
-            "en": "44",
-            "tr": "44"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_45",
-          "label": {
-            "en": "45",
-            "tr": "45"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_46",
-          "label": {
-            "en": "46",
-            "tr": "46"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_47",
-          "label": {
-            "en": "47",
-            "tr": "47"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_48",
-          "label": {
-            "en": "48",
-            "tr": "48"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_49",
-          "label": {
-            "en": "49",
-            "tr": "49"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_50",
-          "label": {
-            "en": "50",
-            "tr": "50"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_51",
-          "label": {
-            "en": "51",
-            "tr": "51"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_52",
-          "label": {
-            "en": "52",
-            "tr": "52"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_53",
-          "label": {
-            "en": "53",
-            "tr": "53"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_54",
-          "label": {
-            "en": "54",
-            "tr": "54"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_55",
-          "label": {
-            "en": "55",
-            "tr": "55"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_56",
-          "label": {
-            "en": "56",
-            "tr": "56"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_57",
-          "label": {
-            "en": "57",
-            "tr": "57"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_58",
-          "label": {
-            "en": "58",
-            "tr": "58"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_59",
-          "label": {
-            "en": "59",
-            "tr": "59"
-          },
-          "p": 0.012358664982063342
-        },
-        {
-          "id": "age_60_plus",
-          "label": {
-            "en": "60+",
-            "tr": "60+"
-          },
-          "p": 0.16170035902399224
+          "p": 0.09990703411367563
         }
       ]
     },
@@ -2065,34 +1825,6 @@
       ]
     },
     {
-      "id": "handedness",
-      "label": {
-        "en": "Handedness",
-        "tr": "Baskın el"
-      },
-      "source": "Papadatou-Pastou et al., meta-analysis of handedness prevalence",
-      "year": 2020,
-      "optional": true,
-      "values": [
-        {
-          "id": "right",
-          "label": {
-            "en": "Right-handed",
-            "tr": "Sağlak"
-          },
-          "p": 0.893
-        },
-        {
-          "id": "left",
-          "label": {
-            "en": "Left-handed",
-            "tr": "Solak"
-          },
-          "p": 0.107
-        }
-      ]
-    },
-    {
       "id": "eye_color",
       "label": {
         "en": "Eye color",
@@ -2243,7 +1975,7 @@
         "tr": "Boy aralığı"
       },
       "ui": "searchable_select",
-      "source": "Global Gaussian cm prior (mean ~165 cm, sd ~11.3; NCD-RisC-informed level, not age-sex conditional)",
+      "source": "Global Gaussian cm prior in 5 cm bands (mean ~165 cm, sd ~11.3; NCD-RisC-informed level, not age- or sex-conditioned)",
       "year": 2024,
       "optional": true,
       "values": [
@@ -2253,665 +1985,149 @@
             "en": "Under 120 cm",
             "tr": "120 cm altı"
           },
-          "p": 0.00004926551969543919
+          "p": 0.000034129959369633145
         },
         {
-          "id": "height_120",
+          "id": "height_120_124",
           "label": {
-            "en": "120 cm",
-            "tr": "120 cm"
+            "en": "120–124 cm",
+            "tr": "120–124 cm"
           },
-          "p": 0.00001513607691949632
+          "p": 0.0001645768162983896
         },
         {
-          "id": "height_121",
+          "id": "height_125_129",
           "label": {
-            "en": "121 cm",
-            "tr": "121 cm"
+            "en": "125–129 cm",
+            "tr": "125–129 cm"
           },
-          "p": 0.000021325896270239496
+          "p": 0.0007646559174332435
         },
         {
-          "id": "height_122",
+          "id": "height_130_134",
           "label": {
-            "en": "122 cm",
-            "tr": "122 cm"
+            "en": "130–134 cm",
+            "tr": "130–134 cm"
           },
-          "p": 0.000029814969280569046
+          "p": 0.002934525073928773
         },
         {
-          "id": "height_123",
+          "id": "height_135_139",
           "label": {
-            "en": "123 cm",
-            "tr": "123 cm"
+            "en": "135–139 cm",
+            "tr": "135–139 cm"
           },
-          "p": 0.00004136132461466926
+          "p": 0.009302483115570748
         },
         {
-          "id": "height_124",
+          "id": "height_140_144",
           "label": {
-            "en": "124 cm",
-            "tr": "124 cm"
+            "en": "140–144 cm",
+            "tr": "140–144 cm"
           },
-          "p": 0.00005693605816606485
+          "p": 0.024359194684948793
         },
         {
-          "id": "height_125",
+          "id": "height_145_149",
           "label": {
-            "en": "125 cm",
-            "tr": "125 cm"
+            "en": "145–149 cm",
+            "tr": "145–149 cm"
           },
-          "p": 0.00007777018301100196
+          "p": 0.05269213804171885
         },
         {
-          "id": "height_126",
+          "id": "height_150_154",
           "label": {
-            "en": "126 cm",
-            "tr": "126 cm"
+            "en": "150–154 cm",
+            "tr": "150–154 cm"
           },
-          "p": 0.00010540749425685059
+          "p": 0.09416025565759267
         },
         {
-          "id": "height_127",
+          "id": "height_155_159",
           "label": {
-            "en": "127 cm",
-            "tr": "127 cm"
+            "en": "155–159 cm",
+            "tr": "155–159 cm"
           },
-          "p": 0.00014176283031384576
+          "p": 0.13901048046177167
         },
         {
-          "id": "height_128",
+          "id": "height_160_164",
           "label": {
-            "en": "128 cm",
-            "tr": "128 cm"
+            "en": "160–164 cm",
+            "tr": "160–164 cm"
           },
-          "p": 0.0001891845424935996
+          "p": 0.16954806738267686
         },
         {
-          "id": "height_129",
+          "id": "height_165_169",
           "label": {
-            "en": "129 cm",
-            "tr": "129 cm"
+            "en": "165–169 cm",
+            "tr": "165–169 cm"
           },
-          "p": 0.0002505192934671624
+          "p": 0.1708480745671357
         },
         {
-          "id": "height_130",
+          "id": "height_170_174",
           "label": {
-            "en": "130 cm",
-            "tr": "130 cm"
+            "en": "170–174 cm",
+            "tr": "170–174 cm"
           },
-          "p": 0.00032917650418660873
+          "p": 0.14223259776374575
         },
         {
-          "id": "height_131",
+          "id": "height_175_179",
           "label": {
-            "en": "131 cm",
-            "tr": "131 cm"
+            "en": "175–179 cm",
+            "tr": "175–179 cm"
           },
-          "p": 0.00042918888467852526
+          "p": 0.09782595358681268
         },
         {
-          "id": "height_132",
+          "id": "height_180_184",
           "label": {
-            "en": "132 cm",
-            "tr": "132 cm"
+            "en": "180–184 cm",
+            "tr": "180–184 cm"
           },
-          "p": 0.0005552645593792203
+          "p": 0.055586361247823235
         },
         {
-          "id": "height_133",
+          "id": "height_185_189",
           "label": {
-            "en": "133 cm",
-            "tr": "133 cm"
+            "en": "185–189 cm",
+            "tr": "185–189 cm"
           },
-          "p": 0.0007128253929042076
+          "p": 0.026092940529423236
         },
         {
-          "id": "height_134",
+          "id": "height_190_194",
           "label": {
-            "en": "134 cm",
-            "tr": "134 cm"
+            "en": "190–194 cm",
+            "tr": "190–194 cm"
           },
-          "p": 0.0009080253155829704
+          "p": 0.010118080186555911
         },
         {
-          "id": "height_135",
+          "id": "height_195_199",
           "label": {
-            "en": "135 cm",
-            "tr": "135 cm"
+            "en": "195–199 cm",
+            "tr": "195–199 cm"
           },
-          "p": 0.0011477418337260401
-        },
-        {
-          "id": "height_136",
-          "label": {
-            "en": "136 cm",
-            "tr": "136 cm"
-          },
-          "p": 0.0014395335929687665
-        },
-        {
-          "id": "height_137",
-          "label": {
-            "en": "137 cm",
-            "tr": "137 cm"
-          },
-          "p": 0.0017915569544311092
-        },
-        {
-          "id": "height_138",
-          "label": {
-            "en": "138 cm",
-            "tr": "138 cm"
-          },
-          "p": 0.0022124351487659505
-        },
-        {
-          "id": "height_139",
-          "label": {
-            "en": "139 cm",
-            "tr": "139 cm"
-          },
-          "p": 0.0027110747825789027
-        },
-        {
-          "id": "height_140",
-          "label": {
-            "en": "140 cm",
-            "tr": "140 cm"
-          },
-          "p": 0.0032964263468384975
-        },
-        {
-          "id": "height_141",
-          "label": {
-            "en": "141 cm",
-            "tr": "141 cm"
-          },
-          "p": 0.003977187937713477
-        },
-        {
-          "id": "height_142",
-          "label": {
-            "en": "142 cm",
-            "tr": "142 cm"
-          },
-          "p": 0.004761454612825785
-        },
-        {
-          "id": "height_143",
-          "label": {
-            "en": "143 cm",
-            "tr": "143 cm"
-          },
-          "p": 0.005656319572735322
-        },
-        {
-          "id": "height_144",
-          "label": {
-            "en": "144 cm",
-            "tr": "144 cm"
-          },
-          "p": 0.006667437512191267
-        },
-        {
-          "id": "height_145",
-          "label": {
-            "en": "145 cm",
-            "tr": "145 cm"
-          },
-          "p": 0.007798564793463592
-        },
-        {
-          "id": "height_146",
-          "label": {
-            "en": "146 cm",
-            "tr": "146 cm"
-          },
-          "p": 0.009051095259086907
-        },
-        {
-          "id": "height_147",
-          "label": {
-            "en": "147 cm",
-            "tr": "147 cm"
-          },
-          "p": 0.0104236141820506
-        },
-        {
-          "id": "height_148",
-          "label": {
-            "en": "148 cm",
-            "tr": "148 cm"
-          },
-          "p": 0.01191149568332268
-        },
-        {
-          "id": "height_149",
-          "label": {
-            "en": "149 cm",
-            "tr": "149 cm"
-          },
-          "p": 0.013506570571540625
-        },
-        {
-          "id": "height_150",
-          "label": {
-            "en": "150 cm",
-            "tr": "150 cm"
-          },
-          "p": 0.015196891660060649
-        },
-        {
-          "id": "height_151",
-          "label": {
-            "en": "151 cm",
-            "tr": "151 cm"
-          },
-          "p": 0.01696662195075286
-        },
-        {
-          "id": "height_152",
-          "label": {
-            "en": "152 cm",
-            "tr": "152 cm"
-          },
-          "p": 0.01879606751027505
-        },
-        {
-          "id": "height_153",
-          "label": {
-            "en": "153 cm",
-            "tr": "153 cm"
-          },
-          "p": 0.02066187140925527
-        },
-        {
-          "id": "height_154",
-          "label": {
-            "en": "154 cm",
-            "tr": "154 cm"
-          },
-          "p": 0.022537377910376463
-        },
-        {
-          "id": "height_155",
-          "label": {
-            "en": "155 cm",
-            "tr": "155 cm"
-          },
-          "p": 0.024393167501942512
-        },
-        {
-          "id": "height_156",
-          "label": {
-            "en": "156 cm",
-            "tr": "156 cm"
-          },
-          "p": 0.02619775385526853
-        },
-        {
-          "id": "height_157",
-          "label": {
-            "en": "157 cm",
-            "tr": "157 cm"
-          },
-          "p": 0.027918423939406013
-        },
-        {
-          "id": "height_158",
-          "label": {
-            "en": "158 cm",
-            "tr": "158 cm"
-          },
-          "p": 0.029522193042879175
-        },
-        {
-          "id": "height_159",
-          "label": {
-            "en": "159 cm",
-            "tr": "159 cm"
-          },
-          "p": 0.03097683804895057
-        },
-        {
-          "id": "height_160",
-          "label": {
-            "en": "160 cm",
-            "tr": "160 cm"
-          },
-          "p": 0.03225196567922166
-        },
-        {
-          "id": "height_161",
-          "label": {
-            "en": "161 cm",
-            "tr": "161 cm"
-          },
-          "p": 0.03332006815861945
-        },
-        {
-          "id": "height_162",
-          "label": {
-            "en": "162 cm",
-            "tr": "162 cm"
-          },
-          "p": 0.034157517310356766
-        },
-        {
-          "id": "height_163",
-          "label": {
-            "en": "163 cm",
-            "tr": "163 cm"
-          },
-          "p": 0.03474544971018083
-        },
-        {
-          "id": "height_164",
-          "label": {
-            "en": "164 cm",
-            "tr": "164 cm"
-          },
-          "p": 0.03507050023170872
-        },
-        {
-          "id": "height_165",
-          "label": {
-            "en": "165 cm",
-            "tr": "165 cm"
-          },
-          "p": 0.035125044303466364
-        },
-        {
-          "id": "height_166",
-          "label": {
-            "en": "166 cm",
-            "tr": "166 cm"
-          },
-          "p": 0.03490756570669457
-        },
-        {
-          "id": "height_167",
-          "label": {
-            "en": "167 cm",
-            "tr": "167 cm"
-          },
-          "p": 0.03442351070700484
-        },
-        {
-          "id": "height_168",
-          "label": {
-            "en": "168 cm",
-            "tr": "168 cm"
-          },
-          "p": 0.03368389798277983
-        },
-        {
-          "id": "height_169",
-          "label": {
-            "en": "169 cm",
-            "tr": "169 cm"
-          },
-          "p": 0.032705469897591904
-        },
-        {
-          "id": "height_170",
-          "label": {
-            "en": "170 cm",
-            "tr": "170 cm"
-          },
-          "p": 0.031510047342619384
-        },
-        {
-          "id": "height_171",
-          "label": {
-            "en": "171 cm",
-            "tr": "171 cm"
-          },
-          "p": 0.030123700468973932
-        },
-        {
-          "id": "height_172",
-          "label": {
-            "en": "172 cm",
-            "tr": "172 cm"
-          },
-          "p": 0.028575792680146258
-        },
-        {
-          "id": "height_173",
-          "label": {
-            "en": "173 cm",
-            "tr": "173 cm"
-          },
-          "p": 0.02689794373686133
-        },
-        {
-          "id": "height_174",
-          "label": {
-            "en": "174 cm",
-            "tr": "174 cm"
-          },
-          "p": 0.025122960691604652
-        },
-        {
-          "id": "height_175",
-          "label": {
-            "en": "175 cm",
-            "tr": "175 cm"
-          },
-          "p": 0.023283785134416802
-        },
-        {
-          "id": "height_176",
-          "label": {
-            "en": "176 cm",
-            "tr": "176 cm"
-          },
-          "p": 0.02141250205326525
-        },
-        {
-          "id": "height_177",
-          "label": {
-            "en": "177 cm",
-            "tr": "177 cm"
-          },
-          "p": 0.019539449863985998
-        },
-        {
-          "id": "height_178",
-          "label": {
-            "en": "178 cm",
-            "tr": "178 cm"
-          },
-          "p": 0.017692463391077693
-        },
-        {
-          "id": "height_179",
-          "label": {
-            "en": "179 cm",
-            "tr": "179 cm"
-          },
-          "p": 0.015896272442908727
-        },
-        {
-          "id": "height_180",
-          "label": {
-            "en": "180 cm",
-            "tr": "180 cm"
-          },
-          "p": 0.014172068838845977
-        },
-        {
-          "id": "height_181",
-          "label": {
-            "en": "181 cm",
-            "tr": "181 cm"
-          },
-          "p": 0.01253724501884381
-        },
-        {
-          "id": "height_182",
-          "label": {
-            "en": "182 cm",
-            "tr": "182 cm"
-          },
-          "p": 0.011005298340122234
-        },
-        {
-          "id": "height_183",
-          "label": {
-            "en": "183 cm",
-            "tr": "183 cm"
-          },
-          "p": 0.009585887371354
-        },
-        {
-          "id": "height_184",
-          "label": {
-            "en": "184 cm",
-            "tr": "184 cm"
-          },
-          "p": 0.0082850203192177
-        },
-        {
-          "id": "height_185",
-          "label": {
-            "en": "185 cm",
-            "tr": "185 cm"
-          },
-          "p": 0.007105351392664463
-        },
-        {
-          "id": "height_186",
-          "label": {
-            "en": "186 cm",
-            "tr": "186 cm"
-          },
-          "p": 0.006046558493909115
-        },
-        {
-          "id": "height_187",
-          "label": {
-            "en": "187 cm",
-            "tr": "187 cm"
-          },
-          "p": 0.005105775042610257
-        },
-        {
-          "id": "height_188",
-          "label": {
-            "en": "188 cm",
-            "tr": "188 cm"
-          },
-          "p": 0.004278049789462469
-        },
-        {
-          "id": "height_189",
-          "label": {
-            "en": "189 cm",
-            "tr": "189 cm"
-          },
-          "p": 0.003556810866022026
-        },
-        {
-          "id": "height_190",
-          "label": {
-            "en": "190 cm",
-            "tr": "190 cm"
-          },
-          "p": 0.0029343137028414617
-        },
-        {
-          "id": "height_191",
-          "label": {
-            "en": "191 cm",
-            "tr": "191 cm"
-          },
-          "p": 0.002402056462154338
-        },
-        {
-          "id": "height_192",
-          "label": {
-            "en": "192 cm",
-            "tr": "192 cm"
-          },
-          "p": 0.0019511509204977978
-        },
-        {
-          "id": "height_193",
-          "label": {
-            "en": "193 cm",
-            "tr": "193 cm"
-          },
-          "p": 0.0015726409844551163
-        },
-        {
-          "id": "height_194",
-          "label": {
-            "en": "194 cm",
-            "tr": "194 cm"
-          },
-          "p": 0.0012577649685672173
-        },
-        {
-          "id": "height_195",
-          "label": {
-            "en": "195 cm",
-            "tr": "195 cm"
-          },
-          "p": 0.0009981612142056903
-        },
-        {
-          "id": "height_196",
-          "label": {
-            "en": "196 cm",
-            "tr": "196 cm"
-          },
-          "p": 0.0007860194571706019
-        },
-        {
-          "id": "height_197",
-          "label": {
-            "en": "197 cm",
-            "tr": "197 cm"
-          },
-          "p": 0.000614182501554514
-        },
-        {
-          "id": "height_198",
-          "label": {
-            "en": "198 cm",
-            "tr": "198 cm"
-          },
-          "p": 0.0004762042277567021
-        },
-        {
-          "id": "height_199",
-          "label": {
-            "en": "199 cm",
-            "tr": "199 cm"
-          },
-          "p": 0.00036637079998231946
-        },
-        {
-          "id": "height_200",
-          "label": {
-            "en": "200 cm",
-            "tr": "200 cm"
-          },
-          "p": 0.0002796922234281771
+          "p": 0.003240987256502237
         },
         {
           "id": "height_200_plus",
           "label": {
-            "en": "200+ cm",
-            "tr": "200+ cm"
+            "en": "200 cm or more",
+            "tr": "200 cm ve üzeri"
           },
-          "p": 0.0008047891122220871
+          "p": 0.0010844977506916376
         }
-      ]
+      ],
+      "description": {
+        "en": "Choose the 5 cm height bracket that best matches you (e.g. 170–174 cm).",
+        "tr": "Sana en uygun 5 cm'lik boy aralığını seç (ör. 170–174 cm)."
+      }
     },
     {
       "id": "education_level",
@@ -3249,118 +2465,6 @@
       ]
     },
     {
-      "id": "birth_month",
-      "label": {
-        "en": "Birth month",
-        "tr": "Doğum ayı"
-      },
-      "description": {
-        "en": "Select the month you were born.",
-        "tr": "Doğduğun ayı seç."
-      },
-      "source": "HMD / national vital statistics seasonal averages (weak global prior)",
-      "year": 2022,
-      "optional": true,
-      "values": [
-        {
-          "id": "january",
-          "label": {
-            "en": "January",
-            "tr": "Ocak"
-          },
-          "p": 0.08181818181818183
-        },
-        {
-          "id": "february",
-          "label": {
-            "en": "February",
-            "tr": "Şubat"
-          },
-          "p": 0.07676767676767678
-        },
-        {
-          "id": "march",
-          "label": {
-            "en": "March",
-            "tr": "Mart"
-          },
-          "p": 0.08383838383838385
-        },
-        {
-          "id": "april",
-          "label": {
-            "en": "April",
-            "tr": "Nisan"
-          },
-          "p": 0.08181818181818183
-        },
-        {
-          "id": "may",
-          "label": {
-            "en": "May",
-            "tr": "Mayıs"
-          },
-          "p": 0.08484848484848487
-        },
-        {
-          "id": "june",
-          "label": {
-            "en": "June",
-            "tr": "Haziran"
-          },
-          "p": 0.08585858585858587
-        },
-        {
-          "id": "july",
-          "label": {
-            "en": "July",
-            "tr": "Temmuz"
-          },
-          "p": 0.08787878787878789
-        },
-        {
-          "id": "august",
-          "label": {
-            "en": "August",
-            "tr": "Ağustos"
-          },
-          "p": 0.08888888888888889
-        },
-        {
-          "id": "september",
-          "label": {
-            "en": "September",
-            "tr": "Eylül"
-          },
-          "p": 0.08686868686868687
-        },
-        {
-          "id": "october",
-          "label": {
-            "en": "October",
-            "tr": "Ekim"
-          },
-          "p": 0.08383838383838385
-        },
-        {
-          "id": "november",
-          "label": {
-            "en": "November",
-            "tr": "Kasım"
-          },
-          "p": 0.07979797979797981
-        },
-        {
-          "id": "december",
-          "label": {
-            "en": "December",
-            "tr": "Aralık"
-          },
-          "p": 0.07777777777777779
-        }
-      ]
-    },
-    {
       "id": "pet_ownership",
       "label": {
         "en": "Pet ownership",
@@ -3449,54 +2553,6 @@
       ]
     },
     {
-      "id": "home_ownership",
-      "label": {
-        "en": "Home ownership",
-        "tr": "Konut sahipliği"
-      },
-      "description": {
-        "en": "Choose the housing ownership status that best fits you.",
-        "tr": "Sana en uygun konut sahipliği durumunu seç."
-      },
-      "source": "UN-Habitat / Eurostat / national housing surveys (rounded global tenure mix)",
-      "year": 2021,
-      "optional": true,
-      "values": [
-        {
-          "id": "homeowner",
-          "label": {
-            "en": "Homeowner",
-            "tr": "Ev sahibi"
-          },
-          "p": 0.54
-        },
-        {
-          "id": "renter",
-          "label": {
-            "en": "Renter",
-            "tr": "Kiracı"
-          },
-          "p": 0.31
-        },
-        {
-          "id": "living_with_family",
-          "label": {
-            "en": "Living with family",
-            "tr": "Aile ile yaşıyor"
-          },
-          "p": 0.12
-        },
-        {
-          "id": "other_housing",
-          "label": {
-            "en": "Other",
-            "tr": "Diğer"
-          },
-          "p": 0.03
-        }
-      ]
-    },
-    {
       "id": "mobile_os",
       "label": {
         "en": "Mobile OS",
@@ -3533,94 +2589,6 @@
             "tr": "Diğer"
           },
           "p": 0.014
-        }
-      ]
-    },
-    {
-      "id": "payment_preference",
-      "label": {
-        "en": "Payment preference",
-        "tr": "Ödeme tercihi"
-      },
-      "description": {
-        "en": "How do you usually pay for daily purchases?",
-        "tr": "Günlük harcamalarda genelde nasıl ödeme yaparsın?"
-      },
-      "source": "World Bank Global Findex 2021 (mapped to cash vs card vs mobile digital use)",
-      "year": 2021,
-      "optional": true,
-      "values": [
-        {
-          "id": "mostly_cash",
-          "label": {
-            "en": "Mostly cash",
-            "tr": "Çoğunlukla nakit"
-          },
-          "p": 0.28
-        },
-        {
-          "id": "mostly_card",
-          "label": {
-            "en": "Mostly card",
-            "tr": "Çoğunlukla kart"
-          },
-          "p": 0.41
-        },
-        {
-          "id": "mostly_mobile_wallet",
-          "label": {
-            "en": "Mostly mobile wallet",
-            "tr": "Çoğunlukla mobil cüzdan"
-          },
-          "p": 0.14
-        },
-        {
-          "id": "mixed_payment",
-          "label": {
-            "en": "Mixed",
-            "tr": "Karışık"
-          },
-          "p": 0.17
-        }
-      ]
-    },
-    {
-      "id": "shopping_channel",
-      "label": {
-        "en": "Shopping channel",
-        "tr": "Alışveriş kanalı"
-      },
-      "description": {
-        "en": "Where do you usually shop?",
-        "tr": "Genelde nereden alışveriş yaparsın?"
-      },
-      "source": "UNCTAD / e-commerce share of retail (mapped to channel habit buckets)",
-      "year": 2023,
-      "optional": true,
-      "values": [
-        {
-          "id": "mostly_online",
-          "label": {
-            "en": "Mostly online",
-            "tr": "Çoğunlukla online"
-          },
-          "p": 0.26
-        },
-        {
-          "id": "mostly_in_store",
-          "label": {
-            "en": "Mostly in-store",
-            "tr": "Çoğunlukla fiziksel mağaza"
-          },
-          "p": 0.46
-        },
-        {
-          "id": "balanced_channel",
-          "label": {
-            "en": "Balanced",
-            "tr": "Dengeli"
-          },
-          "p": 0.28
         }
       ]
     }

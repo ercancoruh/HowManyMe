@@ -33,8 +33,8 @@ When updating data:
 Committed inputs live under `src/data/sources/` (see `sources.lock.json` for URLs and SHA-256 checksums).
 
 - **Country shares and `worldPopulation`**: World Bank WDI `SP.POP.TOTL` (2023 snapshot). Vatican City uses a fixed UN-scale estimate where the Bank does not publish a separate series.
-- **`age_band`**: Derived from the Our World in Data “World” row for 2023 broad age groups (UN WPP–based), assuming a uniform split within each broad band (15–24, 25–64) as documented in `scripts/build-attributes.mts`.
-- **`height_band`**: Discrete Gaussian prior on height in cm (global marginal, not age- or sex-conditioned).
+- **`age_band`**: 5-year bins (0–4, 5–9, …, 60–64, 65+) from the Our World in Data “World” row for 2023 (UN WPP–based), with a uniform split within each UN broad age group where a group spans multiple bins (see `buildAgeBandValues5y` in `scripts/build-attributes.mts`).
+- **`height_band`**: 5 cm bins (below 120, 120–124, …, 195–199, 200+) from the same Gaussian global marginal as before (`buildHeightBandValues5cm` in `scripts/build-attributes.mts`).
 - **Other traits**: Literature-based priors and short citations are maintained in `literaturePatches()` inside `scripts/build-attributes.mts` (Pew, WHO, UNESCO/UIS, StatCounter, Findex, etc.). Some items (eye colour, hair colour, diet) are explicitly **synthetic global marginals**, not census counts.
 
 Regenerate `attributes.json` after editing sources or the script:

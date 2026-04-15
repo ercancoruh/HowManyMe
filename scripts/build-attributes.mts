@@ -68,19 +68,66 @@ function normCdf(x: number): number {
   return 0.5 * (1 + erf(x / Math.SQRT2))
 }
 
-function heightProbabilities(): { id: string; p: number }[] {
-  const mu = 164.7
-  const sigma = 11.35
-  const out: { id: string; p: number }[] = []
-  out.push({ id: "under_120", p: normCdf((120.5 - mu) / sigma) })
-  for (let cm = 120; cm <= 200; cm++) {
-    const low = (cm - 0.5 - mu) / sigma
-    const high = (cm + 0.5 - mu) / sigma
-    out.push({ id: `height_${cm}`, p: normCdf(high) - normCdf(low) })
+type DatasetValue = { id: string; label: { en: string; tr: string }; p: number }
+
+const HEIGHT_MU = 164.7
+const HEIGHT_SIGMA = 11.35
+
+/** 5 cm bands: below 120, 120–124, …, 195–199, 200+ (Gaussian global marginal). */
+function buildHeightBandValues5cm(): DatasetValue[] {
+  const mu = HEIGHT_MU
+  const sigma = HEIGHT_SIGMA
+  const rows: DatasetValue[] = []
+  const pUnder = normCdf((119.5 - mu) / sigma)
+  rows.push({
+    id: "under_120",
+    label: { en: "Under 120 cm", tr: "120 cm altı" },
+    p: pUnder,
+  })
+  for (let lo = 120; lo <= 195; lo += 5) {
+    const hi = lo + 4
+    const p =
+      normCdf((hi + 0.5 - mu) / sigma) - normCdf((lo - 0.5 - mu) / sigma)
+    rows.push({
+      id: `height_${lo}_${hi}`,
+      label: { en: `${lo}–${hi} cm`, tr: `${lo}–${hi} cm` },
+      p,
+    })
   }
-  out.push({ id: "height_200_plus", p: 1 - normCdf((200.5 - mu) / sigma) })
-  const s = out.reduce((a, x) => a + x.p, 0)
-  return out.map((x) => ({ id: x.id, p: x.p / s }))
+  rows.push({
+    id: "height_200_plus",
+    label: { en: "200 cm or more", tr: "200 cm ve üzeri" },
+    p: 1 - normCdf((199.5 - mu) / sigma),
+  })
+  const s = rows.reduce((a, x) => a + x.p, 0)
+  return rows.map((x) => ({ ...x, p: x.p / s }))
+}
+
+/**
+ * 5-year age bands from OWID broad groups (World, 2023): uniform within each UN broad band
+ * where a band spans multiple 5-year bins.
+ */
+function buildAgeBandValues5y(o: ReturnType<typeof parseOwidWorldRow>): DatasetValue[] {
+  const T = o.total
+  const rows: DatasetValue[] = []
+  const add = (id: string, en: string, tr: string, p: number) =>
+    rows.push({ id, label: { en, tr }, p })
+
+  add("age_0_4", "0–4", "0–4 yaş", o.p0_4 / T)
+  add("age_5_9", "5–9", "5–9 yaş", ((o.p5_14 * 5) / 10) / T)
+  add("age_10_14", "10–14", "10–14 yaş", ((o.p5_14 * 5) / 10) / T)
+  add("age_15_19", "15–19", "15–19 yaş", ((o.p15_24 * 5) / 10) / T)
+  add("age_20_24", "20–24", "20–24 yaş", ((o.p15_24 * 5) / 10) / T)
+  const p25_64_slice = ((o.p25_64 * 5) / 40) / T
+  for (let lo = 25; lo <= 55; lo += 5) {
+    const hi = lo + 4
+    add(`age_${lo}_${hi}`, `${lo}–${hi}`, `${lo}–${hi} yaş`, p25_64_slice)
+  }
+  add("age_60_64", "60–64", "60–64 yaş", ((o.p25_64 * 5) / 40) / T)
+  add("age_65_plus", "65+", "65 ve üzeri", o.p65 / T)
+
+  const sum = rows.reduce((a, r) => a + r.p, 0)
+  return rows.map((r) => ({ ...r, p: r.p / sum }))
 }
 
 function verifyLockHashes(): void {
@@ -117,21 +164,6 @@ function parseOwidWorldRow(): {
   const p0_4 = Number(row[idx("population__sex_all__age_0_4__variant_estimates")])
   const total = p65 + p25_64 + p15_24 + p5_14 + p0_4
   return { p65, p25_64, p15_24, p5_14, p0_4, total }
-}
-
-function ageSharesFromBroadBands(o: ReturnType<typeof parseOwidWorldRow>): Record<string, number> {
-  const { p65, p25_64, p15_24, p5_14, p0_4, total } = o
-  const s: Record<string, number> = {}
-  s.under_18 = (p0_4 + p5_14 + (3 / 10) * p15_24) / total
-  for (let a = 18; a <= 24; a++) s[`age_${a}`] = (p15_24 / 10) / total
-  for (let a = 25; a <= 59; a++) s[`age_${a}`] = (p25_64 / 40) / total
-  s.age_60_plus = ((5 / 40) * p25_64 + p65) / total
-  return s
-}
-
-function normalizeRecord(rec: Record<string, number>): void {
-  const sum = Object.values(rec).reduce((a, b) => a + b, 0)
-  for (const k of Object.keys(rec)) rec[k] /= sum
 }
 
 function buildCountryMap(
@@ -194,14 +226,6 @@ function literaturePatches(): Record<
         { id: "a_minus", p: 0.061 },
         { id: "b_minus", p: 0.017 },
         { id: "ab_minus", p: 0.008 },
-      ],
-    },
-    handedness: {
-      source: "Papadatou-Pastou et al., meta-analysis of handedness prevalence",
-      year: 2020,
-      values: [
-        { id: "right", p: 0.893 },
-        { id: "left", p: 0.107 },
       ],
     },
     eye_color: {
@@ -306,24 +330,6 @@ function literaturePatches(): Record<
         { id: "other_diet", p: 0.01 },
       ],
     },
-    birth_month: {
-      source: "HMD / national vital statistics seasonal averages (weak global prior)",
-      year: 2022,
-      values: [
-        { id: "january", p: 0.081 },
-        { id: "february", p: 0.076 },
-        { id: "march", p: 0.083 },
-        { id: "april", p: 0.081 },
-        { id: "may", p: 0.084 },
-        { id: "june", p: 0.085 },
-        { id: "july", p: 0.087 },
-        { id: "august", p: 0.088 },
-        { id: "september", p: 0.086 },
-        { id: "october", p: 0.083 },
-        { id: "november", p: 0.079 },
-        { id: "december", p: 0.077 },
-      ],
-    },
     pet_ownership: {
       source: "Euromonitor / industry reports (household-oriented, mapped to self-report buckets)",
       year: 2022,
@@ -339,16 +345,6 @@ function literaturePatches(): Record<
         { id: "other_pet", p: 0.02 },
       ],
     },
-    home_ownership: {
-      source: "UN-Habitat / Eurostat / national housing surveys (rounded global tenure mix)",
-      year: 2021,
-      values: [
-        { id: "homeowner", p: 0.54 },
-        { id: "renter", p: 0.31 },
-        { id: "living_with_family", p: 0.12 },
-        { id: "other_housing", p: 0.03 },
-      ],
-    },
     mobile_os: {
       source: "StatCounter GlobalStats mobile OS (device share, Jan–Dec 2024 average, rounded)",
       year: 2024,
@@ -360,25 +356,6 @@ function literaturePatches(): Record<
         { id: "android", p: 0.714 },
         { id: "ios", p: 0.272 },
         { id: "other_mobile_os", p: 0.014 },
-      ],
-    },
-    payment_preference: {
-      source: "World Bank Global Findex 2021 (mapped to cash vs card vs mobile digital use)",
-      year: 2021,
-      values: [
-        { id: "mostly_cash", p: 0.28 },
-        { id: "mostly_card", p: 0.41 },
-        { id: "mostly_mobile_wallet", p: 0.14 },
-        { id: "mixed_payment", p: 0.17 },
-      ],
-    },
-    shopping_channel: {
-      source: "UNCTAD / e-commerce share of retail (mapped to channel habit buckets)",
-      year: 2023,
-      values: [
-        { id: "mostly_online", p: 0.26 },
-        { id: "mostly_in_store", p: 0.46 },
-        { id: "balanced_channel", p: 0.28 },
       ],
     },
   }
@@ -406,9 +383,6 @@ function main(): void {
   raw.worldPopulation = Math.round(ow.total)
   raw.asOfYear = 2023
 
-  const ageShares = ageSharesFromBroadBands(ow)
-  normalizeRecord(ageShares)
-
   const countryAttr = attributes.find((a) => (a as { id: string }).id === "country") as {
     values: { id: string; label: { en: string }; p: number }[]
   }
@@ -429,29 +403,26 @@ function main(): void {
   for (const attr of attributes) {
     const a = attr as Record<string, unknown> & { id: string; values: { id: string; p: number }[] }
     if (a.id === "age_band") {
-      for (const v of a.values) {
-        const key = v.id === "age_60_plus" ? "age_60_plus" : v.id
-        const p = ageShares[key]
-        if (p === undefined) throw new Error(`Missing age share for ${v.id}`)
-        v.p = p
-      }
+      a.values = buildAgeBandValues5y(ow) as unknown as { id: string; p: number }[]
       a.source =
-        "Derived from Our World in Data broad age groups (World, 2023; UN WPP-based), uniform within each band"
+        "Derived from Our World in Data broad age groups (World, 2023; UN WPP–based), split into 5-year bands with uniform distribution within each UN broad group"
       a.year = 2023
-      assertSumNearOne(a.values, "age_band")
+      a.description = {
+        en: "Choose the 5-year age bracket that includes your current age.",
+        tr: "Yaşının dahil olduğu 5 yıllık aralığı seç.",
+      }
+      assertSumNearOne(a.values as { p: number }[], "age_band")
     }
     if (a.id === "height_band") {
-      const hp = heightProbabilities()
-      const byId = new Map(hp.map((x) => [x.id, x.p]))
-      for (const v of a.values) {
-        const p = byId.get(v.id)
-        if (p === undefined) throw new Error(`Missing height p for ${v.id}`)
-        v.p = p
-      }
+      a.values = buildHeightBandValues5cm() as unknown as { id: string; p: number }[]
       a.source =
-        "Global Gaussian cm prior (mean ~165 cm, sd ~11.3; NCD-RisC-informed level, not age-sex conditional)"
+        "Global Gaussian cm prior in 5 cm bands (mean ~165 cm, sd ~11.3; NCD-RisC-informed level, not age- or sex-conditioned)"
       a.year = 2024
-      assertSumNearOne(a.values, "height_band")
+      a.description = {
+        en: "Choose the 5 cm height bracket that best matches you (e.g. 170–174 cm).",
+        tr: "Sana en uygun 5 cm'lik boy aralığını seç (ör. 170–174 cm).",
+      }
+      assertSumNearOne(a.values as { p: number }[], "height_band")
     }
 
     const lit = literaturePatches()[a.id]
