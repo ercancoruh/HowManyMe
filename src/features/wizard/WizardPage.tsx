@@ -12,14 +12,13 @@ import { formatEstimateNote } from "@/features/estimator/estimate-notes"
 import { estimateHowManyLikeMe } from "@/features/estimator/estimate"
 import { EstimateCard } from "@/features/results/EstimateCard"
 import { useWizardState } from "@/features/wizard/hooks/useWizardState"
+import { clearWizardPersisted, replaceWizardHistory } from "@/features/wizard/persist"
 import { LiveEstimateSidebar } from "@/features/wizard/LiveEstimateSidebar"
 import { WizardAnswerTrail } from "@/features/wizard/WizardAnswerTrail"
 import { WizardOptionCard } from "@/features/wizard/WizardOptionCard"
 import { useI18n } from "@/i18n/useI18n"
 import { PANEL_FRAME_CLASS, PANEL_INNER_CLASS } from "@/features/wizard/panel-surface"
 import { fadeSlideVariants, springSoft } from "@/lib/motion-presets"
-
-const COUNTRY_STORAGE_KEY = "howmanyme.country.v1"
 
 function WizardShell(props: { center: ReactNode; sideRail: ReactNode }) {
   return (
@@ -35,13 +34,7 @@ function WizardShell(props: { center: ReactNode; sideRail: ReactNode }) {
 }
 
 export function WizardPage() {
-  const [selectedCountryCode, setSelectedCountryCode] = useState<string | null>(() => {
-    if (typeof sessionStorage === "undefined") {
-      return null
-    }
-    const saved = sessionStorage.getItem(COUNTRY_STORAGE_KEY)
-    return saved ?? null
-  })
+  const [selectedCountryCode, setSelectedCountryCode] = useState<string | null>(null)
   const selectedCountry = countryCatalog.find((country) => country.code === selectedCountryCode)
 
   if (!selectedCountry) {
@@ -51,14 +44,26 @@ export function WizardPage() {
         center={
           <CountrySelectionStep
             defaultCountryCode={defaultCountryCode}
-            onContinue={(countryCode) => setSelectedCountryCode(countryCode)}
+            onContinue={(countryCode) => {
+              clearWizardPersisted()
+              replaceWizardHistory({ stepIndex: 0, isComplete: false })
+              setSelectedCountryCode(countryCode)
+            }}
           />
         }
       />
     )
   }
 
-  return <CountryWizardFlow dataset={getDatasetForCountry(selectedCountry.code)} />
+  return (
+    <CountryWizardFlow
+      dataset={getDatasetForCountry(selectedCountry.code)}
+      onResetToCountryStep={() => {
+        clearWizardPersisted()
+        setSelectedCountryCode(null)
+      }}
+    />
+  )
 }
 
 function CountrySelectionStep(props: {
@@ -94,14 +99,7 @@ function CountrySelectionStep(props: {
           />
         </div>
         <div className="bg-card/80 shrink-0 border-t border-border/60 px-4 py-3 backdrop-blur-sm">
-          <Button
-            onClick={() => {
-              if (typeof sessionStorage !== "undefined") {
-                sessionStorage.setItem(COUNTRY_STORAGE_KEY, countryCode)
-              }
-              props.onContinue(countryCode)
-            }}
-          >
+          <Button onClick={() => props.onContinue(countryCode)}>
             {language === "tr" ? "Devam et" : "Continue"}
           </Button>
         </div>
@@ -110,17 +108,20 @@ function CountrySelectionStep(props: {
   )
 }
 
-function CountryWizardFlow({ dataset }: { dataset: PopulationDataset }) {
+function CountryWizardFlow(props: {
+  dataset: PopulationDataset
+  onResetToCountryStep: () => void
+}) {
   const { t, language } = useI18n()
   const reduced = useReducedMotion()
-  const wizard = useWizardState(dataset)
+  const wizard = useWizardState(props.dataset)
   const currentAnswer = wizard.answers[wizard.currentAttribute.id] ?? ""
-  const estimate = estimateHowManyLikeMe(dataset, wizard.answers)
+  const estimate = estimateHowManyLikeMe(props.dataset, wizard.answers)
   const stepVariants = fadeSlideVariants(reduced ?? undefined)
   const transition = springSoft(reduced ?? undefined)
 
   const trailCommon = {
-    dataset,
+    dataset: props.dataset,
     answers: wizard.answers,
     stepIndex: wizard.stepIndex,
     isComplete: wizard.isComplete,
@@ -181,7 +182,14 @@ function CountryWizardFlow({ dataset }: { dataset: PopulationDataset }) {
                   <Button variant="outline" onClick={wizard.goBack}>
                     {t.backButton}
                   </Button>
-                  <Button onClick={wizard.restart}>{t.restartButton}</Button>
+                  <Button
+                    onClick={() => {
+                      wizard.restart()
+                      props.onResetToCountryStep()
+                    }}
+                  >
+                    {t.restartButton}
+                  </Button>
                 </div>
               </div>
             </div>
@@ -270,7 +278,16 @@ function CountryWizardFlow({ dataset }: { dataset: PopulationDataset }) {
             </div>
             <div className="bg-card/80 shrink-0 border-t border-border/60 px-4 py-3 backdrop-blur-sm">
               <div className="flex flex-wrap items-center gap-2">
-                <Button variant="outline" onClick={wizard.goBack} disabled={wizard.stepIndex === 0}>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    if (wizard.stepIndex === 0) {
+                      props.onResetToCountryStep()
+                      return
+                    }
+                    wizard.goBack()
+                  }}
+                >
                   {t.backButton}
                 </Button>
                 <Button
@@ -282,7 +299,13 @@ function CountryWizardFlow({ dataset }: { dataset: PopulationDataset }) {
                 >
                   {t.skipButton}
                 </Button>
-                <Button variant="default" onClick={wizard.restart}>
+                <Button
+                  variant="default"
+                  onClick={() => {
+                    wizard.restart()
+                    props.onResetToCountryStep()
+                  }}
+                >
                   {t.restartButton}
                 </Button>
               </div>
