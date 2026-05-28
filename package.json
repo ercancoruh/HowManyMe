@@ -20,6 +20,7 @@
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
     "data:build": "tsx scripts/build-attributes.mts",
+    "data:report": "tsx scripts/data-quality-report.mts",
     "preview": "vite preview"
   },
   "dependencies": {

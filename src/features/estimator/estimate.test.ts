@@ -4,6 +4,8 @@ import { estimateHowManyLikeMe } from "@/features/estimator/estimate"
 import type { PopulationDataset } from "@/data/schema"
 
 const dataset: PopulationDataset = {
+  countryCode: "tr",
+  version: "test-version",
   worldPopulation: 1_000_000_000,
   asOfYear: 2026,
   alpha: 0.9,

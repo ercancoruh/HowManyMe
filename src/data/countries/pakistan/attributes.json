@@ -1,0 +1,1021 @@
+{
+  "countryCode": "pakistan",
+  "asOfYear": 2023,
+  "worldPopulation": 247504495,
+  "alpha": 0.86,
+  "minProbabilityFloor": 1e-12,
+  "attributes": [
+    {
+      "id": "age_band",
+      "label": {
+        "en": "Age range",
+        "tr": "Yaş aralığı"
+      },
+      "ui": "searchable_select",
+      "description": {
+        "en": "Choose the 5-year age bracket that includes your current age.",
+        "tr": "Yaşının dahil olduğu 5 yıllık aralığı seç."
+      },
+      "source": "World Bank WDI SP.POP.0014.TO.ZS, SP.POP.1564.TO.ZS, SP.POP.65UP.TO.ZS (2024)",
+      "year": 2024,
+      "optional": false,
+      "values": [
+        {
+          "id": "age_0_4",
+          "label": {
+            "en": "0–4",
+            "tr": "0–4 yaş"
+          },
+          "p": 0.1222830994362152
+        },
+        {
+          "id": "age_5_9",
+          "label": {
+            "en": "5–9",
+            "tr": "5–9 yaş"
+          },
+          "p": 0.1222830994362152
+        },
+        {
+          "id": "age_10_14",
+          "label": {
+            "en": "10–14",
+            "tr": "10–14 yaş"
+          },
+          "p": 0.1222830994362152
+        },
+        {
+          "id": "age_15_19",
+          "label": {
+            "en": "15–19",
+            "tr": "15–19 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_20_24",
+          "label": {
+            "en": "20–24",
+            "tr": "20–24 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_25_29",
+          "label": {
+            "en": "25–29",
+            "tr": "25–29 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_30_34",
+          "label": {
+            "en": "30–34",
+            "tr": "30–34 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_35_39",
+          "label": {
+            "en": "35–39",
+            "tr": "35–39 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_40_44",
+          "label": {
+            "en": "40–44",
+            "tr": "40–44 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_45_49",
+          "label": {
+            "en": "45–49",
+            "tr": "45–49 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_50_54",
+          "label": {
+            "en": "50–54",
+            "tr": "50–54 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_55_59",
+          "label": {
+            "en": "55–59",
+            "tr": "55–59 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_60_64",
+          "label": {
+            "en": "60–64",
+            "tr": "60–64 yaş"
+          },
+          "p": 0.05903444124962343
+        },
+        {
+          "id": "age_65_plus",
+          "label": {
+            "en": "65+",
+            "tr": "65 ve üzeri"
+          },
+          "p": 0.042806289195119855
+        }
+      ]
+    },
+    {
+      "id": "sex",
+      "label": {
+        "en": "Sex",
+        "tr": "Cinsiyet"
+      },
+      "source": "World Bank WDI SP.POP.TOTL.FE.ZS (2024) + fixed other-share prior",
+      "year": 2024,
+      "optional": true,
+      "values": [
+        {
+          "id": "female",
+          "label": {
+            "en": "Female",
+            "tr": "Kadın"
+          },
+          "p": 0.488898321104369
+        },
+        {
+          "id": "male",
+          "label": {
+            "en": "Male",
+            "tr": "Erkek"
+          },
+          "p": 0.5031016788956311
+        },
+        {
+          "id": "other",
+          "label": {
+            "en": "Other",
+            "tr": "Diğer"
+          },
+          "p": 0.008
+        }
+      ]
+    },
+    {
+      "id": "blood_type",
+      "label": {
+        "en": "Blood type",
+        "tr": "Kan grubu"
+      },
+      "source": "AABB / international donor screening summaries (approximate global phenotype mix)",
+      "year": 2022,
+      "optional": true,
+      "sensitive": true,
+      "weight": 0.8,
+      "values": [
+        {
+          "id": "o_plus",
+          "label": {
+            "en": "O+",
+            "tr": "0+"
+          },
+          "p": 0.3743743743743744
+        },
+        {
+          "id": "a_plus",
+          "label": {
+            "en": "A+",
+            "tr": "A+"
+          },
+          "p": 0.35735735735735735
+        },
+        {
+          "id": "b_plus",
+          "label": {
+            "en": "B+",
+            "tr": "B+"
+          },
+          "p": 0.0850850850850851
+        },
+        {
+          "id": "ab_plus",
+          "label": {
+            "en": "AB+",
+            "tr": "AB+"
+          },
+          "p": 0.03403403403403404
+        },
+        {
+          "id": "o_minus",
+          "label": {
+            "en": "O-",
+            "tr": "0-"
+          },
+          "p": 0.06306306306306306
+        },
+        {
+          "id": "a_minus",
+          "label": {
+            "en": "A-",
+            "tr": "A-"
+          },
+          "p": 0.06106106106106106
+        },
+        {
+          "id": "b_minus",
+          "label": {
+            "en": "B-",
+            "tr": "B-"
+          },
+          "p": 0.01701701701701702
+        },
+        {
+          "id": "ab_minus",
+          "label": {
+            "en": "AB-",
+            "tr": "AB-"
+          },
+          "p": 0.008008008008008008
+        }
+      ]
+    },
+    {
+      "id": "eye_color",
+      "label": {
+        "en": "Eye color",
+        "tr": "Göz rengi"
+      },
+      "source": "Synthetic global marginal (survey literature; not a census). Brown-dominant prior with wide uncertainty.",
+      "year": 2020,
+      "optional": true,
+      "values": [
+        {
+          "id": "brown",
+          "label": {
+            "en": "Brown",
+            "tr": "Kahverengi"
+          },
+          "p": 0.55
+        },
+        {
+          "id": "blue",
+          "label": {
+            "en": "Blue",
+            "tr": "Mavi"
+          },
+          "p": 0.18
+        },
+        {
+          "id": "gray",
+          "label": {
+            "en": "Gray",
+            "tr": "Gri"
+          },
+          "p": 0.04
+        },
+        {
+          "id": "amber",
+          "label": {
+            "en": "Amber",
+            "tr": "Kehribar"
+          },
+          "p": 0.03
+        },
+        {
+          "id": "hazel",
+          "label": {
+            "en": "Hazel",
+            "tr": "Ela"
+          },
+          "p": 0.1
+        },
+        {
+          "id": "green",
+          "label": {
+            "en": "Green",
+            "tr": "Yeşil"
+          },
+          "p": 0.07
+        },
+        {
+          "id": "other",
+          "label": {
+            "en": "Other",
+            "tr": "Diğer"
+          },
+          "p": 0.03
+        }
+      ],
+      "description": {
+        "en": "Illustrative world blend of national surveys; true joint distribution depends strongly on ancestry and geography.",
+        "tr": "Ulusal anketlerin dünya çapında birleştirilmiş kabaca karışımı; gerçek dağılım köken ve coğrafyaya göre güçlü şekilde değişir."
+      }
+    },
+    {
+      "id": "hair_color",
+      "label": {
+        "en": "Hair color",
+        "tr": "Saç rengi"
+      },
+      "source": "Synthetic global marginal (ethnic composition model; not self-reported census).",
+      "year": 2020,
+      "optional": true,
+      "values": [
+        {
+          "id": "black",
+          "label": {
+            "en": "Black",
+            "tr": "Siyah"
+          },
+          "p": 0.52
+        },
+        {
+          "id": "dark_brown",
+          "label": {
+            "en": "Dark brown",
+            "tr": "Koyu kahverengi"
+          },
+          "p": 0.22
+        },
+        {
+          "id": "brown",
+          "label": {
+            "en": "Brown",
+            "tr": "Kahverengi"
+          },
+          "p": 0.14
+        },
+        {
+          "id": "blonde",
+          "label": {
+            "en": "Blonde",
+            "tr": "Sarı"
+          },
+          "p": 0.06
+        },
+        {
+          "id": "auburn",
+          "label": {
+            "en": "Auburn",
+            "tr": "Kestane kızılı"
+          },
+          "p": 0.02
+        },
+        {
+          "id": "red",
+          "label": {
+            "en": "Red",
+            "tr": "Kızıl"
+          },
+          "p": 0.02
+        },
+        {
+          "id": "gray_white",
+          "label": {
+            "en": "Gray/White",
+            "tr": "Beyaz/Gri"
+          },
+          "p": 0.02
+        }
+      ],
+      "description": {
+        "en": "Black/dark hair categories dominate globally; light hair is rare outside European-descended populations.",
+        "tr": "Siyah/koyu saç kategorileri küresel olarak baskın; açık renkli saç Avrupa kökenli olmayan nüfuslarda nadirdir."
+      }
+    },
+    {
+      "id": "height_band",
+      "label": {
+        "en": "Height range",
+        "tr": "Boy aralığı"
+      },
+      "ui": "searchable_select",
+      "source": "Global Gaussian cm prior in 5 cm bands (mean ~165 cm, sd ~11.3; NCD-RisC-informed level, not age- or sex-conditioned)",
+      "year": 2024,
+      "optional": true,
+      "values": [
+        {
+          "id": "under_120",
+          "label": {
+            "en": "Under 120 cm",
+            "tr": "120 cm altı"
+          },
+          "p": 0.000034129959369633145
+        },
+        {
+          "id": "height_120_124",
+          "label": {
+            "en": "120–124 cm",
+            "tr": "120–124 cm"
+          },
+          "p": 0.0001645768162983896
+        },
+        {
+          "id": "height_125_129",
+          "label": {
+            "en": "125–129 cm",
+            "tr": "125–129 cm"
+          },
+          "p": 0.0007646559174332435
+        },
+        {
+          "id": "height_130_134",
+          "label": {
+            "en": "130–134 cm",
+            "tr": "130–134 cm"
+          },
+          "p": 0.002934525073928773
+        },
+        {
+          "id": "height_135_139",
+          "label": {
+            "en": "135–139 cm",
+            "tr": "135–139 cm"
+          },
+          "p": 0.009302483115570748
+        },
+        {
+          "id": "height_140_144",
+          "label": {
+            "en": "140–144 cm",
+            "tr": "140–144 cm"
+          },
+          "p": 0.024359194684948793
+        },
+        {
+          "id": "height_145_149",
+          "label": {
+            "en": "145–149 cm",
+            "tr": "145–149 cm"
+          },
+          "p": 0.05269213804171885
+        },
+        {
+          "id": "height_150_154",
+          "label": {
+            "en": "150–154 cm",
+            "tr": "150–154 cm"
+          },
+          "p": 0.09416025565759267
+        },
+        {
+          "id": "height_155_159",
+          "label": {
+            "en": "155–159 cm",
+            "tr": "155–159 cm"
+          },
+          "p": 0.13901048046177167
+        },
+        {
+          "id": "height_160_164",
+          "label": {
+            "en": "160–164 cm",
+            "tr": "160–164 cm"
+          },
+          "p": 0.16954806738267686
+        },
+        {
+          "id": "height_165_169",
+          "label": {
+            "en": "165–169 cm",
+            "tr": "165–169 cm"
+          },
+          "p": 0.1708480745671357
+        },
+        {
+          "id": "height_170_174",
+          "label": {
+            "en": "170–174 cm",
+            "tr": "170–174 cm"
+          },
+          "p": 0.14223259776374575
+        },
+        {
+          "id": "height_175_179",
+          "label": {
+            "en": "175–179 cm",
+            "tr": "175–179 cm"
+          },
+          "p": 0.09782595358681268
+        },
+        {
+          "id": "height_180_184",
+          "label": {
+            "en": "180–184 cm",
+            "tr": "180–184 cm"
+          },
+          "p": 0.055586361247823235
+        },
+        {
+          "id": "height_185_189",
+          "label": {
+            "en": "185–189 cm",
+            "tr": "185–189 cm"
+          },
+          "p": 0.026092940529423236
+        },
+        {
+          "id": "height_190_194",
+          "label": {
+            "en": "190–194 cm",
+            "tr": "190–194 cm"
+          },
+          "p": 0.010118080186555911
+        },
+        {
+          "id": "height_195_199",
+          "label": {
+            "en": "195–199 cm",
+            "tr": "195–199 cm"
+          },
+          "p": 0.003240987256502237
+        },
+        {
+          "id": "height_200_plus",
+          "label": {
+            "en": "200 cm or more",
+            "tr": "200 cm ve üzeri"
+          },
+          "p": 0.0010844977506916376
+        }
+      ],
+      "description": {
+        "en": "Choose the 5 cm height bracket that best matches you (e.g. 170–174 cm).",
+        "tr": "Sana en uygun 5 cm'lik boy aralığını seç (ör. 170–174 cm)."
+      }
+    },
+    {
+      "id": "education_level",
+      "label": {
+        "en": "Education level",
+        "tr": "Eğitim düzeyi"
+      },
+      "description": {
+        "en": "Choose your highest completed education level.",
+        "tr": "Tamamladığın en yüksek eğitim düzeyini seç."
+      },
+      "source": "UNESCO UIS attainment via World Bank WDI (SE.PRM.CUAT.ZS, SE.SEC.CUAT.LO.ZS, SE.SEC.CUAT.UP.ZS, SE.TER.CUAT.BA.ZS, SE.TER.CUAT.MS.ZS) + ISCED bucket mapping",
+      "year": 2018,
+      "optional": true,
+      "values": [
+        {
+          "id": "no_formal",
+          "label": {
+            "en": "No formal education",
+            "tr": "Örgün eğitim yok"
+          },
+          "p": 0.5077706909179691
+        },
+        {
+          "id": "primary",
+          "label": {
+            "en": "Primary",
+            "tr": "İlkokul"
+          },
+          "p": 0.10869770050048799
+        },
+        {
+          "id": "lower_secondary",
+          "label": {
+            "en": "Lower secondary",
+            "tr": "Ortaokul"
+          },
+          "p": 0.12289155926455098
+        },
+        {
+          "id": "upper_secondary",
+          "label": {
+            "en": "Upper secondary",
+            "tr": "Lise"
+          },
+          "p": 0.13230966099657399
+        },
+        {
+          "id": "associate",
+          "label": {
+            "en": "Associate degree",
+            "tr": "Ön lisans"
+          },
+          "p": 0.029043584121199166
+        },
+        {
+          "id": "bachelor",
+          "label": {
+            "en": "Bachelor degree",
+            "tr": "Lisans"
+          },
+          "p": 0.0643343486113
+        },
+        {
+          "id": "postgraduate",
+          "label": {
+            "en": "Postgraduate",
+            "tr": "Yüksek lisans/doktora"
+          },
+          "p": 0.0349524555879188
+        }
+      ]
+    },
+    {
+      "id": "marital_status",
+      "label": {
+        "en": "Marital status",
+        "tr": "Medeni durum"
+      },
+      "source": "UN demographic yearbook / DHS-style aggregates (rough global mix)",
+      "year": 2022,
+      "optional": true,
+      "values": [
+        {
+          "id": "never_married",
+          "label": {
+            "en": "Never married",
+            "tr": "Hiç evlenmemiş"
+          },
+          "p": 0.36
+        },
+        {
+          "id": "married",
+          "label": {
+            "en": "Married",
+            "tr": "Evli"
+          },
+          "p": 0.46
+        },
+        {
+          "id": "separated_divorced",
+          "label": {
+            "en": "Separated/Divorced",
+            "tr": "Ayrı/Boşanmış"
+          },
+          "p": 0.12
+        },
+        {
+          "id": "widowed",
+          "label": {
+            "en": "Widowed",
+            "tr": "Dul"
+          },
+          "p": 0.06
+        }
+      ]
+    },
+    {
+      "id": "smoker_status",
+      "label": {
+        "en": "Smoking status",
+        "tr": "Sigara kullanımı"
+      },
+      "description": {
+        "en": "Self-reported smoking habit.",
+        "tr": "Kişinin beyanına dayalı sigara alışkanlığı."
+      },
+      "source": "World Bank WDI SH.PRV.SMOK (2022) + calibrated split prior",
+      "year": 2022,
+      "optional": true,
+      "sensitive": true,
+      "values": [
+        {
+          "id": "current_smoker",
+          "label": {
+            "en": "Current smoker",
+            "tr": "Aktif içici"
+          },
+          "p": 0.18899999999999997
+        },
+        {
+          "id": "former_smoker",
+          "label": {
+            "en": "Former smoker",
+            "tr": "Eski içici"
+          },
+          "p": 0.1588556701030928
+        },
+        {
+          "id": "never_smoked",
+          "label": {
+            "en": "Never smoked",
+            "tr": "Hiç içmemiş"
+          },
+          "p": 0.6521443298969073
+        }
+      ]
+    },
+    {
+      "id": "alcohol_status",
+      "label": {
+        "en": "Alcohol use",
+        "tr": "Alkol kullanımı"
+      },
+      "description": {
+        "en": "Choose the option that best describes your alcohol use.",
+        "tr": "Alkol kullanımını en iyi tanımlayan seçeneği seç."
+      },
+      "source": "World Bank WDI SH.ALC.PCAP.LI (2020) + frequency mapping heuristic",
+      "year": 2020,
+      "optional": true,
+      "sensitive": true,
+      "values": [
+        {
+          "id": "never",
+          "label": {
+            "en": "Never",
+            "tr": "Hiç"
+          },
+          "p": 0.7356320000000001
+        },
+        {
+          "id": "rarely",
+          "label": {
+            "en": "Rarely",
+            "tr": "Nadiren"
+          },
+          "p": 0.120672
+        },
+        {
+          "id": "monthly",
+          "label": {
+            "en": "Monthly",
+            "tr": "Aylık"
+          },
+          "p": 0.081176
+        },
+        {
+          "id": "weekly_or_more",
+          "label": {
+            "en": "Weekly or more",
+            "tr": "Haftalık veya daha sık"
+          },
+          "p": 0.06251999999999999
+        }
+      ]
+    },
+    {
+      "id": "religion",
+      "label": {
+        "en": "Religion",
+        "tr": "Din"
+      },
+      "description": {
+        "en": "Optional broad religion group.",
+        "tr": "İsteğe bağlı geniş din grubu."
+      },
+      "source": "Pew 2025 religious composition by country via OWID grapher + derived unaffiliated/other split",
+      "year": 2020,
+      "optional": true,
+      "sensitive": true,
+      "values": [
+        {
+          "id": "islam",
+          "label": {
+            "en": "Islam",
+            "tr": "İslam"
+          },
+          "p": 0.9654430399999999
+        },
+        {
+          "id": "christianity",
+          "label": {
+            "en": "Christianity",
+            "tr": "Hristiyanlık"
+          },
+          "p": 0.01271848
+        },
+        {
+          "id": "hinduism",
+          "label": {
+            "en": "Hinduism",
+            "tr": "Hinduizm"
+          },
+          "p": 0.021397018
+        },
+        {
+          "id": "buddhism",
+          "label": {
+            "en": "Buddhism",
+            "tr": "Budizm"
+          },
+          "p": 0.00010499283
+        },
+        {
+          "id": "folk_religions",
+          "label": {
+            "en": "Folk religions",
+            "tr": "Geleneksel dinler"
+          },
+          "p": 0.00017466979735485244
+        },
+        {
+          "id": "other_religion",
+          "label": {
+            "en": "Other religion",
+            "tr": "Diğer din"
+          },
+          "p": 0.00003449937264516395
+        },
+        {
+          "id": "unaffiliated",
+          "label": {
+            "en": "Unaffiliated",
+            "tr": "Dinsiz/bağımsız"
+          },
+          "p": 0.00012730000000005237
+        }
+      ]
+    },
+    {
+      "id": "diet_type",
+      "label": {
+        "en": "Diet type",
+        "tr": "Beslenme tipi"
+      },
+      "description": {
+        "en": "Choose the eating pattern that best describes you.",
+        "tr": "Seni en iyi tanımlayan beslenme düzenini seç."
+      },
+      "source": "Vegetarianism meta-reviews & FAO food pattern estimates (very uncertain global prior)",
+      "year": 2022,
+      "optional": true,
+      "values": [
+        {
+          "id": "omnivore",
+          "label": {
+            "en": "Omnivore (eats both plant and animal foods)",
+            "tr": "Omnivor (hem bitkisel hem hayvansal tüketir)"
+          },
+          "p": 0.88
+        },
+        {
+          "id": "vegetarian",
+          "label": {
+            "en": "Vegetarian (no meat)",
+            "tr": "Vejetaryen (et tüketmez)"
+          },
+          "p": 0.07
+        },
+        {
+          "id": "vegan",
+          "label": {
+            "en": "Vegan (no animal products)",
+            "tr": "Vegan (hayvansal ürün tüketmez)"
+          },
+          "p": 0.02
+        },
+        {
+          "id": "pescatarian",
+          "label": {
+            "en": "Pescatarian (fish but no other meat)",
+            "tr": "Pesketaryen (balık var, diğer et yok)"
+          },
+          "p": 0.02
+        },
+        {
+          "id": "other_diet",
+          "label": {
+            "en": "Other (custom pattern)",
+            "tr": "Diğer (özel düzen)"
+          },
+          "p": 0.01
+        }
+      ]
+    },
+    {
+      "id": "pet_ownership",
+      "label": {
+        "en": "Pet ownership",
+        "tr": "Evcil hayvan sahipliği"
+      },
+      "description": {
+        "en": "Choose the option that best matches your household.",
+        "tr": "Hanen için en uygun seçeneği seç."
+      },
+      "source": "Euromonitor / industry reports (household-oriented, mapped to self-report buckets)",
+      "year": 2022,
+      "optional": true,
+      "values": [
+        {
+          "id": "no_pet",
+          "label": {
+            "en": "No pet",
+            "tr": "Evcil hayvan yok"
+          },
+          "p": 0.5199999999999999
+        },
+        {
+          "id": "cat",
+          "label": {
+            "en": "Cat",
+            "tr": "Kedi"
+          },
+          "p": 0.14999999999999997
+        },
+        {
+          "id": "dog",
+          "label": {
+            "en": "Dog",
+            "tr": "Köpek"
+          },
+          "p": 0.15999999999999998
+        },
+        {
+          "id": "cat_and_dog",
+          "label": {
+            "en": "Cat and dog",
+            "tr": "Kedi ve köpek"
+          },
+          "p": 0.059999999999999984
+        },
+        {
+          "id": "bird",
+          "label": {
+            "en": "Bird",
+            "tr": "Kuş"
+          },
+          "p": 0.029999999999999992
+        },
+        {
+          "id": "fish",
+          "label": {
+            "en": "Fish",
+            "tr": "Balık"
+          },
+          "p": 0.029999999999999992
+        },
+        {
+          "id": "small_mammal",
+          "label": {
+            "en": "Small mammal",
+            "tr": "Küçük memeli"
+          },
+          "p": 0.019999999999999997
+        },
+        {
+          "id": "reptile",
+          "label": {
+            "en": "Reptile",
+            "tr": "Sürüngen"
+          },
+          "p": 0.009999999999999998
+        },
+        {
+          "id": "other_pet",
+          "label": {
+            "en": "Other pet",
+            "tr": "Diğer evcil hayvan"
+          },
+          "p": 0.019999999999999997
+        }
+      ]
+    },
+    {
+      "id": "mobile_os",
+      "label": {
+        "en": "Mobile OS",
+        "tr": "Telefon işletim sistemi"
+      },
+      "description": {
+        "en": "Reflects installed smartphone OS share, not people; many individuals own multiple devices.",
+        "tr": "Yüklü akıllı telefon işletim sistemi payını yansıtır, kişi sayısını değil; çoklu cihaz yaygındır."
+      },
+      "source": "StatCounter GlobalStats mobile OS market share (2024 country-level)",
+      "year": 2024,
+      "optional": true,
+      "values": [
+        {
+          "id": "android",
+          "label": {
+            "en": "Android",
+            "tr": "Android"
+          },
+          "p": 0.9504049595040496
+        },
+        {
+          "id": "ios",
+          "label": {
+            "en": "iOS",
+            "tr": "iOS"
+          },
+          "p": 0.04489551044895511
+        },
+        {
+          "id": "other_mobile_os",
+          "label": {
+            "en": "Other",
+            "tr": "Diğer"
+          },
+          "p": 0.0046995300469953
+        }
+      ]
+    }
+  ],
+  "version": "56394a37d4cd"
+}

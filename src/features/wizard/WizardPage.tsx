@@ -1,12 +1,13 @@
 import { AnimatePresence, motion, useReducedMotion } from "motion/react"
-import type { ReactNode } from "react"
+import { useState, type ReactNode } from "react"
 
 import { SearchableSelect } from "@/components/searchable-select"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { populationDataset } from "@/data"
+import { countryCatalog, defaultCountryCode, getDatasetForCountry } from "@/data"
+import type { PopulationDataset } from "@/data/schema"
 import { formatEstimateNote } from "@/features/estimator/estimate-notes"
 import { estimateHowManyLikeMe } from "@/features/estimator/estimate"
 import { EstimateCard } from "@/features/results/EstimateCard"
@@ -17,6 +18,8 @@ import { WizardOptionCard } from "@/features/wizard/WizardOptionCard"
 import { useI18n } from "@/i18n/useI18n"
 import { PANEL_FRAME_CLASS, PANEL_INNER_CLASS } from "@/features/wizard/panel-surface"
 import { fadeSlideVariants, springSoft } from "@/lib/motion-presets"
+
+const COUNTRY_STORAGE_KEY = "howmanyme.country.v1"
 
 function WizardShell(props: { center: ReactNode; sideRail: ReactNode }) {
   return (
@@ -32,16 +35,92 @@ function WizardShell(props: { center: ReactNode; sideRail: ReactNode }) {
 }
 
 export function WizardPage() {
+  const [selectedCountryCode, setSelectedCountryCode] = useState<string | null>(() => {
+    if (typeof sessionStorage === "undefined") {
+      return null
+    }
+    const saved = sessionStorage.getItem(COUNTRY_STORAGE_KEY)
+    return saved ?? null
+  })
+  const selectedCountry = countryCatalog.find((country) => country.code === selectedCountryCode)
+
+  if (!selectedCountry) {
+    return (
+      <WizardShell
+        sideRail={<div />}
+        center={
+          <CountrySelectionStep
+            defaultCountryCode={defaultCountryCode}
+            onContinue={(countryCode) => setSelectedCountryCode(countryCode)}
+          />
+        }
+      />
+    )
+  }
+
+  return <CountryWizardFlow dataset={getDatasetForCountry(selectedCountry.code)} />
+}
+
+function CountrySelectionStep(props: {
+  defaultCountryCode: string
+  onContinue: (countryCode: string) => void
+}) {
+  const { t, language } = useI18n()
+  const [countryCode, setCountryCode] = useState(props.defaultCountryCode)
+
+  return (
+    <div className={PANEL_FRAME_CLASS}>
+      <div className={PANEL_INNER_CLASS}>
+        <div className="min-h-0 flex-1 space-y-5 overflow-y-auto overscroll-contain p-4">
+          <h2 className="font-heading text-balance text-lg font-semibold leading-snug tracking-tight">
+            {language === "tr" ? "İlk soru: Ülke" : "First question: Country"}
+          </h2>
+          <p className="text-pretty text-sm text-muted-foreground">
+            {language === "tr"
+              ? "Sonraki adımlar ve olasılıklar seçtiğin ülkeye göre yüklenecek."
+              : "Next steps and probabilities will load based on your selected country."}
+          </p>
+          <SearchableSelect
+            value={countryCode}
+            placeholder={t.selectPrompt}
+            emptyText={t.noSearchResult}
+            options={countryCatalog.map((country) => ({
+              id: country.code,
+              label: country.label[language],
+            }))}
+            onSelect={(value) => {
+              setCountryCode(value)
+            }}
+          />
+        </div>
+        <div className="bg-card/80 shrink-0 border-t border-border/60 px-4 py-3 backdrop-blur-sm">
+          <Button
+            onClick={() => {
+              if (typeof sessionStorage !== "undefined") {
+                sessionStorage.setItem(COUNTRY_STORAGE_KEY, countryCode)
+              }
+              props.onContinue(countryCode)
+            }}
+          >
+            {language === "tr" ? "Devam et" : "Continue"}
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function CountryWizardFlow({ dataset }: { dataset: PopulationDataset }) {
   const { t, language } = useI18n()
   const reduced = useReducedMotion()
-  const wizard = useWizardState(populationDataset)
+  const wizard = useWizardState(dataset)
   const currentAnswer = wizard.answers[wizard.currentAttribute.id] ?? ""
-  const estimate = estimateHowManyLikeMe(populationDataset, wizard.answers)
+  const estimate = estimateHowManyLikeMe(dataset, wizard.answers)
   const stepVariants = fadeSlideVariants(reduced ?? undefined)
   const transition = springSoft(reduced ?? undefined)
 
   const trailCommon = {
-    dataset: populationDataset,
+    dataset,
     answers: wizard.answers,
     stepIndex: wizard.stepIndex,
     isComplete: wizard.isComplete,

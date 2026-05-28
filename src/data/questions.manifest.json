@@ -1,0 +1,19 @@
+{
+  "firstQuestion": "country",
+  "attributeOrder": [
+    "age_band",
+    "sex",
+    "blood_type",
+    "eye_color",
+    "hair_color",
+    "height_band",
+    "education_level",
+    "marital_status",
+    "smoker_status",
+    "alcohol_status",
+    "religion",
+    "diet_type",
+    "pet_ownership",
+    "mobile_os"
+  ]
+}

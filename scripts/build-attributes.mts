@@ -4,17 +4,25 @@
  *   npx tsx scripts/build-attributes.mts
  */
 import { createHash } from "node:crypto"
-import { readFileSync, writeFileSync } from "node:fs"
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs"
 import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, "..")
 const attrsPath = join(root, "src", "data", "attributes.json")
+const countriesDir = join(root, "src", "data", "countries")
+const countriesIndexPath = join(countriesDir, "index.json")
 const sourcesDir = join(root, "src", "data", "sources")
 const lockPath = join(sourcesDir, "sources.lock.json")
 const wbPath = join(sourcesDir, "world_bank_population_2023_snapshot.json")
 const owidPath = join(sourcesDir, "owid_world_broad_age_2023.csv")
+const owidReligiousAnyPath = join(sourcesDir, "owid_religious_composition.csv")
+const owidReligiousChristiansPath = join(sourcesDir, "owid_religion_christians.csv")
+const owidReligiousMuslimsPath = join(sourcesDir, "owid_religion_muslims.csv")
+const owidReligiousHindusPath = join(sourcesDir, "owid_religion_hindus.csv")
+const owidReligiousBuddhistsPath = join(sourcesDir, "owid_religion_buddhists.csv")
+const owidReligiousJewsPath = join(sourcesDir, "owid_religion_jews.csv")
 
 /** World Bank `country.value` keys (lower case) for rows where label.en differs. */
 const WB_NAME_BY_APP_ID: Record<string, string> = {
@@ -69,6 +77,52 @@ function normCdf(x: number): number {
 }
 
 type DatasetValue = { id: string; label: { en: string; tr: string }; p: number }
+type DatasetAttribute = {
+  id: string
+  label: { en: string; tr: string }
+  ui?: "radio" | "searchable_select"
+  description?: { en: string; tr: string }
+  values: DatasetValue[]
+  optional?: boolean
+  sensitive?: boolean
+  source?: string
+  year?: number
+  weight?: number
+}
+
+type CountryFacts = {
+  iso2: string
+  iso3: string
+  population: number
+}
+
+type WbIndicatorPoint = {
+  value: number
+  year: number
+}
+
+type Iso3SeriesPoint = {
+  value: number
+  year: number
+}
+
+type MobileOsShare = {
+  android: number
+  ios: number
+  other: number
+}
+
+const WB_AGE_0_14 = "SP.POP.0014.TO.ZS"
+const WB_AGE_15_64 = "SP.POP.1564.TO.ZS"
+const WB_AGE_65_PLUS = "SP.POP.65UP.TO.ZS"
+const WB_FEMALE_PCT = "SP.POP.TOTL.FE.ZS"
+const WB_SMOKING_PREVALENCE = "SH.PRV.SMOK"
+const WB_ALCOHOL_PER_CAPITA = "SH.ALC.PCAP.LI"
+const WB_EDU_PRIMARY_PLUS = "SE.PRM.CUAT.ZS"
+const WB_EDU_LOWER_SEC_PLUS = "SE.SEC.CUAT.LO.ZS"
+const WB_EDU_UPPER_SEC_PLUS = "SE.SEC.CUAT.UP.ZS"
+const WB_EDU_BACHELOR_PLUS = "SE.TER.CUAT.BA.ZS"
+const WB_EDU_MASTER_PLUS = "SE.TER.CUAT.MS.ZS"
 
 const HEIGHT_MU = 164.7
 const HEIGHT_SIGMA = 11.35
@@ -166,12 +220,12 @@ function parseOwidWorldRow(): {
   return { p65, p25_64, p15_24, p5_14, p0_4, total }
 }
 
-function buildCountryMap(
+function buildCountryFacts(
   countryValues: { id: string; label: { en: string } }[],
-): Map<string, number> {
+): Map<string, CountryFacts> {
   const wb = JSON.parse(readFileSync(wbPath, "utf8")) as [
     unknown,
-    { country: { id: string; value: string }; value: number | null }[],
+    { country: { id: string; value: string }; countryiso3code?: string; value: number | null }[],
   ]
   const rows = wb[1].filter(
     (r) =>
@@ -180,22 +234,31 @@ function buildCountryMap(
       typeof r.value === "number" &&
       r.value > 0,
   )
-  const popByWbName = new Map(rows.map((r) => [r.country.value.toLowerCase(), r.value as number]))
-  const pops = new Map<string, number>()
+  const rowsByWbName = new Map(
+    rows.map((r) => [
+      r.country.value.toLowerCase(),
+      {
+        iso2: r.country.id.toLowerCase(),
+        iso3: String((r as { countryiso3code?: string }).countryiso3code ?? "").toUpperCase(),
+        population: r.value as number,
+      },
+    ]),
+  )
+  const facts = new Map<string, CountryFacts>()
   for (const v of countryValues) {
     if (POPULATION_OVERRIDE[v.id] !== undefined) {
-      pops.set(v.id, POPULATION_OVERRIDE[v.id])
+      facts.set(v.id, { iso2: "xk", iso3: "XKX", population: POPULATION_OVERRIDE[v.id] })
       continue
     }
     const alias = WB_NAME_BY_APP_ID[v.id]
     const key = (alias ?? v.label.en).toLowerCase()
-    const pop = popByWbName.get(key)
-    if (pop === undefined) {
+    const row = rowsByWbName.get(key)
+    if (row === undefined) {
       throw new Error(`No World Bank population match for country id=${v.id} key=${key}`)
     }
-    pops.set(v.id, pop)
+    facts.set(v.id, row)
   }
-  return pops
+  return facts
 }
 
 function literaturePatches(): Record<
@@ -373,7 +436,522 @@ function assertSumNearOne(values: { p: number }[], label: string, tol = 1e-6): v
   }
 }
 
-function main(): void {
+async function fetchWorldBankIndicatorLatest(indicator: string): Promise<Map<string, WbIndicatorPoint>> {
+  const url = `https://api.worldbank.org/v2/country/all/indicator/${indicator}?format=json&per_page=20000`
+  const response = await fetch(url)
+  if (!response.ok) {
+    throw new Error(`World Bank API request failed for ${indicator}: ${response.status}`)
+  }
+  const payload = (await response.json()) as [
+    { page: number; pages: number; per_page: string; total: number },
+    { countryiso3code: string; country: { id: string }; date: string; value: number | null }[],
+  ]
+  const rows = payload[1] ?? []
+  const latestByIso2 = new Map<string, WbIndicatorPoint>()
+
+  for (const row of rows) {
+    const iso2 = row.country?.id?.toLowerCase()
+    if (!iso2 || iso2.length !== 2) {
+      continue
+    }
+    if (typeof row.value !== "number" || Number.isNaN(row.value)) {
+      continue
+    }
+    const year = Number.parseInt(row.date, 10)
+    if (Number.isNaN(year)) {
+      continue
+    }
+    const current = latestByIso2.get(iso2)
+    if (!current || year > current.year) {
+      latestByIso2.set(iso2, { value: row.value, year })
+    }
+  }
+  return latestByIso2
+}
+
+function buildAgeBandValuesFromShares(args: {
+  age0_14: number
+  age15_64: number
+  age65plus: number
+}): DatasetValue[] {
+  const rows: DatasetValue[] = []
+  const add = (id: string, en: string, tr: string, p: number) =>
+    rows.push({ id, label: { en, tr }, p })
+
+  const share0_14 = args.age0_14 / 100
+  const share15_64 = args.age15_64 / 100
+  const share65plus = args.age65plus / 100
+
+  const p0_14Bin = share0_14 / 3
+  add("age_0_4", "0–4", "0–4 yaş", p0_14Bin)
+  add("age_5_9", "5–9", "5–9 yaş", p0_14Bin)
+  add("age_10_14", "10–14", "10–14 yaş", p0_14Bin)
+
+  const p15_64Bin = share15_64 / 10
+  add("age_15_19", "15–19", "15–19 yaş", p15_64Bin)
+  add("age_20_24", "20–24", "20–24 yaş", p15_64Bin)
+  for (let lo = 25; lo <= 55; lo += 5) {
+    const hi = lo + 4
+    add(`age_${lo}_${hi}`, `${lo}–${hi}`, `${lo}–${hi} yaş`, p15_64Bin)
+  }
+  add("age_60_64", "60–64", "60–64 yaş", p15_64Bin)
+  add("age_65_plus", "65+", "65 ve üzeri", share65plus)
+  normalizeValuesList(rows)
+  return rows
+}
+
+function parseCsvRow(line: string): string[] {
+  const values: string[] = []
+  let current = ""
+  let inQuotes = false
+  for (let i = 0; i < line.length; i += 1) {
+    const ch = line[i]
+    if (ch === '"') {
+      if (inQuotes && line[i + 1] === '"') {
+        current += '"'
+        i += 1
+      } else {
+        inQuotes = !inQuotes
+      }
+      continue
+    }
+    if (ch === "," && !inQuotes) {
+      values.push(current)
+      current = ""
+      continue
+    }
+    current += ch
+  }
+  values.push(current)
+  return values
+}
+
+function parseOwidReligionLatestByIso3(csvPath: string): Map<string, Iso3SeriesPoint> {
+  const lines = readFileSync(csvPath, "utf8").trim().split(/\r?\n/)
+  const header = parseCsvRow(lines[0] ?? "")
+  const codeIndex = header.indexOf("Code")
+  const yearIndex = header.indexOf("Year")
+  const valueIndex = header.length - 1
+  const latest = new Map<string, Iso3SeriesPoint>()
+  for (let i = 1; i < lines.length; i += 1) {
+    const row = parseCsvRow(lines[i] ?? "")
+    const code = (row[codeIndex] ?? "").trim().toUpperCase()
+    if (code.length !== 3 || code.startsWith("OWID_") || code.startsWith("PEW_")) {
+      continue
+    }
+    const year = Number.parseInt(row[yearIndex] ?? "", 10)
+    const value = Number.parseFloat(row[valueIndex] ?? "")
+    if (Number.isNaN(year) || Number.isNaN(value)) {
+      continue
+    }
+    const current = latest.get(code)
+    if (!current || year > current.year) {
+      latest.set(code, { value, year })
+    }
+  }
+  return latest
+}
+
+async function fetchStatcounterCountryMobileOsShare(iso2: string): Promise<MobileOsShare | null> {
+  const url =
+    `http://gs.statcounter.com/chart.php?device_hidden=mobile&statType_hidden=os` +
+    `&region_hidden=${iso2.toUpperCase()}&multi-device=true&csv=1&granularity=yearly&fromYear=2024&toYear=2024`
+  const response = await fetch(url)
+  if (!response.ok) {
+    return null
+  }
+  const text = await response.text()
+  const lines = text.trim().split(/\r?\n/)
+  if (lines.length < 2) {
+    return null
+  }
+  let android = 0
+  let ios = 0
+  let other = 0
+  for (let i = 1; i < lines.length; i += 1) {
+    const row = parseCsvRow(lines[i] ?? "")
+    const name = (row[0] ?? "").trim().toLowerCase()
+    const value = Number.parseFloat(row[1] ?? "")
+    if (Number.isNaN(value)) {
+      continue
+    }
+    const p = Math.max(0, value / 100)
+    if (name === "android") {
+      android += p
+    } else if (name === "ios") {
+      ios += p
+    } else {
+      other += p
+    }
+  }
+  const sum = android + ios + other
+  if (sum <= 0) {
+    return null
+  }
+  return {
+    android: android / sum,
+    ios: ios / sum,
+    other: other / sum,
+  }
+}
+
+async function fetchStatcounterMobileOsByIso2(
+  iso2Codes: string[],
+): Promise<Map<string, MobileOsShare>> {
+  const out = new Map<string, MobileOsShare>()
+  const workerCount = 12
+  let cursor = 0
+
+  async function worker(): Promise<void> {
+    while (cursor < iso2Codes.length) {
+      const idx = cursor
+      cursor += 1
+      const iso2 = iso2Codes[idx] ?? ""
+      if (!iso2) continue
+      const share = await fetchStatcounterCountryMobileOsShare(iso2)
+      if (share) {
+        out.set(iso2, share)
+      }
+    }
+  }
+
+  await Promise.all(Array.from({ length: workerCount }, () => worker()))
+  return out
+}
+
+function applySmokerDistributionFromCurrentRate(
+  values: DatasetValue[],
+  currentPct: number,
+): DatasetValue[] {
+  const current = Math.max(0, Math.min(1, currentPct / 100))
+  const nonCurrent = Math.max(0, 1 - current)
+  // Keep former/non-smoker split proportional to the current global prior.
+  const formerShareOfNonCurrent = 0.152 / (0.152 + 0.624)
+  const former = nonCurrent * formerShareOfNonCurrent
+  const never = nonCurrent - former
+
+  const next = values.map((value) => ({ ...value }))
+  for (const value of next) {
+    if (value.id === "current_smoker") value.p = current
+    if (value.id === "former_smoker") value.p = former
+    if (value.id === "never_smoked") value.p = never
+  }
+  normalizeValuesList(next)
+  return next
+}
+
+function applyAlcoholDistributionFromPerCapita(
+  values: DatasetValue[],
+  litersPerCapita: number,
+): DatasetValue[] {
+  const liters = Math.max(0, litersPerCapita)
+  // Heuristic mapping from WHO/WB total liters-per-adult into frequency buckets.
+  // Tuned to keep plausible mass while reacting to real country differences.
+  const weekly = Math.min(0.45, Math.max(0.03, 0.06 + liters * 0.03))
+  const monthly = Math.min(0.3, Math.max(0.05, 0.08 + liters * 0.014))
+  const rarely = Math.min(0.35, Math.max(0.08, 0.12 + liters * 0.008))
+  const never = Math.max(0.05, 1 - (weekly + monthly + rarely))
+
+  const next = values.map((value) => ({ ...value }))
+  for (const value of next) {
+    if (value.id === "weekly_or_more") value.p = weekly
+    if (value.id === "monthly") value.p = monthly
+    if (value.id === "rarely") value.p = rarely
+    if (value.id === "never") value.p = never
+  }
+  normalizeValuesList(next)
+  return next
+}
+
+function applyEducationDistributionFromAttainment(args: {
+  primaryPlusPct: number
+  lowerSecPlusPct: number
+  upperSecPlusPct: number
+  bachelorPlusPct?: number
+  masterPlusPct?: number
+}): Record<string, number> {
+  const primaryPlus = Math.max(0, Math.min(1, args.primaryPlusPct / 100))
+  const lowerPlus = Math.max(0, Math.min(primaryPlus, args.lowerSecPlusPct / 100))
+  const upperPlus = Math.max(0, Math.min(lowerPlus, args.upperSecPlusPct / 100))
+  const bachelorPlus = Math.max(0, Math.min(upperPlus, (args.bachelorPlusPct ?? 0) / 100))
+  const masterPlus = Math.max(0, Math.min(bachelorPlus, (args.masterPlusPct ?? 0) / 100))
+
+  const noFormal = Math.max(0, 1 - primaryPlus)
+  const primary = Math.max(0, primaryPlus - lowerPlus)
+  const lowerSecondary = Math.max(0, lowerPlus - upperPlus)
+
+  const bachelor = Math.max(0, bachelorPlus - masterPlus)
+  const postgraduate = masterPlus
+  const nonBachelorUpper = Math.max(0, upperPlus - bachelorPlus)
+  const associate = nonBachelorUpper * 0.18
+  const upperSecondary = Math.max(0, nonBachelorUpper - associate)
+
+  const result = {
+    no_formal: noFormal,
+    primary,
+    lower_secondary: lowerSecondary,
+    upper_secondary: upperSecondary,
+    associate,
+    bachelor,
+    postgraduate,
+  }
+  const sum = Object.values(result).reduce((a, b) => a + b, 0)
+  if (sum <= 0) {
+    return result
+  }
+  return Object.fromEntries(
+    Object.entries(result).map(([k, v]) => [k, v / sum]),
+  ) as Record<string, number>
+}
+
+function stableVersionHash(payload: unknown): string {
+  return createHash("sha256").update(JSON.stringify(payload)).digest("hex").slice(0, 12)
+}
+
+async function buildCountryDatasets(raw: Record<string, unknown>): Promise<{
+  index: {
+    code: string
+    label: { en: string; tr: string }
+    datasetVersion: string
+    datasetAsOfYear: number
+    sourceCoverageScore: number
+    lastUpdated: string
+  }[]
+  datasets: Record<string, Record<string, unknown>>
+}> {
+  const allAttributes = raw.attributes as DatasetAttribute[]
+  const countryAttr = allAttributes.find((attribute) => attribute.id === "country")
+  if (!countryAttr) {
+    throw new Error("country attribute is required to build per-country datasets")
+  }
+
+  const baseAttributes = allAttributes.filter((attribute) => attribute.id !== "country")
+  const wbAge0_14 = await fetchWorldBankIndicatorLatest(WB_AGE_0_14)
+  const wbAge15_64 = await fetchWorldBankIndicatorLatest(WB_AGE_15_64)
+  const wbAge65Plus = await fetchWorldBankIndicatorLatest(WB_AGE_65_PLUS)
+  const wbFemale = await fetchWorldBankIndicatorLatest(WB_FEMALE_PCT)
+  const wbSmoking = await fetchWorldBankIndicatorLatest(WB_SMOKING_PREVALENCE)
+  const wbAlcohol = await fetchWorldBankIndicatorLatest(WB_ALCOHOL_PER_CAPITA)
+  const wbEduPrimaryPlus = await fetchWorldBankIndicatorLatest(WB_EDU_PRIMARY_PLUS)
+  const wbEduLowerPlus = await fetchWorldBankIndicatorLatest(WB_EDU_LOWER_SEC_PLUS)
+  const wbEduUpperPlus = await fetchWorldBankIndicatorLatest(WB_EDU_UPPER_SEC_PLUS)
+  const wbEduBachelorPlus = await fetchWorldBankIndicatorLatest(WB_EDU_BACHELOR_PLUS)
+  const wbEduMasterPlus = await fetchWorldBankIndicatorLatest(WB_EDU_MASTER_PLUS)
+  const relAny = parseOwidReligionLatestByIso3(owidReligiousAnyPath)
+  const relChristianity = parseOwidReligionLatestByIso3(owidReligiousChristiansPath)
+  const relIslam = parseOwidReligionLatestByIso3(owidReligiousMuslimsPath)
+  const relHinduism = parseOwidReligionLatestByIso3(owidReligiousHindusPath)
+  const relBuddhism = parseOwidReligionLatestByIso3(owidReligiousBuddhistsPath)
+  const relJudaism = parseOwidReligionLatestByIso3(owidReligiousJewsPath)
+  const countryFacts = buildCountryFacts(countryAttr.values as { id: string; label: { en: string } }[])
+  const statcounterMobileOs = await fetchStatcounterMobileOsByIso2(
+    Array.from(
+      new Set(
+        Array.from(countryFacts.values())
+          .map((facts) => facts.iso2.toLowerCase())
+          .filter((iso2) => iso2.length === 2),
+      ),
+    ),
+  )
+
+  const datasets: Record<string, Record<string, unknown>> = {}
+  const index: {
+    code: string
+    label: { en: string; tr: string }
+    datasetVersion: string
+    datasetAsOfYear: number
+    sourceCoverageScore: number
+    lastUpdated: string
+  }[] = []
+
+  for (const country of countryAttr.values) {
+    const facts = countryFacts.get(country.id)
+    if (!facts) {
+      throw new Error(`Missing country facts for ${country.id}`)
+    }
+    const countryPopulation = Math.max(1, Math.round(facts.population))
+    const attrs = structuredClone(baseAttributes)
+    let coverageScore = 0.35
+
+    const age0_14 = wbAge0_14.get(facts.iso2)
+    const age15_64 = wbAge15_64.get(facts.iso2)
+    const age65plus = wbAge65Plus.get(facts.iso2)
+    const female = wbFemale.get(facts.iso2)
+    const smoking = wbSmoking.get(facts.iso2)
+    const alcohol = wbAlcohol.get(facts.iso2)
+    const anyReligion = relAny.get(facts.iso3)
+    const christianity = relChristianity.get(facts.iso3)
+    const islam = relIslam.get(facts.iso3)
+    const hinduism = relHinduism.get(facts.iso3)
+    const buddhism = relBuddhism.get(facts.iso3)
+    const judaism = relJudaism.get(facts.iso3)
+    const mobileOs = statcounterMobileOs.get(facts.iso2.toLowerCase())
+    const eduPrimaryPlus = wbEduPrimaryPlus.get(facts.iso2)
+    const eduLowerPlus = wbEduLowerPlus.get(facts.iso2)
+    const eduUpperPlus = wbEduUpperPlus.get(facts.iso2)
+    const eduBachelorPlus = wbEduBachelorPlus.get(facts.iso2)
+    const eduMasterPlus = wbEduMasterPlus.get(facts.iso2)
+
+    const ageAttr = attrs.find((attribute) => attribute.id === "age_band")
+    if (ageAttr && age0_14 && age15_64 && age65plus) {
+      ageAttr.values = buildAgeBandValuesFromShares({
+        age0_14: age0_14.value,
+        age15_64: age15_64.value,
+        age65plus: age65plus.value,
+      })
+      ageAttr.source = `World Bank WDI ${WB_AGE_0_14}, ${WB_AGE_15_64}, ${WB_AGE_65_PLUS} (${Math.min(
+        age0_14.year,
+        age15_64.year,
+        age65plus.year,
+      )})`
+      ageAttr.year = Math.min(age0_14.year, age15_64.year, age65plus.year)
+      coverageScore += 0.15
+    }
+
+    const sexAttr = attrs.find((attribute) => attribute.id === "sex")
+    if (sexAttr && female) {
+      const otherShare = sexAttr.values.find((value) => value.id === "other")?.p ?? 0.005
+      const femaleShare = Math.max(0, Math.min(1, female.value / 100))
+      const scaledFemale = femaleShare * (1 - otherShare)
+      const scaledMale = (1 - femaleShare) * (1 - otherShare)
+      for (const value of sexAttr.values) {
+        if (value.id === "female") value.p = scaledFemale
+        if (value.id === "male") value.p = scaledMale
+        if (value.id === "other") value.p = otherShare
+      }
+      normalizeValuesList(sexAttr.values)
+      sexAttr.source = `World Bank WDI ${WB_FEMALE_PCT} (${female.year}) + fixed other-share prior`
+      sexAttr.year = female.year
+      coverageScore += 0.1
+    }
+
+    const smokerAttr = attrs.find((attribute) => attribute.id === "smoker_status")
+    if (smokerAttr && smoking) {
+      smokerAttr.values = applySmokerDistributionFromCurrentRate(smokerAttr.values, smoking.value)
+      smokerAttr.source = `World Bank WDI ${WB_SMOKING_PREVALENCE} (${smoking.year}) + calibrated split prior`
+      smokerAttr.year = smoking.year
+      coverageScore += 0.1
+    }
+
+    const alcoholAttr = attrs.find((attribute) => attribute.id === "alcohol_status")
+    if (alcoholAttr && alcohol) {
+      alcoholAttr.values = applyAlcoholDistributionFromPerCapita(alcoholAttr.values, alcohol.value)
+      alcoholAttr.source = `World Bank WDI ${WB_ALCOHOL_PER_CAPITA} (${alcohol.year}) + frequency mapping heuristic`
+      alcoholAttr.year = alcohol.year
+      coverageScore += 0.1
+    }
+
+    const religionAttr = attrs.find((attribute) => attribute.id === "religion")
+    if (
+      religionAttr &&
+      anyReligion &&
+      christianity &&
+      islam &&
+      hinduism &&
+      buddhism &&
+      judaism
+    ) {
+      const known = [christianity.value, islam.value, hinduism.value, buddhism.value, judaism.value]
+        .map((v) => Math.max(0, v / 100))
+        .reduce((a, b) => a + b, 0)
+      const affiliated = Math.max(0, Math.min(1, anyReligion.value / 100))
+      const unaffiliated = Math.max(0, 1 - affiliated)
+      const remainingAffiliated = Math.max(0, affiliated - known)
+      const folkRatio = 0.052 / (0.052 + 0.01)
+      const folkReligions = remainingAffiliated * folkRatio
+      const otherReligion = remainingAffiliated - folkReligions
+
+      for (const value of religionAttr.values) {
+        if (value.id === "christianity") value.p = Math.max(0, christianity.value / 100)
+        if (value.id === "islam") value.p = Math.max(0, islam.value / 100)
+        if (value.id === "hinduism") value.p = Math.max(0, hinduism.value / 100)
+        if (value.id === "buddhism") value.p = Math.max(0, buddhism.value / 100)
+        if (value.id === "unaffiliated") value.p = unaffiliated
+        if (value.id === "folk_religions") value.p = folkReligions
+        if (value.id === "other_religion") value.p = otherReligion + Math.max(0, judaism.value / 100)
+      }
+      normalizeValuesList(religionAttr.values)
+      religionAttr.source =
+        "Pew 2025 religious composition by country via OWID grapher + derived unaffiliated/other split"
+      religionAttr.year = Math.min(
+        anyReligion.year,
+        christianity.year,
+        islam.year,
+        hinduism.year,
+        buddhism.year,
+        judaism.year,
+      )
+      coverageScore += 0.15
+    }
+
+    const mobileAttr = attrs.find((attribute) => attribute.id === "mobile_os")
+    if (mobileAttr && mobileOs) {
+      for (const value of mobileAttr.values) {
+        if (value.id === "android") value.p = mobileOs.android
+        if (value.id === "ios") value.p = mobileOs.ios
+        if (value.id === "other_mobile_os") value.p = mobileOs.other
+      }
+      normalizeValuesList(mobileAttr.values)
+      mobileAttr.source = "StatCounter GlobalStats mobile OS market share (2024 country-level)"
+      mobileAttr.year = 2024
+      coverageScore += 0.1
+    }
+
+    const educationAttr = attrs.find((attribute) => attribute.id === "education_level")
+    if (educationAttr && eduPrimaryPlus && eduUpperPlus) {
+      const lowerForModel =
+        eduLowerPlus?.value ?? Math.max(eduUpperPlus.value, (eduPrimaryPlus.value + eduUpperPlus.value) / 2)
+      const eduDist = applyEducationDistributionFromAttainment({
+        primaryPlusPct: eduPrimaryPlus.value,
+        lowerSecPlusPct: lowerForModel,
+        upperSecPlusPct: eduUpperPlus.value,
+        bachelorPlusPct: eduBachelorPlus?.value,
+        masterPlusPct: eduMasterPlus?.value,
+      })
+      for (const value of educationAttr.values) {
+        value.p = eduDist[value.id] ?? value.p
+      }
+      normalizeValuesList(educationAttr.values)
+      educationAttr.source =
+        "UNESCO UIS attainment via World Bank WDI (SE.PRM.CUAT.ZS, SE.SEC.CUAT.LO.ZS, SE.SEC.CUAT.UP.ZS, SE.TER.CUAT.BA.ZS, SE.TER.CUAT.MS.ZS) + ISCED bucket mapping"
+      educationAttr.year = Math.min(
+        eduPrimaryPlus.year,
+        eduUpperPlus.year,
+        eduLowerPlus?.year ?? eduUpperPlus.year,
+        eduBachelorPlus?.year ?? eduUpperPlus.year,
+        eduMasterPlus?.year ?? eduUpperPlus.year,
+      )
+      coverageScore += 0.1
+    }
+
+    const payload = {
+      countryCode: country.id,
+      asOfYear: raw.asOfYear,
+      worldPopulation: countryPopulation,
+      alpha: raw.alpha,
+      minProbabilityFloor: raw.minProbabilityFloor,
+      attributes: attrs,
+    }
+    const version = stableVersionHash(payload)
+    const dataset = {
+      ...payload,
+      version,
+    }
+    datasets[country.id] = dataset
+    index.push({
+      code: country.id,
+      label: country.label,
+      datasetVersion: version,
+      datasetAsOfYear: raw.asOfYear as number,
+      sourceCoverageScore: Number(Math.min(1, coverageScore).toFixed(2)),
+      lastUpdated: new Date().toISOString().slice(0, 10),
+    })
+  }
+
+  return { index, datasets }
+}
+
+async function main(): Promise<void> {
   verifyLockHashes()
 
   const raw = JSON.parse(readFileSync(attrsPath, "utf8")) as Record<string, unknown>
@@ -386,15 +964,15 @@ function main(): void {
   const countryAttr = attributes.find((a) => (a as { id: string }).id === "country") as {
     values: { id: string; label: { en: string }; p: number }[]
   }
-  const pops = buildCountryMap(countryAttr.values)
+  const countryFacts = buildCountryFacts(countryAttr.values)
   let popSum = 0
   for (const v of countryAttr.values) {
-    const p = pops.get(v.id)
-    if (p === undefined) throw new Error(`Missing pop for ${v.id}`)
-    popSum += p
+    const facts = countryFacts.get(v.id)
+    if (!facts) throw new Error(`Missing population for ${v.id}`)
+    popSum += facts.population
   }
   for (const v of countryAttr.values) {
-    v.p = (pops.get(v.id) as number) / popSum
+    v.p = (countryFacts.get(v.id) as CountryFacts).population / popSum
   }
   const countryRec = countryAttr as Record<string, unknown>
   countryRec.source = "World Bank WDI SP.POP.TOTL (2023), mapped to app country list"
@@ -441,9 +1019,23 @@ function main(): void {
     }
   }
 
+  const { index, datasets } = await buildCountryDatasets(raw)
+  rmSync(countriesDir, { recursive: true, force: true })
+  mkdirSync(countriesDir, { recursive: true })
+  writeFileSync(countriesIndexPath, JSON.stringify(index, null, 2) + "\n", "utf8")
+  for (const [countryCode, dataset] of Object.entries(datasets)) {
+    const folder = join(countriesDir, countryCode)
+    mkdirSync(folder, { recursive: true })
+    writeFileSync(join(folder, "attributes.json"), JSON.stringify(dataset, null, 2) + "\n", "utf8")
+  }
+
   writeFileSync(attrsPath, JSON.stringify(raw, null, 2) + "\n", "utf8")
   console.log("Wrote", attrsPath)
+  console.log("Wrote", countriesIndexPath, "and", Object.keys(datasets).length, "country datasets")
   console.log("worldPopulation", raw.worldPopulation, "asOfYear", raw.asOfYear)
 }
 
-main()
+main().catch((error) => {
+  console.error(error)
+  process.exit(1)
+})

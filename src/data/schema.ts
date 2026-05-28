@@ -21,11 +21,22 @@ export type DatasetAttribute = {
 }
 
 export type PopulationDataset = {
+  countryCode: string
+  version: string
   worldPopulation: number
   asOfYear: number
   alpha: number
   minProbabilityFloor: number
   attributes: DatasetAttribute[]
+}
+
+export type CountryCatalogEntry = {
+  code: string
+  label: TranslationMap
+  datasetVersion: string
+  datasetAsOfYear: number
+  sourceCoverageScore?: number
+  lastUpdated?: string
 }
 
 function isObject(value: unknown): value is Record<string, unknown> {
@@ -128,6 +139,12 @@ export function parsePopulationDataset(raw: unknown): PopulationDataset {
   if (!isObject(raw)) {
     throw new Error("Dataset must be an object")
   }
+  if (typeof raw.countryCode !== "string" || raw.countryCode.length === 0) {
+    throw new Error("countryCode must be a non-empty string")
+  }
+  if (typeof raw.version !== "string" || raw.version.length === 0) {
+    throw new Error("version must be a non-empty string")
+  }
   if (typeof raw.worldPopulation !== "number" || raw.worldPopulation <= 0) {
     throw new Error("worldPopulation must be a positive number")
   }
@@ -151,10 +168,46 @@ export function parsePopulationDataset(raw: unknown): PopulationDataset {
   }
 
   return {
+    countryCode: raw.countryCode.toLowerCase(),
+    version: raw.version,
     worldPopulation: raw.worldPopulation,
     asOfYear: raw.asOfYear,
     alpha,
     minProbabilityFloor,
     attributes: raw.attributes.map(parseAttribute),
   }
+}
+
+export function parseCountryCatalog(raw: unknown): CountryCatalogEntry[] {
+  if (!Array.isArray(raw) || raw.length === 0) {
+    throw new Error("Country catalog must be a non-empty array")
+  }
+
+  return raw.map((item, index) => {
+    if (!isObject(item)) {
+      throw new Error(`Country catalog item[${index}] must be object`)
+    }
+    if (typeof item.code !== "string" || item.code.length === 0) {
+      throw new Error(`Country catalog item[${index}].code must be non-empty string`)
+    }
+    if (!isLanguageMap(item.label)) {
+      throw new Error(`Country catalog item[${index}].label must contain en and tr`)
+    }
+    if (typeof item.datasetVersion !== "string" || item.datasetVersion.length === 0) {
+      throw new Error(`Country catalog item[${index}].datasetVersion must be non-empty string`)
+    }
+    if (typeof item.datasetAsOfYear !== "number") {
+      throw new Error(`Country catalog item[${index}].datasetAsOfYear must be number`)
+    }
+
+    return {
+      code: item.code.toLowerCase(),
+      label: item.label,
+      datasetVersion: item.datasetVersion,
+      datasetAsOfYear: item.datasetAsOfYear,
+      sourceCoverageScore:
+        typeof item.sourceCoverageScore === "number" ? item.sourceCoverageScore : undefined,
+      lastUpdated: typeof item.lastUpdated === "string" ? item.lastUpdated : undefined,
+    }
+  })
 }

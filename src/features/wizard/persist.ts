@@ -12,7 +12,7 @@ export type WizardPersisted = {
 }
 
 export function datasetStamp(dataset: PopulationDataset): string {
-  return `${dataset.asOfYear}-${dataset.attributes.map((a) => a.id).join("|")}`
+  return `${dataset.countryCode}-${dataset.version}-${dataset.asOfYear}-${dataset.attributes.map((a) => a.id).join("|")}`
 }
 
 export function loadWizardPersisted(dataset: PopulationDataset): WizardPersisted | null {

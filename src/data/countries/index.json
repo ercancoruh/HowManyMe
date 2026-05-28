@@ -1,0 +1,2147 @@
+[
+  {
+    "code": "afghanistan",
+    "label": {
+      "en": "Afghanistan",
+      "tr": "Afghanistan"
+    },
+    "datasetVersion": "d4c53bfbdeec",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "albania",
+    "label": {
+      "en": "Albania",
+      "tr": "Albania"
+    },
+    "datasetVersion": "9117b271eed8",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "algeria",
+    "label": {
+      "en": "Algeria",
+      "tr": "Algeria"
+    },
+    "datasetVersion": "68fd8b5ccddb",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "andorra",
+    "label": {
+      "en": "Andorra",
+      "tr": "Andorra"
+    },
+    "datasetVersion": "e8a608f94e53",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "angola",
+    "label": {
+      "en": "Angola",
+      "tr": "Angola"
+    },
+    "datasetVersion": "203c4e222ca2",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "antigua_and_barbuda",
+    "label": {
+      "en": "Antigua and Barbuda",
+      "tr": "Antigua and Barbuda"
+    },
+    "datasetVersion": "d8e712fc1aab",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.9,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "argentina",
+    "label": {
+      "en": "Argentina",
+      "tr": "Argentina"
+    },
+    "datasetVersion": "9fe068129289",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "armenia",
+    "label": {
+      "en": "Armenia",
+      "tr": "Armenia"
+    },
+    "datasetVersion": "91a65e9c55ba",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "australia",
+    "label": {
+      "en": "Australia",
+      "tr": "Australia"
+    },
+    "datasetVersion": "c26b0a44116a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "austria",
+    "label": {
+      "en": "Austria",
+      "tr": "Austria"
+    },
+    "datasetVersion": "70c3775bc375",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "azerbaijan",
+    "label": {
+      "en": "Azerbaijan",
+      "tr": "Azerbaijan"
+    },
+    "datasetVersion": "426d404d694b",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "bahamas",
+    "label": {
+      "en": "Bahamas",
+      "tr": "Bahamas"
+    },
+    "datasetVersion": "2debc99b80e5",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "bahrain",
+    "label": {
+      "en": "Bahrain",
+      "tr": "Bahrain"
+    },
+    "datasetVersion": "7eda271d9c07",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "bangladesh",
+    "label": {
+      "en": "Bangladesh",
+      "tr": "Bangladesh"
+    },
+    "datasetVersion": "b2db018fed94",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "barbados",
+    "label": {
+      "en": "Barbados",
+      "tr": "Barbados"
+    },
+    "datasetVersion": "8228f810c342",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "belarus",
+    "label": {
+      "en": "Belarus",
+      "tr": "Belarus"
+    },
+    "datasetVersion": "cd4d3945baf4",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "belgium",
+    "label": {
+      "en": "Belgium",
+      "tr": "Belgium"
+    },
+    "datasetVersion": "265fd542c8e0",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "belize",
+    "label": {
+      "en": "Belize",
+      "tr": "Belize"
+    },
+    "datasetVersion": "b1416d414220",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "benin",
+    "label": {
+      "en": "Benin",
+      "tr": "Benin"
+    },
+    "datasetVersion": "3b7c7a415740",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "bhutan",
+    "label": {
+      "en": "Bhutan",
+      "tr": "Bhutan"
+    },
+    "datasetVersion": "fd18ba8e4903",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "bolivia",
+    "label": {
+      "en": "Bolivia",
+      "tr": "Bolivia"
+    },
+    "datasetVersion": "13169503e808",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "bosnia_and_herzegovina",
+    "label": {
+      "en": "Bosnia and Herzegovina",
+      "tr": "Bosnia and Herzegovina"
+    },
+    "datasetVersion": "1ed7b9c04085",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "botswana",
+    "label": {
+      "en": "Botswana",
+      "tr": "Botswana"
+    },
+    "datasetVersion": "6e8d4037b3ff",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "brazil",
+    "label": {
+      "en": "Brazil",
+      "tr": "Brazil"
+    },
+    "datasetVersion": "2b7b77d0f2fb",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "brunei",
+    "label": {
+      "en": "Brunei",
+      "tr": "Brunei"
+    },
+    "datasetVersion": "5dbd12a0d7c1",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "bulgaria",
+    "label": {
+      "en": "Bulgaria",
+      "tr": "Bulgaria"
+    },
+    "datasetVersion": "f5334cf3f8bc",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "burkina_faso",
+    "label": {
+      "en": "Burkina Faso",
+      "tr": "Burkina Faso"
+    },
+    "datasetVersion": "48c3096319d0",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "burundi",
+    "label": {
+      "en": "Burundi",
+      "tr": "Burundi"
+    },
+    "datasetVersion": "f458e2f45aac",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "cabo_verde",
+    "label": {
+      "en": "Cabo Verde",
+      "tr": "Cabo Verde"
+    },
+    "datasetVersion": "8c25a2e21bcd",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "cambodia",
+    "label": {
+      "en": "Cambodia",
+      "tr": "Cambodia"
+    },
+    "datasetVersion": "79c49906ee0d",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "cameroon",
+    "label": {
+      "en": "Cameroon",
+      "tr": "Cameroon"
+    },
+    "datasetVersion": "2ee11475be7e",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "canada",
+    "label": {
+      "en": "Canada",
+      "tr": "Canada"
+    },
+    "datasetVersion": "6f450c3eba81",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "central_african_republic",
+    "label": {
+      "en": "Central African Republic",
+      "tr": "Central African Republic"
+    },
+    "datasetVersion": "197523928572",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "chad",
+    "label": {
+      "en": "Chad",
+      "tr": "Chad"
+    },
+    "datasetVersion": "2d9b26533145",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "chile",
+    "label": {
+      "en": "Chile",
+      "tr": "Chile"
+    },
+    "datasetVersion": "623535c1589a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "china",
+    "label": {
+      "en": "China",
+      "tr": "China"
+    },
+    "datasetVersion": "2720713c1e23",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "colombia",
+    "label": {
+      "en": "Colombia",
+      "tr": "Colombia"
+    },
+    "datasetVersion": "fd3e38686ea2",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "comoros",
+    "label": {
+      "en": "Comoros",
+      "tr": "Comoros"
+    },
+    "datasetVersion": "cdcbef8c52f9",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "congo",
+    "label": {
+      "en": "Congo",
+      "tr": "Congo"
+    },
+    "datasetVersion": "733fcca45687",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "costa_rica",
+    "label": {
+      "en": "Costa Rica",
+      "tr": "Costa Rica"
+    },
+    "datasetVersion": "8455d593b34a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "cote_divoire",
+    "label": {
+      "en": "Cote d'Ivoire",
+      "tr": "Cote d'Ivoire"
+    },
+    "datasetVersion": "eeb6fa67d447",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "croatia",
+    "label": {
+      "en": "Croatia",
+      "tr": "Croatia"
+    },
+    "datasetVersion": "497a89f013a8",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "cuba",
+    "label": {
+      "en": "Cuba",
+      "tr": "Cuba"
+    },
+    "datasetVersion": "81f601aa6e67",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "cyprus",
+    "label": {
+      "en": "Cyprus",
+      "tr": "Cyprus"
+    },
+    "datasetVersion": "091398a0773d",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "czechia",
+    "label": {
+      "en": "Czechia",
+      "tr": "Czechia"
+    },
+    "datasetVersion": "ea58fde229f8",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "democratic_republic_of_the_congo",
+    "label": {
+      "en": "Democratic Republic of the Congo",
+      "tr": "Democratic Republic of the Congo"
+    },
+    "datasetVersion": "83ba7921d8d1",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "denmark",
+    "label": {
+      "en": "Denmark",
+      "tr": "Denmark"
+    },
+    "datasetVersion": "6db23a1e76cc",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "djibouti",
+    "label": {
+      "en": "Djibouti",
+      "tr": "Djibouti"
+    },
+    "datasetVersion": "f41e37707ad0",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "dominica",
+    "label": {
+      "en": "Dominica",
+      "tr": "Dominica"
+    },
+    "datasetVersion": "6595488ead9f",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.9,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "dominican_republic",
+    "label": {
+      "en": "Dominican Republic",
+      "tr": "Dominican Republic"
+    },
+    "datasetVersion": "f52fdd2a8e94",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "ecuador",
+    "label": {
+      "en": "Ecuador",
+      "tr": "Ecuador"
+    },
+    "datasetVersion": "296843d47243",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "egypt",
+    "label": {
+      "en": "Egypt",
+      "tr": "Egypt"
+    },
+    "datasetVersion": "035233c01f61",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "el_salvador",
+    "label": {
+      "en": "El Salvador",
+      "tr": "El Salvador"
+    },
+    "datasetVersion": "dd3021ec2785",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "equatorial_guinea",
+    "label": {
+      "en": "Equatorial Guinea",
+      "tr": "Equatorial Guinea"
+    },
+    "datasetVersion": "e453e5b84044",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.95,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "eritrea",
+    "label": {
+      "en": "Eritrea",
+      "tr": "Eritrea"
+    },
+    "datasetVersion": "26fe27aac69a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.95,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "estonia",
+    "label": {
+      "en": "Estonia",
+      "tr": "Estonia"
+    },
+    "datasetVersion": "587f38642c21",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "eswatini",
+    "label": {
+      "en": "Eswatini",
+      "tr": "Eswatini"
+    },
+    "datasetVersion": "da71c48adcea",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "ethiopia",
+    "label": {
+      "en": "Ethiopia",
+      "tr": "Ethiopia"
+    },
+    "datasetVersion": "de4f6134e5fd",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "fiji",
+    "label": {
+      "en": "Fiji",
+      "tr": "Fiji"
+    },
+    "datasetVersion": "8fdbfb1018bd",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "finland",
+    "label": {
+      "en": "Finland",
+      "tr": "Finland"
+    },
+    "datasetVersion": "34fdb0ec1ba0",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "france",
+    "label": {
+      "en": "France",
+      "tr": "France"
+    },
+    "datasetVersion": "588c7f9d1792",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "gabon",
+    "label": {
+      "en": "Gabon",
+      "tr": "Gabon"
+    },
+    "datasetVersion": "fdf2e1543626",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.95,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "gambia",
+    "label": {
+      "en": "Gambia",
+      "tr": "Gambia"
+    },
+    "datasetVersion": "4a3c2a5859a7",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "georgia",
+    "label": {
+      "en": "Georgia",
+      "tr": "Georgia"
+    },
+    "datasetVersion": "16d104aaad48",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "germany",
+    "label": {
+      "en": "Germany",
+      "tr": "Germany"
+    },
+    "datasetVersion": "1d47d948cec9",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "ghana",
+    "label": {
+      "en": "Ghana",
+      "tr": "Ghana"
+    },
+    "datasetVersion": "e28b14cfcf66",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "greece",
+    "label": {
+      "en": "Greece",
+      "tr": "Greece"
+    },
+    "datasetVersion": "e13a1f6a7679",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "grenada",
+    "label": {
+      "en": "Grenada",
+      "tr": "Grenada"
+    },
+    "datasetVersion": "b0fb81fc30d4",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "guatemala",
+    "label": {
+      "en": "Guatemala",
+      "tr": "Guatemala"
+    },
+    "datasetVersion": "a2576508990a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "guinea",
+    "label": {
+      "en": "Guinea",
+      "tr": "Guinea"
+    },
+    "datasetVersion": "e918fcd5e53f",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "guinea_bissau",
+    "label": {
+      "en": "Guinea-Bissau",
+      "tr": "Guinea-Bissau"
+    },
+    "datasetVersion": "b92901167068",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "guyana",
+    "label": {
+      "en": "Guyana",
+      "tr": "Guyana"
+    },
+    "datasetVersion": "0a6573befa5a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "haiti",
+    "label": {
+      "en": "Haiti",
+      "tr": "Haiti"
+    },
+    "datasetVersion": "d84d71f9f682",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "honduras",
+    "label": {
+      "en": "Honduras",
+      "tr": "Honduras"
+    },
+    "datasetVersion": "dcf8542f00f6",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "hungary",
+    "label": {
+      "en": "Hungary",
+      "tr": "Hungary"
+    },
+    "datasetVersion": "04d4fe9d94e3",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "iceland",
+    "label": {
+      "en": "Iceland",
+      "tr": "Iceland"
+    },
+    "datasetVersion": "4abf0d3ebb48",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "india",
+    "label": {
+      "en": "India",
+      "tr": "India"
+    },
+    "datasetVersion": "19ae7d39d4e3",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "indonesia",
+    "label": {
+      "en": "Indonesia",
+      "tr": "Indonesia"
+    },
+    "datasetVersion": "7d9d6c846893",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "iran",
+    "label": {
+      "en": "Iran",
+      "tr": "Iran"
+    },
+    "datasetVersion": "fbae3c043010",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "iraq",
+    "label": {
+      "en": "Iraq",
+      "tr": "Iraq"
+    },
+    "datasetVersion": "f1cf78d8ffb5",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "ireland",
+    "label": {
+      "en": "Ireland",
+      "tr": "Ireland"
+    },
+    "datasetVersion": "aac1befeed57",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "israel",
+    "label": {
+      "en": "Israel",
+      "tr": "Israel"
+    },
+    "datasetVersion": "11986fada429",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "italy",
+    "label": {
+      "en": "Italy",
+      "tr": "Italy"
+    },
+    "datasetVersion": "cbd4c48b6acc",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "jamaica",
+    "label": {
+      "en": "Jamaica",
+      "tr": "Jamaica"
+    },
+    "datasetVersion": "bb9ded8421f9",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "japan",
+    "label": {
+      "en": "Japan",
+      "tr": "Japan"
+    },
+    "datasetVersion": "2b0a75a29ccc",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "jordan",
+    "label": {
+      "en": "Jordan",
+      "tr": "Jordan"
+    },
+    "datasetVersion": "856ff16fb842",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "kazakhstan",
+    "label": {
+      "en": "Kazakhstan",
+      "tr": "Kazakhstan"
+    },
+    "datasetVersion": "83a9951eacd3",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "kenya",
+    "label": {
+      "en": "Kenya",
+      "tr": "Kenya"
+    },
+    "datasetVersion": "34192c479b13",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "kiribati",
+    "label": {
+      "en": "Kiribati",
+      "tr": "Kiribati"
+    },
+    "datasetVersion": "965e9fff3204",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "kuwait",
+    "label": {
+      "en": "Kuwait",
+      "tr": "Kuwait"
+    },
+    "datasetVersion": "19c62623eac9",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "kyrgyzstan",
+    "label": {
+      "en": "Kyrgyzstan",
+      "tr": "Kyrgyzstan"
+    },
+    "datasetVersion": "6b80dfd89eef",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "laos",
+    "label": {
+      "en": "Laos",
+      "tr": "Laos"
+    },
+    "datasetVersion": "38266df9790d",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "latvia",
+    "label": {
+      "en": "Latvia",
+      "tr": "Latvia"
+    },
+    "datasetVersion": "2683cb366c37",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "lebanon",
+    "label": {
+      "en": "Lebanon",
+      "tr": "Lebanon"
+    },
+    "datasetVersion": "9e6cb19111d7",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "lesotho",
+    "label": {
+      "en": "Lesotho",
+      "tr": "Lesotho"
+    },
+    "datasetVersion": "a4538ba77a94",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "liberia",
+    "label": {
+      "en": "Liberia",
+      "tr": "Liberia"
+    },
+    "datasetVersion": "8161e1a11662",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "libya",
+    "label": {
+      "en": "Libya",
+      "tr": "Libya"
+    },
+    "datasetVersion": "9d1555645888",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "liechtenstein",
+    "label": {
+      "en": "Liechtenstein",
+      "tr": "Liechtenstein"
+    },
+    "datasetVersion": "96cce46e1674",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.8,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "lithuania",
+    "label": {
+      "en": "Lithuania",
+      "tr": "Lithuania"
+    },
+    "datasetVersion": "3dfeb72d636c",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "luxembourg",
+    "label": {
+      "en": "Luxembourg",
+      "tr": "Luxembourg"
+    },
+    "datasetVersion": "dad385c2b817",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "madagascar",
+    "label": {
+      "en": "Madagascar",
+      "tr": "Madagascar"
+    },
+    "datasetVersion": "9a7ddcf89b9e",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "malawi",
+    "label": {
+      "en": "Malawi",
+      "tr": "Malawi"
+    },
+    "datasetVersion": "894e09175538",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "malaysia",
+    "label": {
+      "en": "Malaysia",
+      "tr": "Malaysia"
+    },
+    "datasetVersion": "23d794f68312",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "maldives",
+    "label": {
+      "en": "Maldives",
+      "tr": "Maldives"
+    },
+    "datasetVersion": "bcbee4d9c965",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "mali",
+    "label": {
+      "en": "Mali",
+      "tr": "Mali"
+    },
+    "datasetVersion": "f334a312d69d",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "malta",
+    "label": {
+      "en": "Malta",
+      "tr": "Malta"
+    },
+    "datasetVersion": "0985f552f263",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "marshall_islands",
+    "label": {
+      "en": "Marshall Islands",
+      "tr": "Marshall Islands"
+    },
+    "datasetVersion": "1b10712267ad",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.9,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "mauritania",
+    "label": {
+      "en": "Mauritania",
+      "tr": "Mauritania"
+    },
+    "datasetVersion": "9fde0637d83a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "mauritius",
+    "label": {
+      "en": "Mauritius",
+      "tr": "Mauritius"
+    },
+    "datasetVersion": "d00034ef0a98",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "mexico",
+    "label": {
+      "en": "Mexico",
+      "tr": "Mexico"
+    },
+    "datasetVersion": "64526b8bf839",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "micronesia",
+    "label": {
+      "en": "Micronesia",
+      "tr": "Micronesia"
+    },
+    "datasetVersion": "dbaf0b9672ee",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "moldova",
+    "label": {
+      "en": "Moldova",
+      "tr": "Moldova"
+    },
+    "datasetVersion": "58b4312b049f",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "monaco",
+    "label": {
+      "en": "Monaco",
+      "tr": "Monaco"
+    },
+    "datasetVersion": "5cf95fee7426",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.7,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "mongolia",
+    "label": {
+      "en": "Mongolia",
+      "tr": "Mongolia"
+    },
+    "datasetVersion": "70a402f5cea3",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "montenegro",
+    "label": {
+      "en": "Montenegro",
+      "tr": "Montenegro"
+    },
+    "datasetVersion": "1a7016c42ca0",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "morocco",
+    "label": {
+      "en": "Morocco",
+      "tr": "Morocco"
+    },
+    "datasetVersion": "42af9ec2ef15",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "mozambique",
+    "label": {
+      "en": "Mozambique",
+      "tr": "Mozambique"
+    },
+    "datasetVersion": "5a4baac67a61",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "myanmar",
+    "label": {
+      "en": "Myanmar",
+      "tr": "Myanmar"
+    },
+    "datasetVersion": "df93587d156c",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "namibia",
+    "label": {
+      "en": "Namibia",
+      "tr": "Namibia"
+    },
+    "datasetVersion": "5cf64d591e33",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "nauru",
+    "label": {
+      "en": "Nauru",
+      "tr": "Nauru"
+    },
+    "datasetVersion": "9251d54094cc",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "nepal",
+    "label": {
+      "en": "Nepal",
+      "tr": "Nepal"
+    },
+    "datasetVersion": "ccb34cf18f49",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "netherlands",
+    "label": {
+      "en": "Netherlands",
+      "tr": "Netherlands"
+    },
+    "datasetVersion": "44e7ca717783",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "new_zealand",
+    "label": {
+      "en": "New Zealand",
+      "tr": "New Zealand"
+    },
+    "datasetVersion": "33b2ae0cedb1",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "nicaragua",
+    "label": {
+      "en": "Nicaragua",
+      "tr": "Nicaragua"
+    },
+    "datasetVersion": "160776553f0d",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "niger",
+    "label": {
+      "en": "Niger",
+      "tr": "Niger"
+    },
+    "datasetVersion": "3efc979d32e7",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "nigeria",
+    "label": {
+      "en": "Nigeria",
+      "tr": "Nigeria"
+    },
+    "datasetVersion": "f34ece0c5857",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "north_korea",
+    "label": {
+      "en": "North Korea",
+      "tr": "North Korea"
+    },
+    "datasetVersion": "9d5e247127a3",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "north_macedonia",
+    "label": {
+      "en": "North Macedonia",
+      "tr": "North Macedonia"
+    },
+    "datasetVersion": "2e164e52ba2f",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "norway",
+    "label": {
+      "en": "Norway",
+      "tr": "Norway"
+    },
+    "datasetVersion": "24348a9741ff",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "oman",
+    "label": {
+      "en": "Oman",
+      "tr": "Oman"
+    },
+    "datasetVersion": "351722026dce",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "pakistan",
+    "label": {
+      "en": "Pakistan",
+      "tr": "Pakistan"
+    },
+    "datasetVersion": "56394a37d4cd",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "palau",
+    "label": {
+      "en": "Palau",
+      "tr": "Palau"
+    },
+    "datasetVersion": "2eeb587e20a2",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.9,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "palestine",
+    "label": {
+      "en": "Palestine",
+      "tr": "Palestine"
+    },
+    "datasetVersion": "877754cce8e2",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.95,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "panama",
+    "label": {
+      "en": "Panama",
+      "tr": "Panama"
+    },
+    "datasetVersion": "d3c7a978b056",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "papua_new_guinea",
+    "label": {
+      "en": "Papua New Guinea",
+      "tr": "Papua New Guinea"
+    },
+    "datasetVersion": "1e16510feb26",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "paraguay",
+    "label": {
+      "en": "Paraguay",
+      "tr": "Paraguay"
+    },
+    "datasetVersion": "b8876368b390",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "peru",
+    "label": {
+      "en": "Peru",
+      "tr": "Peru"
+    },
+    "datasetVersion": "ffb771125f07",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "philippines",
+    "label": {
+      "en": "Philippines",
+      "tr": "Philippines"
+    },
+    "datasetVersion": "882105de48d9",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "poland",
+    "label": {
+      "en": "Poland",
+      "tr": "Poland"
+    },
+    "datasetVersion": "f219381208e1",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "portugal",
+    "label": {
+      "en": "Portugal",
+      "tr": "Portugal"
+    },
+    "datasetVersion": "bc2a9028d2c5",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "qatar",
+    "label": {
+      "en": "Qatar",
+      "tr": "Qatar"
+    },
+    "datasetVersion": "2b7dc0c30e59",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "romania",
+    "label": {
+      "en": "Romania",
+      "tr": "Romania"
+    },
+    "datasetVersion": "e2b72678376a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "russia",
+    "label": {
+      "en": "Russia",
+      "tr": "Russia"
+    },
+    "datasetVersion": "721179e7d34d",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "rwanda",
+    "label": {
+      "en": "Rwanda",
+      "tr": "Rwanda"
+    },
+    "datasetVersion": "52b7fafe1072",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "saint_kitts_and_nevis",
+    "label": {
+      "en": "Saint Kitts and Nevis",
+      "tr": "Saint Kitts and Nevis"
+    },
+    "datasetVersion": "0087fc5c56ff",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.8,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "saint_lucia",
+    "label": {
+      "en": "Saint Lucia",
+      "tr": "Saint Lucia"
+    },
+    "datasetVersion": "8d74f767f79e",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "saint_vincent_and_the_grenadines",
+    "label": {
+      "en": "Saint Vincent and the Grenadines",
+      "tr": "Saint Vincent and the Grenadines"
+    },
+    "datasetVersion": "3a9f977a1e19",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.95,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "samoa",
+    "label": {
+      "en": "Samoa",
+      "tr": "Samoa"
+    },
+    "datasetVersion": "f53356fcacc8",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "san_marino",
+    "label": {
+      "en": "San Marino",
+      "tr": "San Marino"
+    },
+    "datasetVersion": "3c15fda7c1aa",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.8,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "sao_tome_and_principe",
+    "label": {
+      "en": "Sao Tome and Principe",
+      "tr": "Sao Tome and Principe"
+    },
+    "datasetVersion": "a611eb08ef81",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "saudi_arabia",
+    "label": {
+      "en": "Saudi Arabia",
+      "tr": "Saudi Arabia"
+    },
+    "datasetVersion": "f2dc3b25d949",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "senegal",
+    "label": {
+      "en": "Senegal",
+      "tr": "Senegal"
+    },
+    "datasetVersion": "abadb62322e1",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "serbia",
+    "label": {
+      "en": "Serbia",
+      "tr": "Serbia"
+    },
+    "datasetVersion": "f02b28d92c72",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "seychelles",
+    "label": {
+      "en": "Seychelles",
+      "tr": "Seychelles"
+    },
+    "datasetVersion": "05ff03afc16e",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "sierra_leone",
+    "label": {
+      "en": "Sierra Leone",
+      "tr": "Sierra Leone"
+    },
+    "datasetVersion": "beeda8aad2ec",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "singapore",
+    "label": {
+      "en": "Singapore",
+      "tr": "Singapore"
+    },
+    "datasetVersion": "381e3c7892b4",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "slovakia",
+    "label": {
+      "en": "Slovakia",
+      "tr": "Slovakia"
+    },
+    "datasetVersion": "9a9e07f60019",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "slovenia",
+    "label": {
+      "en": "Slovenia",
+      "tr": "Slovenia"
+    },
+    "datasetVersion": "2d198125175c",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "solomon_islands",
+    "label": {
+      "en": "Solomon Islands",
+      "tr": "Solomon Islands"
+    },
+    "datasetVersion": "71869c1a9603",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "somalia",
+    "label": {
+      "en": "Somalia",
+      "tr": "Somalia"
+    },
+    "datasetVersion": "b2c27301b82a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "south_africa",
+    "label": {
+      "en": "South Africa",
+      "tr": "South Africa"
+    },
+    "datasetVersion": "086e5791392d",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "south_korea",
+    "label": {
+      "en": "South Korea",
+      "tr": "South Korea"
+    },
+    "datasetVersion": "6e35eb983e83",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "south_sudan",
+    "label": {
+      "en": "South Sudan",
+      "tr": "South Sudan"
+    },
+    "datasetVersion": "6c4bf5002e8a",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.95,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "spain",
+    "label": {
+      "en": "Spain",
+      "tr": "Spain"
+    },
+    "datasetVersion": "a91c47f523b1",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "sri_lanka",
+    "label": {
+      "en": "Sri Lanka",
+      "tr": "Sri Lanka"
+    },
+    "datasetVersion": "cbeada093366",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "sudan",
+    "label": {
+      "en": "Sudan",
+      "tr": "Sudan"
+    },
+    "datasetVersion": "1de1c81cde4d",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "suriname",
+    "label": {
+      "en": "Suriname",
+      "tr": "Suriname"
+    },
+    "datasetVersion": "0b6f20547296",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "sweden",
+    "label": {
+      "en": "Sweden",
+      "tr": "Sweden"
+    },
+    "datasetVersion": "beb6162a88cb",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "switzerland",
+    "label": {
+      "en": "Switzerland",
+      "tr": "Switzerland"
+    },
+    "datasetVersion": "e21a40480768",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "syria",
+    "label": {
+      "en": "Syria",
+      "tr": "Syria"
+    },
+    "datasetVersion": "24b79a1cec24",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "tajikistan",
+    "label": {
+      "en": "Tajikistan",
+      "tr": "Tajikistan"
+    },
+    "datasetVersion": "9170971626ae",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "tanzania",
+    "label": {
+      "en": "Tanzania",
+      "tr": "Tanzania"
+    },
+    "datasetVersion": "300a9b67a330",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "thailand",
+    "label": {
+      "en": "Thailand",
+      "tr": "Thailand"
+    },
+    "datasetVersion": "bbaa9ac86985",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "timor_leste",
+    "label": {
+      "en": "Timor-Leste",
+      "tr": "Timor-Leste"
+    },
+    "datasetVersion": "213deeda173e",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "togo",
+    "label": {
+      "en": "Togo",
+      "tr": "Togo"
+    },
+    "datasetVersion": "a1af97db4019",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "tonga",
+    "label": {
+      "en": "Tonga",
+      "tr": "Tonga"
+    },
+    "datasetVersion": "f7deed3adb09",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "trinidad_and_tobago",
+    "label": {
+      "en": "Trinidad and Tobago",
+      "tr": "Trinidad and Tobago"
+    },
+    "datasetVersion": "68fa6d11523d",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "tunisia",
+    "label": {
+      "en": "Tunisia",
+      "tr": "Tunisia"
+    },
+    "datasetVersion": "82536707c084",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "turkiye",
+    "label": {
+      "en": "Türkiye",
+      "tr": "Türkiye"
+    },
+    "datasetVersion": "f07a36d93bd3",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "turkmenistan",
+    "label": {
+      "en": "Turkmenistan",
+      "tr": "Turkmenistan"
+    },
+    "datasetVersion": "58c28a703e48",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "tuvalu",
+    "label": {
+      "en": "Tuvalu",
+      "tr": "Tuvalu"
+    },
+    "datasetVersion": "c8383c8d71ba",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "uganda",
+    "label": {
+      "en": "Uganda",
+      "tr": "Uganda"
+    },
+    "datasetVersion": "32e84ed0797c",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "ukraine",
+    "label": {
+      "en": "Ukraine",
+      "tr": "Ukraine"
+    },
+    "datasetVersion": "ea1e20d79db4",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "united_arab_emirates",
+    "label": {
+      "en": "United Arab Emirates",
+      "tr": "United Arab Emirates"
+    },
+    "datasetVersion": "97798440ca66",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "united_kingdom",
+    "label": {
+      "en": "United Kingdom",
+      "tr": "United Kingdom"
+    },
+    "datasetVersion": "cbf7ea03a31f",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "united_states",
+    "label": {
+      "en": "United States",
+      "tr": "United States"
+    },
+    "datasetVersion": "548d5475c9de",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "uruguay",
+    "label": {
+      "en": "Uruguay",
+      "tr": "Uruguay"
+    },
+    "datasetVersion": "624ce9840ccb",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "uzbekistan",
+    "label": {
+      "en": "Uzbekistan",
+      "tr": "Uzbekistan"
+    },
+    "datasetVersion": "cc240c2a5568",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "vanuatu",
+    "label": {
+      "en": "Vanuatu",
+      "tr": "Vanuatu"
+    },
+    "datasetVersion": "3c560d6f0447",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "vatican_city",
+    "label": {
+      "en": "Vatican City",
+      "tr": "Vatican City"
+    },
+    "datasetVersion": "16dad3dafa48",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 0.7,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "venezuela",
+    "label": {
+      "en": "Venezuela",
+      "tr": "Venezuela"
+    },
+    "datasetVersion": "4e5bd3fe6b58",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "vietnam",
+    "label": {
+      "en": "Vietnam",
+      "tr": "Vietnam"
+    },
+    "datasetVersion": "373b76788fce",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "yemen",
+    "label": {
+      "en": "Yemen",
+      "tr": "Yemen"
+    },
+    "datasetVersion": "865559d2bb98",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "zambia",
+    "label": {
+      "en": "Zambia",
+      "tr": "Zambia"
+    },
+    "datasetVersion": "5776aae75594",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "code": "zimbabwe",
+    "label": {
+      "en": "Zimbabwe",
+      "tr": "Zimbabwe"
+    },
+    "datasetVersion": "def182025365",
+    "datasetAsOfYear": 2023,
+    "sourceCoverageScore": 1,
+    "lastUpdated": "2026-05-28"
+  }
+]

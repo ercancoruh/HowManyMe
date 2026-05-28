@@ -1,10 +1,15 @@
 # Data Notes
 
-This project uses a static JSON dataset: `src/data/attributes.json`.
+This project uses country-conditioned static datasets:
+
+- `src/data/countries/index.json` (country catalog and coverage score)
+- `src/data/countries/<country>/attributes.json` (runtime dataset per country)
 
 ## Fields
 
-- `worldPopulation`: baseline population for the estimate.
+- `countryCode`: dataset country id.
+- `version`: content hash used for cache/persist invalidation.
+- `worldPopulation`: country baseline population for the estimate.
 - `asOfYear`: reference year for baseline.
 - `alpha`: dampening coefficient to reduce independence overconfidence.
 - `minProbabilityFloor`: lower bound to avoid hard zero probability.
@@ -41,8 +46,14 @@ Committed inputs live under `src/data/sources/` (see `sources.lock.json` for URL
 - **`height_band`**: 5 cm bins (below 120, 120–124, …, 195–199, 200+) from the same Gaussian global marginal as before (`buildHeightBandValues5cm` in `scripts/build-attributes.mts`).
 - **Other traits**: Literature-based priors and short citations are maintained in `literaturePatches()` inside `scripts/build-attributes.mts` (Pew, WHO, UNESCO/UIS, StatCounter, Findex, etc.). Some items (eye colour, hair colour, diet) are explicitly **synthetic global marginals**, not census counts.
 
-Regenerate `attributes.json` after editing sources or the script:
+Regenerate datasets after editing sources or the script:
 
 ```bash
 npm run data:build
+```
+
+Generate quality coverage report:
+
+```bash
+npm run data:report
 ```

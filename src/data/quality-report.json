@@ -1,0 +1,4407 @@
+{
+  "summary": {
+    "generatedAt": "2026-05-28T12:43:38.400Z",
+    "totalCountries": 195,
+    "countriesBelowCoverage09": 5,
+    "lowCoverageCountries": [
+      {
+        "code": "monaco",
+        "sourceCoverageScore": 0.7
+      },
+      {
+        "code": "vatican_city",
+        "sourceCoverageScore": 0.7
+      },
+      {
+        "code": "liechtenstein",
+        "sourceCoverageScore": 0.8
+      },
+      {
+        "code": "saint_kitts_and_nevis",
+        "sourceCoverageScore": 0.8
+      },
+      {
+        "code": "san_marino",
+        "sourceCoverageScore": 0.8
+      }
+    ],
+    "traitCoverage": {
+      "age_band": {
+        "total": 195,
+        "realSource": 195,
+        "fallbackOrSynthetic": 0,
+        "realSourceRate": 1
+      },
+      "sex": {
+        "total": 195,
+        "realSource": 195,
+        "fallbackOrSynthetic": 0,
+        "realSourceRate": 1
+      },
+      "smoker_status": {
+        "total": 195,
+        "realSource": 164,
+        "fallbackOrSynthetic": 31,
+        "realSourceRate": 0.841
+      },
+      "alcohol_status": {
+        "total": 195,
+        "realSource": 187,
+        "fallbackOrSynthetic": 8,
+        "realSourceRate": 0.959
+      },
+      "religion": {
+        "total": 195,
+        "realSource": 183,
+        "fallbackOrSynthetic": 12,
+        "realSourceRate": 0.9385
+      },
+      "mobile_os": {
+        "total": 195,
+        "realSource": 195,
+        "fallbackOrSynthetic": 0,
+        "realSourceRate": 1
+      },
+      "education_level": {
+        "total": 195,
+        "realSource": 186,
+        "fallbackOrSynthetic": 9,
+        "realSourceRate": 0.9538
+      },
+      "marital_status": {
+        "total": 195,
+        "realSource": 0,
+        "fallbackOrSynthetic": 195,
+        "realSourceRate": 0
+      },
+      "eye_color": {
+        "total": 195,
+        "realSource": 0,
+        "fallbackOrSynthetic": 195,
+        "realSourceRate": 0
+      },
+      "hair_color": {
+        "total": 195,
+        "realSource": 0,
+        "fallbackOrSynthetic": 195,
+        "realSourceRate": 0
+      },
+      "diet_type": {
+        "total": 195,
+        "realSource": 0,
+        "fallbackOrSynthetic": 195,
+        "realSourceRate": 0
+      },
+      "pet_ownership": {
+        "total": 195,
+        "realSource": 0,
+        "fallbackOrSynthetic": 195,
+        "realSourceRate": 0
+      },
+      "blood_type": {
+        "total": 195,
+        "realSource": 0,
+        "fallbackOrSynthetic": 195,
+        "realSourceRate": 0
+      },
+      "height_band": {
+        "total": 195,
+        "realSource": 0,
+        "fallbackOrSynthetic": 195,
+        "realSourceRate": 0
+      }
+    }
+  },
+  "countries": [
+    {
+      "code": "afghanistan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "albania",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "algeria",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "andorra",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "religion",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "angola",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "antigua_and_barbuda",
+      "sourceCoverageScore": 0.9,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "religion",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "argentina",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "armenia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "australia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "austria",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "azerbaijan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "bahamas",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "bahrain",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "bangladesh",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "barbados",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "belarus",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "belgium",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "belize",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "benin",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "bhutan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "bolivia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "bosnia_and_herzegovina",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "botswana",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "brazil",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "brunei",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "bulgaria",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "burkina_faso",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "burundi",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "cabo_verde",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "cambodia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "cameroon",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "canada",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "central_african_republic",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "chad",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "chile",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "china",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "colombia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "comoros",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "congo",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "costa_rica",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "cote_divoire",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "croatia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "cuba",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "cyprus",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "czechia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "democratic_republic_of_the_congo",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "denmark",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "djibouti",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "dominica",
+      "sourceCoverageScore": 0.9,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "religion",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "dominican_republic",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "ecuador",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "egypt",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "el_salvador",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "equatorial_guinea",
+      "sourceCoverageScore": 0.95,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "education_level",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "eritrea",
+      "sourceCoverageScore": 0.95,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "education_level",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "estonia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "eswatini",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "ethiopia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "fiji",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "finland",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "france",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "gabon",
+      "sourceCoverageScore": 0.95,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "education_level",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "gambia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "georgia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "germany",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "ghana",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "greece",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "grenada",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "guatemala",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "guinea",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "guinea_bissau",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "guyana",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "haiti",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "honduras",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "hungary",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "iceland",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "india",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "indonesia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "iran",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "iraq",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "ireland",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "israel",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "italy",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "jamaica",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "japan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "jordan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "kazakhstan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "kenya",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "kiribati",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "kuwait",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "kyrgyzstan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "laos",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "latvia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "lebanon",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "lesotho",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "liberia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "libya",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "liechtenstein",
+      "sourceCoverageScore": 0.8,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "lithuania",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "luxembourg",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "madagascar",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "malawi",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "malaysia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "maldives",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "mali",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "malta",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "marshall_islands",
+      "sourceCoverageScore": 0.9,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "alcohol_status",
+        "religion",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "mauritania",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "mauritius",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "mexico",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "micronesia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "moldova",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "monaco",
+      "sourceCoverageScore": 0.7,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "mobile_os"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "education_level",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "mongolia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "montenegro",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "morocco",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "mozambique",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "myanmar",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "namibia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "nauru",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "religion",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "nepal",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "netherlands",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "new_zealand",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os"
+      ],
+      "fallbackTraits": [
+        "education_level",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "nicaragua",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "niger",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "nigeria",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "north_korea",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os"
+      ],
+      "fallbackTraits": [
+        "education_level",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "north_macedonia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "norway",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "oman",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "pakistan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "palau",
+      "sourceCoverageScore": 0.9,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "alcohol_status",
+        "religion",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "palestine",
+      "sourceCoverageScore": 0.95,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "alcohol_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "panama",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "papua_new_guinea",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "paraguay",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "peru",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "philippines",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "poland",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "portugal",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "qatar",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "romania",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "russia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "rwanda",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "saint_kitts_and_nevis",
+      "sourceCoverageScore": 0.8,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "mobile_os"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "religion",
+        "education_level",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "saint_lucia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "saint_vincent_and_the_grenadines",
+      "sourceCoverageScore": 0.95,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "education_level",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "samoa",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "san_marino",
+      "sourceCoverageScore": 0.8,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "sao_tome_and_principe",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "saudi_arabia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "senegal",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "serbia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "seychelles",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "sierra_leone",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "singapore",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "slovakia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "slovenia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "solomon_islands",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "somalia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "south_africa",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "south_korea",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "south_sudan",
+      "sourceCoverageScore": 0.95,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "alcohol_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "spain",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "sri_lanka",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "sudan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "suriname",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "sweden",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "switzerland",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "syria",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "tajikistan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "tanzania",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "thailand",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "timor_leste",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "togo",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "tonga",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "trinidad_and_tobago",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "tunisia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "turkiye",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "turkmenistan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "tuvalu",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "religion",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "uganda",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "ukraine",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "united_arab_emirates",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "united_kingdom",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "united_states",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "uruguay",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "uzbekistan",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "vanuatu",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "vatican_city",
+      "sourceCoverageScore": 0.7,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "mobile_os"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "education_level",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "venezuela",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "smoker_status",
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "vietnam",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "yemen",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "zambia",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    },
+    {
+      "code": "zimbabwe",
+      "sourceCoverageScore": 1,
+      "realSourceTraits": [
+        "age_band",
+        "sex",
+        "smoker_status",
+        "alcohol_status",
+        "religion",
+        "mobile_os",
+        "education_level"
+      ],
+      "fallbackTraits": [
+        "marital_status",
+        "eye_color",
+        "hair_color",
+        "diet_type",
+        "pet_ownership",
+        "blood_type",
+        "height_band"
+      ]
+    }
+  ]
+}

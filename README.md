@@ -7,7 +7,7 @@ people in the world may share your selected traits.
 
 - No backend and no database.
 - No user answers are saved.
-- One static JSON dataset powers all calculations.
+- Country-conditioned static JSON datasets power all calculations.
 
 ## Formula
 
@@ -22,7 +22,10 @@ The app also shows a likely range and confidence tier.
 
 ## Data transparency
 
-- Dataset file: `src/data/attributes.json`
+- Country catalog: `src/data/countries/index.json`
+- Per-country datasets: `src/data/countries/<country>/attributes.json`
+- Build script: `scripts/build-attributes.mts`
+- Coverage report script: `scripts/data-quality-report.mts`
 - Validation schema: `src/data/schema.ts`
 - Data notes: `src/data/README.md`
 
@@ -43,6 +46,14 @@ npm run dev
 npm run lint
 npm run typecheck
 npm run test
+npm run build
+```
+
+### Data pipeline checks
+
+```bash
+npm run data:build
+npm run data:report
 ```
 
 ### GitHub Pages
